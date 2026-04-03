@@ -1,0 +1,3 @@
+Roster M33_roster {
+    sink.xpath = "//PrimaryExpression[PrimaryPrefix/Name[@Image='Pattern.compile']]/PrimarySuffix/Arguments/ArgumentList/Expression/PrimaryExpression/PrimaryPrefix/Literal[contains(@Image,'.*')]";
+}

@@ -1,0 +1,3 @@
+Roster M36b_roster {
+    propagate.methodArgToReturn = "java.net.URLEncoder.encode|java.net.URLDecoder.decode";
+}

@@ -1,0 +1,6 @@
+Roster Java_ssrf_config {
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getParameter"; };
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getHeader"; };
+    sink.methodArg += { precise = true; value = "java.net.URL.<init>"; };
+    sanitizer.methodReturn += { value = "org.apache.commons.validator.routines.UrlValidator.isValid"; };
+}

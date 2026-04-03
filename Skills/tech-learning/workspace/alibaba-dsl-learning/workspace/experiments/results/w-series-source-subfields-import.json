@@ -1,0 +1,54 @@
+{
+  "series": "w",
+  "date": "2026-04-02",
+  "experiments": {
+    "Part1_Roster_SubFields": {
+      "w01b": {"field": "source.param_annotation", "syntax": "= string", "context": "Roster", "result": "PASS"},
+      "w02b": {"field": "source.param_annotation", "syntax": "+= string", "context": "Roster", "result": "PASS"},
+      "w03b": {"field": "source.method_annotation", "syntax": "= string", "context": "Roster", "result": "PASS"},
+      "w04b": {"field": "source.method_annotation", "syntax": "+= string", "context": "Roster", "result": "PASS"},
+      "w05b": {"field": "source.method_param", "syntax": "= string", "context": "Roster", "result": "PASS"},
+      "w06b": {"field": "source.method_param", "syntax": "+= string", "context": "Roster", "result": "PASS"},
+      "w07b": {"field": "source.method_param", "syntax": "+= { xpath, tag }", "context": "Roster", "result": "FAIL", "error": "can only be string value"},
+      "w08b": {"field": "source.expression", "syntax": "= string", "context": "Roster", "result": "PASS"},
+      "w09b": {"field": "source.expression", "syntax": "+= string", "context": "Roster", "result": "PASS"},
+      "w10b": {"field": "source.expression", "syntax": "+= { precise, value }", "context": "Roster", "result": "FAIL", "error": "can only be string value"}
+    },
+    "Part2_Rule_Modifiable": {
+      "w11": {"field": "source.param_annotation", "syntax": "= string (no modifiable)", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule"},
+      "w12": {"field": "source.method_annotation", "syntax": "= string (no modifiable)", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule"},
+      "w13": {"field": "source.expression", "syntax": "= string (no modifiable)", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule"},
+      "w14": {"field": "source.method_param", "syntax": "= string (no modifiable)", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule"},
+      "w22": {"field": "source.param_annotation", "syntax": "modifiable + = string", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule (x2)"},
+      "w23": {"field": "source.method_annotation", "syntax": "modifiable + = string", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule (x2)"},
+      "w24": {"field": "source.expression", "syntax": "modifiable + = string", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule (x2)"},
+      "w25": {"field": "source.method_param", "syntax": "modifiable + = string", "context": "Rule", "result": "FAIL", "error": "not modifiable in parent rule (x2)"}
+    },
+    "Part3_Roster_Via_Relation": {
+      "w26": {"field": "source.param_annotation", "context": "Roster+relation", "result": "PASS"},
+      "w27": {"field": "source.method_annotation", "context": "Roster+relation", "result": "PASS"},
+      "w28": {"field": "source.expression", "context": "Roster+relation", "result": "PASS"},
+      "w29": {"field": "source.method_param", "context": "Roster+relation", "result": "PASS"}
+    },
+    "Part4_Import_Mechanism": {
+      "w15": {"desc": "import without relation", "result": "FAIL", "error": "NullPointerException: getRuleIdToRosterMap() is null"},
+      "w16": {"desc": "import + relation", "result": "PASS"},
+      "w17": {"desc": "import with filename (not decl name) + relation", "result": "FAIL", "error": "cannot find roster version file"},
+      "w18": {"desc": "no import, relation only, empty Rule", "result": "PASS"},
+      "w19": {"desc": "relation uses decl name (no _0)", "result": "PASS"},
+      "w20": {"desc": "relation uses filename (_0)", "result": "PASS"},
+      "w21": {"desc": "Rule inline source + Roster source via relation", "result": "PASS"}
+    },
+    "Part5_Relation_Naming": {
+      "w30": {"relation": "Java_w30 (decl name)", "result": "PASS"},
+      "w31": {"relation": "Java_w31_0 (filename)", "result": "PASS"},
+      "w32": {"relation": "Bogus_name (non-existent)", "result": "PASS"},
+      "w33": {"relation": "Java_w33_0 (filename, mismatched decl)", "result": "PASS"}
+    }
+  },
+  "conclusions": {
+    "source_subfields": "param_annotation, method_annotation, method_param, expression all work in Roster with string syntax (= or +=). Block syntax ({...}) fails. These fields CANNOT be used in Rule (even with modifiable).",
+    "import_mechanism": "import roster uses Roster DECLARATION name. Requires relation config to exist. Without import, relation config is not validated by verify API.",
+    "relation_naming": "Verify API does NOT validate relation config entries. Any value passes syntax check. The naming convention is for SAST runtime, not verification."
+  }
+}

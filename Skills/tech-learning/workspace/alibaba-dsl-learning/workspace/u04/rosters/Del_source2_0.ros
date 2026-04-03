@@ -1,0 +1,7 @@
+Roster Del_source2 {
+    delete source.methodReturn;
+    source.methodReturn += {
+        precise = true;
+        value = "com.example.Replaced.get";
+    };
+}

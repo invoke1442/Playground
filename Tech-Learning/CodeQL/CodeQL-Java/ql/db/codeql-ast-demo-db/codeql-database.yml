@@ -1,0 +1,12 @@
+---
+sourceLocationPrefix: /home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo
+baselineLinesOfCode: 113
+unicodeNewlines: false
+columnKind: utf16
+primaryLanguage: java
+creationMetadata:
+  cliVersion: 2.23.3
+  creationTime: 2026-03-01T02:34:23.775048654Z
+overlayBaseDatabase: false
+overlayDatabase: false
+finalised: true

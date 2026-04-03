@@ -1,0 +1,5 @@
+Roster Test {
+    sanitizer.methodReturn += {
+        value += "/\\bescapeHtml\\b/";
+    };
+}

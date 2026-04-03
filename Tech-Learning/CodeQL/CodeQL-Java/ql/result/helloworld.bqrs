@@ -1,0 +1,1 @@
+"Extract all AddExpr","Retrieves all Java AddExpr nodes (""+"") in the analyzed code.","warning","Found AddExpr: ... + ...","/HelloWorld.java","6","17","6","21"

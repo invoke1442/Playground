@@ -1,0 +1,182 @@
+Roster Java_common_source {
+	group general_sources {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,'com.alibaba.rings.sdk.CloudBean')]";
+		source.velocityReference += {
+			value = "(rundata|runData).getParameters";
+		};
+		source.methodReturn += {
+			value = "(Request|RequestWrapper).(getCookies|getHeader|getHeaders|getReader)\\b|RunData.getCookies\\b";
+			excludeTag = "FrontendExcludeMe";
+		};
+		source.methodReturn += {
+			precise = true;
+			value = "javax.servlet.http.HttpServletRequest.getRequestedSessionId|javax.servlet.http.HttpServletRequest.getHeaderNames|javax.servlet.http.HttpServletRequest.getHeaders";
+			excludeTag = "FrontendExcludeMe";
+		};
+		source.paramAnnotation += {
+			precise = true;
+			value = "javax.ws.rs.CookieParam";
+			excludeTag = "FrontendExcludeMe";
+		};
+		source.methodReturnJws += {
+			value = "\\brequest.header.get\\b|\\brequest.cookies.get\\b|\\bHttp.Request.current.headers.get\\b|\\bHttp.Request.current.cookies.get\\b";
+			excludeTag = "FrontendExcludeMe";
+		};
+		source.methodReturn += {
+			precise = true;
+			value = "javax.servlet.http.HttpServletRequest.getInputStream|javax.servlet.http.HttpServletRequest.getRemoteUser|com.alibaba.citrus.service.form.impl.FormImpl.getForm|com.alibaba.service.form.FormService.getForm|javax.servlet.http.HttpServletRequest.getQueryString|com.alibaba.citrus.service.form.impl.FormImpl.init|org.apache.commons.fileupload.FileItem.getString|org.springframework.web.socket.TextMessage.getPayload|com.ali.shy.web.RequestCycle.getRequest.getQueryString|org.springframework.web.multipart.MultipartFile.getOriginalFilename|org.springframework.web.socket.TextMessage.asBytes|org.springframework.web.socket.BinaryMessage.getPayload";
+		};
+		source.methodReturn += {
+			value = "\\bParameterParser.(getString|toQueryString)\\b|(Request|RequestWrapper).(getInputStream|getParameterMap|getParameterNames|getParameterValues|getParameterValue|getParameter|getParameters)\\b|com.alibaba.citrus.service.upload.UploadService.parseRequest\\b|org.apache.commons.fileupload.\\w+?.parseRequest\\b|turbine.util.parser.ParameterParser\\b|\\bgetParameters.(getString|toQueryString|getFileItem|getFileItems|getStrings)\\b";
+		};
+		source.paramAnnotation += {
+			precise = true;
+			value = "com.alibaba.citrus.turbine.dataresolver.FormGroup|javax.ws.rs.MatrixParam|com.alibaba.citrus.turbine.dataresolver.Param|javax.ws.rs.FormParam|javax.ws.rs.BeanParam|javax.ws.rs.PathParam|com.alibaba.citrus.turbine.dataresolver.Params|com.alibaba.citrus.turbine.dataresolver.Params|org.springframework.web.bind.annotation.RequestParam|org.springframework.web.bind.annotation.PathVariable|javax.ws.rs.QueryParam|com.alibaba.citrus.turbine.dataresolver.FormField|com.alibaba.citrus.turbine.dataresolver.FormGroup|org.springframework.web.bind.annotation.RequestParam";
+		};
+		source.paramAnnotation += {
+			value = "";
+		};
+		source.allocReturn += {
+			value = "\\bServerSocket\\b|\\bSocket\\b";
+		};
+		source.mvcMapping += {
+			value = "\\bDeleteMapping|\\bGetMapping|\\bPatchMapping|\\bPostMapping|\\bPutMapping|\\bRequestMapping|\\bResourceMapping|annotation.DeleteMapping|annotation.GetMapping|annotation.PatchMapping|annotation.PostMapping|annotation.PutMapping|annotation.RequestMapping|annotation.ResourceMapping|javax.ws.rs.DELETE|javax.ws.rs.GET|javax.ws.rs.PATH|javax.ws.rs.POST|javax.ws.rs.PUT";
+		};
+		source.mvcMapping += {
+			precise = true;
+			value = "org.springframework.messaging.handler.annotation.MessageMapping|org.springframework.web.bind.annotation.RequestMapping";
+		};
+		source.annotationJWS += {
+			precise = true;
+			value = "jws.mvc.rpc.annotation.Path";
+		};
+		source.methodParam += {
+			xpath = "./self::FormalParameter[../../..[@Public='true' and @Void='false' and @Static='false'] and ancestor::TypeDeclaration/Annotation/SingleMemberAnnotation/Name[@RawClassName='com.alibaba.jakes.RestResource'] and not(ancestor::ClassOrInterfaceBodyDeclaration//Annotation/MarkerAnnotation/Name[@RawClassName='com.alibaba.jakes.NotExposed'])]";
+		};
+		source.methodReturnJws += {
+			value = "\\bparams.getAll\\b|\\bparams.get\\b";
+		};
+	};
+	group jar_sourcecode_sources {
+		includePlatforms = "AONE_THIRD_PARTY";
+		general.scanAllFiles = true;
+		propagate.bAllPublicMethod += {
+			value = true;
+		};
+	};
+	group odps_sources {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,'com.aliyun.odps.udf.UDF|com.aliyun.odps.udf.UDTF|com.aliyun.odps.udf.Aggregator')]";
+		source.methodParam += {
+			xpath = "./self::FormalParameter[../../..[@Public='true' and @Static='false' and @MethodName='evaluate'] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,'com.aliyun.odps.udf.UDF')]]";
+			tag = "UDF";
+		};
+		source.methodParam += {
+			xpath = "./self::FormalParameter[../../..[@Public='true' and @Static='false' and @MethodName='process'] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,'com.aliyun.odps.udf.UDTF')]]";
+			tag = "UDTF";
+		};
+		source.methodParam += {
+			xpath = "./self::FormalParameter[@ChildIndex = 1 and ../../..[@Public='true' and @Static='false' and @MethodName='iterate'] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,'com.aliyun.odps.udf.Aggregator')]]";
+			tag = "UDAF";
+		};
+	};
+	group AOP_handler {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@Image='Filter' or @Image='WebMvcConfigurer' or @Image='HandlerInterceptor' or @Image='Valve']|./self::CompilationUnit/TypeDeclaration/Annotation/MarkerAnnotation/Name[@Image='Aspect']|./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration//ExtendsList/ClassOrInterfaceType[@Image='FilterBean']";
+	};
+	group tac_handler {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName='com.tmall.wireless.tac.client.handler.TacHandler']| ./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ExtendsList/ClassOrInterfaceType[@ClassName='com.tmall.wireless.tac.client.handler.AbstractTacHandler']";
+		source.methodReturn += {
+			precise = true;
+			value = "com.tmall.wireless.tac.client.domain.Context.get|com.tmall.wireless.tac.client.domain.Context.getParams|com.tmall.recommend.biz.model.context.RpmRequestContext.getParamByKey|com.tmall.recommend.biz.model.context.RpmRequestContext.getParamMap";
+		};
+	};
+	group tpp_handler {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName='com.taobao.recommendplatform.protocol.solution.RecommendSolution']";
+		source.methodReturn += {
+			precise = true;
+			value = "com.taobao.recommendplatform.protocol.solution.Context.get";
+		};
+	};
+	group robot_handler {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName='com.alibaba.search.robot.common.RobotFactoryStudioService']";
+		source.methodReturn += {
+			value = "com.alibaba.search.robot.common.RobotFactoryFuncDTO.(getSysInput|getSysParams|getParams)";
+		};
+	};
+	group DFaaS_handler {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName='com.alibaba.dt.faas.runtime.DFunction']";
+		general.userDefinePatternClass += {
+			userDefineClass = loadclass("com.taobao.customrule.DfaasSource");
+		};
+	};
+	group VineFrameWorkUserDefine {
+		includePlatforms = "*";
+		general.methodRedirect += {
+			precise = true;
+			value = "me.ele.napos.vine.processor.aop.Redirected";
+			xpath = "./self::Annotation/NormalAnnotation/MemberValuePairs/MemberValuePair[@Image='to']/MemberValue/PrimaryExpression/PrimaryPrefix/ResultType";
+		};
+		general.userDefineEntranceClass += {
+			userDefineClass = loadclass("com.taobao.stc.pmd.rule.security.userdfineclass.NcpServiceImplEntrance");
+		};
+		general.userDefinePatternClass += {
+			userDefineClass = loadclass("com.taobao.stc.pmd.rule.security.userdfineclass.NcpServiceImplParamSource");
+		};
+	};
+	group cocktail_handler {
+		includePlatforms = "cocktail";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration[@ClassName='com.alibaba.cbu.cocktail.ScriptForSTCScanClass']";
+		general.userDefinePatternClass += {
+			userDefineClass = loadclass("com.taobao.customrule.CocktailSource");
+		};
+	};
+	group graphql_handler {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/TypeDeclaration/Annotation/MarkerAnnotation/Name[@ClassName='com.alibaba.cco.commons.graphql.annotation.GraphQLResolver']";
+		general.userDefinePatternClass += {
+			userDefineClass = loadclass("com.taobao.customrule.GraphQLSource");
+		};
+	};
+	group CarryFrameworkUserDefine {
+		includePlatforms = "*";
+		general.userDefinePatternClass += {
+			userDefineClass = loadclass("com.taobao.customrule.CarrySource");
+		};
+		general.userDefineEntranceClass += {
+			userDefineClass = loadclass("com.taobao.customrule.CarryEntrance");
+		};
+	};
+	group Mcp {
+		includePlatforms = "*";
+		general.entranceFileXpath += "./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,'dev.langchain4j.agent.tool.Tool')]";
+      	general.entranceFileXpath += "./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,'org.springframework.ai.tool.annotation.Tool')]";
+		source.paramAnnotation += {
+			value = "org.springframework.ai.tool.annotation.ToolParam";
+		};
+		source.mvcMapping += {
+			precise = true;
+			value = "dev.langchain4j.agent.tool.Tool";
+          	flag = "MCPTool";
+		};
+      	source.mvcMapping += {
+			precise = true;
+			value = "org.springframework.ai.tool.annotation.Tool";
+          	flag = "MCPTool";
+		};
+	};
+	group aws_lambda_sources {
+		includePlatforms = "*";
+		source.methodReturn += {
+			value = "com.amazonaws.services.lambda.runtime.RequestHandler.handleRequest";
+		};
+		source.methodReturn += {
+			value = "com.amazonaws.services.lambda.runtime.RequestStreamHandler.handleRequest";
+		};
+	};
+}

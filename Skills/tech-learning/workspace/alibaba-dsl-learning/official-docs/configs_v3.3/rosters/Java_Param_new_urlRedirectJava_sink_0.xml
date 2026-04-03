@@ -1,0 +1,79 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_urlRedirectJava_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.citrus.turbine.Navigator.redirectToLocation</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.sendRedirect\b|\.setRedirectLocation\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;: 0, value: &apos;^(?i)Location$&apos;}, {&apos;position&apos;:1,&apos;tainted&apos;:true, &apos;type&apos;: &apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax\.servlet\.http\.HttpServletResponse\.setHeader|javax\.servlet\.http\.HttpServletResponse\.addHeader</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink jws</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bredirect\b|\bredirectToStatic\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>jws.mvc.results.Redirect|jws.mvc.results.RedirectToStatic</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

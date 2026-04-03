@@ -1,0 +1,6 @@
+Roster Java_stream_io_sanitizer {
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "java.io.BufferedInputStream|java.io.ByteArrayInputStream|java.io.DataInputStream|java.io.File|java.io.FileInputStream|java.io.FileReader|java.io.InputStream|java.util.zip.GZIPInputStream";
+	};
+}

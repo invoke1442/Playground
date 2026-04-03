@@ -1,0 +1,27 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_stream_io_sanitizer</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.BufferedInputStream|java.io.ByteArrayInputStream|java.io.DataInputStream|java.io.File|java.io.FileInputStream|java.io.FileReader|java.io.InputStream|java.util.zip.GZIPInputStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

@@ -1,0 +1,15 @@
+Roster m07_sinkParam {
+    sink.methodArg += {
+        value = "javax.servlet.http.HttpServletResponse.sendRedirect";
+        param = "[{'position':0,'tainted':true}]";
+    };
+    sink.methodArg += {
+        value = "javax.servlet.http.HttpServletResponse.setHeader";
+        param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+    };
+    sink.methodArg += {
+        precise = true;
+        value = "java.sql.Statement.execute";
+        param = "[{'position':0,'tainted':true,'type':'String'}]";
+    };
+}

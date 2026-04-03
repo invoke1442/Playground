@@ -1,0 +1,7 @@
+Rule ChildDelNoMod extends ParentNoMod {
+    delete source.methodReturn;
+    source.methodReturn += {
+        precise = true;
+        value = "com.example.Child.get";
+    };
+}

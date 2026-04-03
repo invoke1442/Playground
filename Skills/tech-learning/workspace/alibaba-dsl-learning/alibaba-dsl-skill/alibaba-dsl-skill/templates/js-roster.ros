@@ -1,0 +1,55 @@
+// JS Roster — Core semantics (source/sink/sanitizer)
+// File: rosters/{RosterName}_0.ros (internal name without _0)
+Roster {RosterName} {
+    // === Source: tainted data entry points ===
+    // Block syntax: use value += "/regex/" (NOT precise, NOT pattern)
+    source.methodReturn += {
+        value += "/\\breq\\.query\\b|\\breq\\.body\\b|\\breq\\.params\\b/";
+    };
+    source.expression += {
+        taintTag = "tag_name";      // optional: correlate with specific sinks
+        value += "/ctx\\.request\\.body$/";
+    };
+    // source.paramDecorator += { value = "/@Query\\b/"; };
+
+    // === Sink ===
+    // Block syntax: REQUIRES pattern field (only methodArg)
+    sink.methodArg += {
+        pattern += "/\\bres\\.send\\b|\\bres\\.write\\b/";
+        paramIndex = 0;              // optional: argument position
+        taintTag = "tag_name";      // optional: match source taintTag
+    };
+    // String syntax (Roster only) — all use = "str" or += "str"
+    // sink.expression = "res.render";
+    // sink.methodReturn = "res.redirect";
+    // sink.paramDecorator = "@Body";
+    // sink.param_annotation = "javax.inject.Inject";
+    // sink.method_annotation = "org.spring.PostMapping";
+    // sink.method_param = "Controller.handle[0]";
+
+    // === Sanitizer ===
+    // Block syntax: REQUIRES pattern field (only methodReturn)
+    sanitizer.methodReturn += {
+        pattern += "/\\bescapeHtml\\b|\\bDOMPurify\\.sanitize\\b/";
+    };
+    // String syntax (Roster only)
+    // sanitizer.expression = "validator.check";
+    // sanitizer.methodArg = "sanitize.input";        // ⚠️ JS is string! Block syntax fails!
+    // sanitizer.param_annotation = "@Validated";
+    // sanitizer.method_annotation = "@Sanitized";
+    // sanitizer.method_param = "Cleaner.clean[0]";
+
+    // === Platform Group ===
+    group express_handler {
+        includePlatforms = "express";
+        source.methodReturn += {
+            value += "/\\breq\\.headers\\b/";
+        };
+    };
+    group koa_handler {
+        includePlatforms = "koa";
+        source.methodReturn += {
+            value += "/\\bctx\\.request\\.query\\b/";
+        };
+    };
+}

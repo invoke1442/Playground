@@ -1,0 +1,9 @@
+Roster m01_safeVarNames {
+    sanitizer.safeVarNames += {
+        value = "(?i)safe.*|whitelist.*|trusted.*";
+    };
+    sanitizer.safeVarNames += {
+        value = "allowedUrl|safeInput";
+        excludeTag = "testTag";
+    };
+}

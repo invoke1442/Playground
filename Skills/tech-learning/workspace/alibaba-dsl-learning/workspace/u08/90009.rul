@@ -1,0 +1,12 @@
+Rule ParentNoMod extends AbstractTaintRule {
+    type = "Test";
+    subType = "TestRule";
+    source.methodReturn += {
+        precise = true;
+        value = "com.example.Parent.get";
+    };
+    sink.methodArg += {
+        precise = true;
+        value = "com.example.Sink.exec";
+    };
+}

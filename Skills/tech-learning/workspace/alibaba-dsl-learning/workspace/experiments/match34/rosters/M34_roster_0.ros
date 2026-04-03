@@ -1,0 +1,6 @@
+Roster M34_roster {
+    source.paramAnnotation += {
+        precise = true;
+        value = "org.springframework.web.bind.annotation.RequestParam|org.springframework.web.bind.annotation.PathVariable|org.springframework.web.bind.annotation.RequestBody";
+    };
+}

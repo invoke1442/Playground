@@ -1,0 +1,8 @@
+// relation/config_roster_relation.json
+// Links Rule → Roster(s). Key = rule_id, Value = array of roster names + "_0" suffix.
+// Each Roster file must be named {RosterName}_0.ros inside rosters/ directory.
+// A Rule can link to multiple Rosters; multiple Rules can share the same Roster.
+{
+    "RuleName": ["RosterName_0"],
+    "AnotherRule": ["SharedRoster_0", "ExtraRoster_0"]
+}

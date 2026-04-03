@@ -1,0 +1,11 @@
+Roster m02_safeTypes {
+    sanitizer.safeTypes += {
+        precise = true;
+        value = "java.net.URL|java.io.File|javax.servlet.http.HttpSession";
+    };
+    sanitizer.safeTypes += {
+        precise = true;
+        value = "org.apache.commons.httpclient.methods.GetMethod";
+        excludeTag = "networkType";
+    };
+}

@@ -1,0 +1,14 @@
+[2026-02-28 13:43:20] [javac-extractor-3895416] Starting extraction for:
+                                                sun.java.command=com.semmle.extractor.java.JavaExtractor --jdk-version 17 --javac-args @@@/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/log/ext/javac.args
+                                                user.dir=/home/nyn/Desktop/Projects/Java/Java-learning/src
+[2026-02-28 13:43:20] [javac-extractor-3895416] Compilation name /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/trap/java/diagnostics/diagnostic.trap.gz
+[2026-02-28 13:43:21] [javac-extractor-3895416] Annotation processor class 'lombok.launch.AnnotationProcessorHider$AnnotationProcessor' initialized.
+[2026-02-28 13:43:21] [javac-extractor-3895416] Annotation processor class 'lombok.launch.AnnotationProcessorHider$ClaimingProcessor' initialized.
+[2026-02-28 13:43:21] [javac-extractor-3895416] 1 files will be passed to the attrib/flow phase
+[2026-02-28 13:43:22] [javac-extractor-3895416] Processing file HelloWorld.java
+[2026-02-28 13:43:23] [javac-extractor-3895416] Processing module java.base
+[2026-02-28 13:43:23] [javac-extractor-3895416] Javac init time: 0.9s
+[2026-02-28 13:43:23] [javac-extractor-3895416] Javac attr time: 0.1s
+[2026-02-28 13:43:23] [javac-extractor-3895416] Extractor time: 1.4s
+[2026-02-28 13:43:23] [javac-extractor-3895416] Other time: 0.2s
+[2026-02-28 13:43:23] [javac-extractor-3895416] Total time: 2.6s

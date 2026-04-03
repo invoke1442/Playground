@@ -1,0 +1,14 @@
+-d
+/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/target/classes
+-classpath
+/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/target/classes:
+-sourcepath
+/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/src/main/java:/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/target/generated-sources/annotations:
+-s
+/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/target/generated-sources/annotations
+-g
+--release
+17
+-encoding
+UTF-8
+/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/src/main/java/org/example/ast/AstShowcase.java

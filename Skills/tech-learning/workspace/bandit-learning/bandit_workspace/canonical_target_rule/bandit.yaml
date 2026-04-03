@@ -1,0 +1,2 @@
+tests: ["B950"]
+exclude_dirs: [".bandit-target-venv"]

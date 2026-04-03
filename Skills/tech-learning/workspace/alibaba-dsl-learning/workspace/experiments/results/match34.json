@@ -1,0 +1,11 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-java-none\",\"values\":[],\"default_template\":\"Cannot invoke \\\"String.getBytes()\\\" because \\\"content\\\" is null\",\"type\":\"error\"}]","execution_time_ms":592}}
+
+❌ Verification FAILED — errors found in output
+[
+    {
+        "template_key": "stae-java-none",
+        "values": [],
+        "default_template": "Cannot invoke \"String.getBytes()\" because \"content\" is null",
+        "type": "error"
+    }
+]

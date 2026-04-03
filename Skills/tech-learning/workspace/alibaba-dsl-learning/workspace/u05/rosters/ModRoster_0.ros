@@ -1,0 +1,7 @@
+Roster ModRoster {
+    modifiable source.methodReturn;
+    source.methodReturn += {
+        precise = true;
+        value = "com.example.Source.get";
+    };
+}

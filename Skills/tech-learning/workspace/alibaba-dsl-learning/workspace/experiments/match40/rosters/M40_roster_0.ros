@@ -1,0 +1,10 @@
+Roster M40_roster {
+    propagate.methodObjectToReturn += {
+        value = "toString|valueOf";
+        excludeTag = "toStringGroup";
+    };
+    propagate.methodObjectToReturn += {
+        value = "trim|strip";
+        excludeTag = "trimGroup";
+    };
+}

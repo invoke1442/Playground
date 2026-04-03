@@ -1,0 +1,119 @@
+[
+  {
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions": [
+      {
+        "callable": "fileinput.input",
+        "sources": [
+          {
+            "port": "result",
+            "taint": [
+              {
+                "kinds": [ { "kind": "UserControlled" } ],
+                "declaration": null
+              }
+            ]
+          }
+        ],
+        "model_generators": [
+          "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions"
+        ],
+        "modes": [ "Obscure" ]
+      },
+      {
+        "callable": "input",
+        "sources": [
+          {
+            "port": "result",
+            "taint": [
+              {
+                "kinds": [ { "kind": "UserControlled" } ],
+                "declaration": null
+              }
+            ]
+          }
+        ],
+        "model_generators": [
+          "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions"
+        ],
+        "modes": [ "Obscure" ]
+      },
+      {
+        "callable": "readline.set_pre_input_hook",
+        "sources": [
+          {
+            "port": "result",
+            "taint": [
+              {
+                "kinds": [ { "kind": "UserControlled" } ],
+                "declaration": null
+              }
+            ]
+          }
+        ],
+        "model_generators": [
+          "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions"
+        ],
+        "modes": [ "Obscure" ]
+      },
+      {
+        "callable": "turtle.numinput",
+        "sources": [
+          {
+            "port": "result",
+            "taint": [
+              {
+                "kinds": [
+                  {
+                    "features": [ { "always-type": "scalar" } ],
+                    "kind": "UserControlled"
+                  }
+                ],
+                "declaration": null
+              }
+            ]
+          }
+        ],
+        "model_generators": [
+          "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions"
+        ],
+        "modes": [ "Obscure" ]
+      },
+      {
+        "callable": "turtle.textinput",
+        "sources": [
+          {
+            "port": "result",
+            "taint": [
+              {
+                "kinds": [ { "kind": "UserControlled" } ],
+                "declaration": null
+              }
+            ]
+          }
+        ],
+        "model_generators": [
+          "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions"
+        ],
+        "modes": [ "Obscure" ]
+      },
+      {
+        "callable": "xml.sax.saxutils.prepare_input_source",
+        "sources": [
+          {
+            "port": "result",
+            "taint": [
+              {
+                "kinds": [ { "kind": "UserControlled" } ],
+                "declaration": null
+              }
+            ]
+          }
+        ],
+        "model_generators": [
+          "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions"
+        ],
+        "modes": [ "Obscure" ]
+      }
+    ]
+  }
+]

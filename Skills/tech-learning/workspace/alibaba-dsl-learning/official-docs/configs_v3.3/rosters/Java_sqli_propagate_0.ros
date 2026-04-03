@@ -1,0 +1,31 @@
+Roster Java_sqli_propagate {
+	sanitizer.methodObject += {
+		value = "PreparedStatement.set.*";
+	};
+	sanitizer.methodReturn += {
+		value = "com.alibaba.security.SecurityUtil.trimSql.*|com.alibaba.security.SecurityUtil.trimSql$|com.alibaba.security.SecurityUtil.escapeSql.*";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.aliyun.securitysdk.SecurityUtil.trimSql|com.aliyun.securitysdk.SecurityUtil.trimSql4OrderBy|com.aliyun.securitysdk.SecurityUtil.escapeSql|com.alibaba.security.SecurityUtil.escapeSql|com.taobao.security.util.SecurityUtil.escapeSql|com.alibaba.security.SecurityUtil.trimSql|com.alibaba.security.SecurityUtil.trimSql.*|com.alibaba.security.SecurityUtil.trimSql$";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "com.alibaba.saiga.base.rdb.SimpleSql";
+	};
+	sanitizer.methodReturn += {
+		value = "com.alibaba.saiga.base.rdb.SqlHelper.(toSqlStr|toSqlStrDirect)";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "java.time.LocalDateTime";
+		excludeTag = "LocalDateTimeType";
+	};
+	sanitizer.methodArg += {
+		precise = true;
+		value = "com.alibaba.rhino.mybatis.core.SqlSafeCheckUtil.checkOrderByClause";
+	};
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.SQLIPkgHandler");
+	};
+}

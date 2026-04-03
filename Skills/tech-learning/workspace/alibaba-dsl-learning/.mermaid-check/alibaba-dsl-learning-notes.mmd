@@ -1,0 +1,29 @@
+mindmap
+  root((Alibaba DSL))
+    核心定位
+      白盒扫描规则 DSL
+      污点分析和状态机分析
+    核心对象
+      Rule(.rul)
+      Roster(.ros)
+      source sink sanitizer
+      group loadclass
+    官方学习主线
+      设计原则
+      基本元素
+      文件格式
+      tar 结构
+    API 实测边界
+      GET verify -> 404
+      POST 无 body -> 400
+      POST multipart 无 file -> 400
+      POST 带 file -> reset
+      代理层显示 502
+    当前能验证
+      请求形态
+      本地 tar 结构
+      样例文件存在
+    当前不能验证
+      规则语义正确性
+      业务错误码触发
+      字段级差异裁决

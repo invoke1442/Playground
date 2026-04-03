@@ -1,0 +1,43 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_pathtraversal_propagate</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.securitysdk.SecurityUtil.pathFilter|com.alibaba.citrus.service.requestcontext.parser.ParameterParser.getFileItem|com.taobao.security.url.FilePath.pathFilter|com.alibaba.security.SecurityUtil.pathFilter|com.alibaba.fasttext.sec.url.FilePath.pathFilter|com.taobao.security.url.FilePath.pathFilter</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>pathTraversalCustomFix.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.pathTraversalCustomFix</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

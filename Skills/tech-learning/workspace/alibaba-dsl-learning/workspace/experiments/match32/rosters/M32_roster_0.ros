@@ -1,0 +1,7 @@
+Roster M32_roster {
+    sink.methodArg += {
+        precise = true;
+        value = "java.lang.Runtime.exec";
+        param = "[{'position':0,'tainted':true,'value':'.*cmd.*'}]";
+    };
+}

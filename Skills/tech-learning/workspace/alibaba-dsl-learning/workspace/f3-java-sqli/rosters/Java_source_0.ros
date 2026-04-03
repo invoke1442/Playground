@@ -1,0 +1,4 @@
+Roster Java_source {
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getParameter"; };
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getHeader"; };
+}

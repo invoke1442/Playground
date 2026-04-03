@@ -1,0 +1,119 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_sqli_propagate</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>PreparedStatement\.set.*</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.trimSql.*|com.alibaba.security.SecurityUtil.trimSql$|com.alibaba.security.SecurityUtil.escapeSql.*</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.securitysdk.SecurityUtil.trimSql|com.aliyun.securitysdk.SecurityUtil.trimSql4OrderBy|com.aliyun.securitysdk.SecurityUtil.escapeSql|com.alibaba.security.SecurityUtil.escapeSql|com.taobao.security.util.SecurityUtil.escapeSql|com.alibaba.security.SecurityUtil.trimSql|com.alibaba.security.SecurityUtil.trimSql.*|com.alibaba.security.SecurityUtil.trimSql$</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.saiga.base.rdb.SimpleSql</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com\.alibaba\.saiga\.base\.rdb\.SqlHelper\.(toSqlStr|toSqlStrDirect)</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>LocalDateTimeType</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.time.LocalDateTime</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.rhino.mybatis.core.SqlSafeCheckUtil.checkOrderByClause</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>SQLIPkgHandler.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.SQLIPkgHandler</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

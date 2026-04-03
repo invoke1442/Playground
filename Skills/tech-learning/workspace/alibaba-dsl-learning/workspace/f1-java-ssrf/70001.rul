@@ -1,0 +1,4 @@
+Rule SSRFEntry extends AbstractTaintRule {
+    type = "SSRF";
+    subType = "SSRFHook";
+}

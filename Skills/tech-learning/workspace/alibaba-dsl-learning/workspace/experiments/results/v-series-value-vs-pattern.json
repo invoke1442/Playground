@@ -1,0 +1,26 @@
+{
+  "description": "JS value vs pattern field semantics investigation",
+  "date": "2026-04-02",
+  "results": {
+    "v01": {"test": "source.methodReturn: only value +=", "result": "PASS"},
+    "v02": {"test": "source.methodReturn: only pattern +=", "result": "FAIL", "error": "field value is required"},
+    "v03": {"test": "source.methodReturn: value + pattern", "result": "FAIL", "error": "cannot find field: pattern"},
+    "v04": {"test": "sink.methodArg: only pattern +=", "result": "PASS"},
+    "v05": {"test": "sink.methodArg: only value +=", "result": "FAIL", "error": "field pattern is required"},
+    "v06": {"test": "sink.methodArg: value + pattern", "result": "FAIL", "error": "cannot find field: value"},
+    "v07": {"test": "sanitizer.methodReturn: only value +=", "result": "FAIL", "error": "field pattern is required"},
+    "v08": {"test": "sanitizer.methodReturn: only pattern +=", "result": "PASS"},
+    "v09": {"test": "sanitizer.methodReturn: value + pattern", "result": "FAIL", "error": "cannot find field: value"},
+    "v10": {"test": "source.expression: only value +=", "result": "PASS"},
+    "v11": {"test": "source.expression: only pattern +=", "result": "FAIL", "error": "field value is required"},
+    "v12": {"test": "source.expression: value + pattern", "result": "FAIL", "error": "cannot find field: pattern"},
+    "v13": {"test": "source.paramDecorator: only value =", "result": "PASS"},
+    "v14": {"test": "source.paramDecorator: only pattern +=", "result": "FAIL", "error": "field value is required"},
+    "v15": {"test": "source.methodReturn: value = (no +=)", "result": "PASS"},
+    "v16": {"test": "sink.methodArg: pattern = (no +=)", "result": "PASS"},
+    "v17": {"test": "sanitizer.methodReturn: pattern = (no +=)", "result": "PASS"},
+    "v18": {"test": "sink: pattern + taintTag + paramIndex", "result": "PASS"},
+    "v19": {"test": "source.expression: value + taintTag", "result": "PASS"}
+  },
+  "conclusion": "source fields (methodReturn, expression, paramDecorator) use 'value' exclusively. sink/sanitizer fields use 'pattern' exclusively. The two cannot coexist. Both = and += work."
+}

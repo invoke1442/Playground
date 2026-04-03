@@ -1,0 +1,63 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_sqlInjectionXBatis_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink xbatis</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\b(select[a-zA-Z]*|query[a-zA-Z]*|insert|update|delete|executeQuery[a-zA-Z]*|executeInsert[a-zA-Z]*|executeUpdate[a-zA-Z]*)\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>exclude xbatis</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>trimSql|criterion\.condition|:METADATA|:SQLKEYWORD|distinctSql|escapeSql</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bTemplateContext\.put\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

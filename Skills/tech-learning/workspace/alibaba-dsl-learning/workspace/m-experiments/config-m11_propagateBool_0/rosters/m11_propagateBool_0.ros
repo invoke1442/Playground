@@ -1,0 +1,20 @@
+Roster m11_propagateBool {
+    propagate.bAllPublicMethod += {
+        value = true;
+    };
+    propagate.bUseSqlSpecial += {
+        value = true;
+    };
+    propagate.bUseCritical += {
+        value = true;
+    };
+    propagate.bPreSanitizerParam += {
+        value = true;
+    };
+    propagate.bUseSafeState += {
+        value = true;
+    };
+    propagate.bUnkownAsSafe += {
+        value = false;
+    };
+}

@@ -1,0 +1,5 @@
+Roster Java_cmdi_propagate {
+	sanitizer.methodReturn += {
+		value = "com.aliyun.securitysdk.SecurityUtil.getSafeCommandLine|com.alibaba.security.SecurityUtil.getSafeCommandLine|com.alibaba.security.SecurityUtil.escapeShellArg|org.springframework.web.util.HtmlUtils.htmlEscapeDecimal|com.alibaba.security.SecurityUtil.escapeShellCmd";
+	};
+}

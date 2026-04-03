@@ -1,0 +1,12 @@
+Rule NewXMLEntitiyInjection extends AbstractTaintRule {
+	import roster Java_xxe_propagate;
+	import roster Java_second_package_source;
+	import roster Java_Param_new_xmlentitiyinjectionjava_sink;
+	import roster Java_network_io_sanitizer;
+	import roster Java_common_source;
+	import roster Java_common_propagate exclude SafeVarnames;
+	type = "XMLEntitiyInjection";
+	subType = "xmlentitiyinjectionjava";
+	general.genAppSummary = false;
+	general.customSubject = "XML外部实体注入";
+}

@@ -1,0 +1,5 @@
+Roster Test {
+    sink.methodArg += {
+        value += "/\\bres\\.send\\b/";
+    };
+}

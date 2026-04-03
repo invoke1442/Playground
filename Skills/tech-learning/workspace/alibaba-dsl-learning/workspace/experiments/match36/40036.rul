@@ -1,0 +1,8 @@
+Rule MatchTest36 extends AbstractTaintRule {
+    type = "Test"; subType = "MatchTest";
+    source.methodReturn += { precise = false; value = "getParameter|getHeader"; };
+    sink.methodArg += { precise = false; value = "exec|execute|eval"; };
+    sanitizer.safeVarNames += { value = "(?i)safe.*|clean.*"; };
+    propagate.methodObjectToReturn += { value = "toString|valueOf|trim"; };
+    propagate.methodArgToReturn += { value = "java.net.URLEncoder.encode"; };
+}

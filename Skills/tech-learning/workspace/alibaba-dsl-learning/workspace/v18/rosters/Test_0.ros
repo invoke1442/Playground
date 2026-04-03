@@ -1,0 +1,7 @@
+Roster Test {
+    sink.methodArg += {
+        pattern += "/\\bdb\\.query\\b/";
+        paramIndex = 0;
+        taintTag = "sql_tag";
+    };
+}

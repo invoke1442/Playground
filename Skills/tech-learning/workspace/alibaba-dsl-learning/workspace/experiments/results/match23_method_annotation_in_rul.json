@@ -1,0 +1,13 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-java-56\",\"values\":[\"source.method_annotation\"],\"default_template\":\"configure is not modifiable in parent rule:{}\",\"type\":\"error\"}]","execution_time_ms":648}}
+
+❌ Verification FAILED — errors found in output
+[
+    {
+        "template_key": "stae-java-56",
+        "values": [
+            "source.method_annotation"
+        ],
+        "default_template": "configure is not modifiable in parent rule:{}",
+        "type": "error"
+    }
+]

@@ -1,0 +1,9 @@
+Rule NewJavaDeserialization extends AbstractTaintRule {
+	import roster Java_common_propagate;
+	import roster Java_network_io_sanitizer;
+	import roster Java_common_source;
+	import roster Java_Param_new_javaDeserialization_sink;
+	type = "JavaDeserialization";
+	subType = "javaDeserialization";
+	general.customSubject = "Java反序列化";
+}

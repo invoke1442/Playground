@@ -1,0 +1,5 @@
+Roster Test {
+    sink.methodArg += {
+        pattern = "/\\bres\\.send\\b/";
+    };
+}

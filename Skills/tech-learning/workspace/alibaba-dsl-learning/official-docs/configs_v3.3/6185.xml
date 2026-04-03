@@ -1,0 +1,1864 @@
+<net.sourceforge.pmd.ParamRule>
+  <name>NewSSRF</name>
+  <type>SSRF</type>
+  <subType>ssrfJava</subType>
+  <qualifiedClass>com.taobao.stc.pmd.rule.security.BaseTaintedDataRule</qualifiedClass>
+  <priority>1</priority>
+  <attributes>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>parentRule</name>
+      <value>AbstractTaintRule</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>modifiableConfigs</name>
+      <value></value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,&apos;com.alibaba.rings.sdk.CloudBean&apos;)]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,&apos;com\.aliyun\.odps\.udf\.UDF|com\.aliyun\.odps\.udf\.UDTF|com\.aliyun\.odps\.udf\.Aggregator&apos;)]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@Image=&apos;Filter&apos; or @Image=&apos;WebMvcConfigurer&apos; or @Image=&apos;HandlerInterceptor&apos; or @Image=&apos;Valve&apos;]|./self::CompilationUnit/TypeDeclaration/Annotation/MarkerAnnotation/Name[@Image=&apos;Aspect&apos;]|./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration//ExtendsList/ClassOrInterfaceType[@Image=&apos;FilterBean&apos;]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName=&apos;com.tmall.wireless.tac.client.handler.TacHandler&apos;]| ./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ExtendsList/ClassOrInterfaceType[@ClassName=&apos;com.tmall.wireless.tac.client.handler.AbstractTacHandler&apos;]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName=&apos;com.taobao.recommendplatform.protocol.solution.RecommendSolution&apos;]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName=&apos;com.alibaba.search.robot.common.RobotFactoryStudioService&apos;]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/TypeDeclaration/ClassOrInterfaceDeclaration/ImplementsList/ClassOrInterfaceType[@ClassName=&apos;com.alibaba.dt.faas.runtime.DFunction&apos;]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/TypeDeclaration/Annotation/MarkerAnnotation/Name[@ClassName=&apos;com.alibaba.cco.commons.graphql.annotation.GraphQLResolver&apos;]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,&apos;dev.langchain4j.agent.tool.Tool&apos;)]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>entranceFileXpath</name>
+      <value>./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,&apos;org.springframework.ai.tool.annotation.Tool&apos;)]</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>taintOnlyBySummary</name>
+      <value>true</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>blackFieldMatch</name>
+      <value>true</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>handlePolymorphism</name>
+      <value>true</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>polyHandleNum</name>
+      <value>1</value>
+    </net.sourceforge.pmd.ParamAttribute>
+    <net.sourceforge.pmd.ParamAttribute>
+      <name>custom_subject</name>
+      <value>SSRF</value>
+    </net.sourceforge.pmd.ParamAttribute>
+  </attributes>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.BufferedInputStream|java.io.ByteArrayInputStream|java.io.DataInputStream|java.io.File|java.io.FileInputStream|java.io.FileReader|java.io.InputStream|java.util.zip.GZIPInputStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>SSRFCustomPropagate.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.SSRFCustomPropagate</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>SSRFPkgHandler.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.SSRFPkgHandler</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>preprocess sanitizer param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use safe state</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>treat unknown as safe</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>false</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>tainted start</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>propagate</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\burl\b|URIBroker[^\.]*\.setServerURI|URIBroker[^\.]*\.setBaseURI|URIBroker[^\.]*\.setContextPath|URIBuilder[^\.]*\.setHost|UriComponentsBuilder[^\.]*\.(fromUriString|fromHttpUrl|fromPath|fromUri|host|uri)\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>composeUrl|setParameter</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>URIBroker[^\.]*\.|URIBuilder[^\.]*\.|UriComponentsBuilder[^\.]*\.|UriTemplate[^\.]*\.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bBuilder\b|\baddHeader\b|\.setHeader|\.setEntity</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>append|concat</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>alloc propagate</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bsetServerURI\b|\bsetBaseURI\b|\bsetContextPath\b|\bsetHost\b|\burl\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.lang.String.join</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param transmit</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe method - redirect set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.httpclient.HttpMethod.setFollowRedirects|org.apache.commons.httpclient.methods.GetMethod.setFollowRedirects|org.apache.commons.httpclient.methods.PostMethod.setFollowRedirects|java.net.HttpURLConnection.setInstanceFollowRedirects|java.net.HttpURLConnection.setFollowRedirects|org.apache.http.client.config.RequestConfig.Builder.setRedirectsEnabled|sun.net.www.protocol.http.HttpURLConnection.setInstanceFollowRedirects|sun.net.www.protocol.http.HttpURLConnection.setFollowRedirects</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe method - redirect</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.setRedirectStrategy\b|\.setRedirectsEnabled\b|\.setFollowRedirects\b|\.setInstanceFollowRedirects\b|\.disableRedirectHandling\b|\bfollowRedirects\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe state set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.startSSRFNetHookChecking</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe state</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.securitysdk.SecurityUtil.withSSRFChecking|com.aliyun.securitysdk.SecurityUtil.startSSRFNetHookChecking</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>unsafe state set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.stopSSRFNetHookChecking|com.aliyun.securitysdk.SecurityUtil.stopSSRFNetHookChecking</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>okhttp3.RequestBody.create|com.aliyun.oss.OSSClient.generatePresignedUrl|com.aliyun.oss.OSS.generatePresignedUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|java.sql.PreparedStatement.setString|java.sql.PreparedStatement.setNString</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.youku.recommend.bigdata.util.RouteUtil.getVipServerDomain</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.checkSSRF</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param - {redirect} set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.fasttext.sec.url.SSRFChecker.checkUrlWithoutConnection|com.alibaba.fasttext.sec.url.SSRFChecker.instance.checkUrlWithoutConnection|com.alibaba.security.SecurityUtil.checkUrlWithoutConnection|com.alibaba.security.SecurityUtil.checkSSRFWithoutConnection|com.alibaba.security.SecurityUtil.startSSRFNetHookCheckingWithExpirationCache</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>addQueryParameter</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source velocity reference</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(rundata|runData)\.getParameters</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>FrontendExcludeMe</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>source return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(Request|RequestWrapper)\.(getCookies|getHeader|getHeaders|getReader)\b|RunData.getCookies\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>FrontendExcludeMe</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>source return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.servlet.http.HttpServletRequest.getRequestedSessionId|javax.servlet.http.HttpServletRequest.getHeaderNames|javax.servlet.http.HttpServletRequest.getHeaders</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>FrontendExcludeMe</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>source annotation set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.ws.rs.CookieParam</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>FrontendExcludeMe</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>source jws</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\brequest.header.get\b|\brequest.cookies.get\b|\bHttp.Request.current.headers.get\b|\bHttp.Request.current.cookies.get\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.servlet.http.HttpServletRequest.getInputStream|javax.servlet.http.HttpServletRequest.getRemoteUser|com.alibaba.citrus.service.form.impl.FormImpl.getForm|com.alibaba.service.form.FormService.getForm|javax.servlet.http.HttpServletRequest.getQueryString|com.alibaba.citrus.service.form.impl.FormImpl.init|org.apache.commons.fileupload.FileItem.getString|org.springframework.web.socket.TextMessage.getPayload|com.ali.shy.web.RequestCycle.getRequest.getQueryString|org.springframework.web.multipart.MultipartFile.getOriginalFilename|org.springframework.web.socket.TextMessage.asBytes|org.springframework.web.socket.BinaryMessage.getPayload</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bParameterParser\.(getString|toQueryString)\b|(Request|RequestWrapper)\.(getInputStream|getParameterMap|getParameterNames|getParameterValues|getParameterValue|getParameter|getParameters)\b|com.alibaba.citrus.service.upload.UploadService.parseRequest\b|org.apache.commons.fileupload.\w+?.parseRequest\b|turbine.util.parser.ParameterParser\b|\bgetParameters\.(getString|toQueryString|getFileItem|getFileItems|getStrings)\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source annotation set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.citrus.turbine.dataresolver.FormGroup|javax.ws.rs.MatrixParam|com.alibaba.citrus.turbine.dataresolver.Param|javax.ws.rs.FormParam|javax.ws.rs.BeanParam|javax.ws.rs.PathParam|com.alibaba.citrus.turbine.dataresolver.Params|com.alibaba.citrus.turbine.dataresolver.Params|org.springframework.web.bind.annotation.RequestParam|org.springframework.web.bind.annotation.PathVariable|javax.ws.rs.QueryParam|com.alibaba.citrus.turbine.dataresolver.FormField|com.alibaba.citrus.turbine.dataresolver.FormGroup|org.springframework.web.bind.annotation.RequestParam</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source annotation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string></string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source alloc</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bServerSocket\b|\bSocket\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>mvc mapping</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bDeleteMapping|\bGetMapping|\bPatchMapping|\bPostMapping|\bPutMapping|\bRequestMapping|\bResourceMapping|annotation.DeleteMapping|annotation.GetMapping|annotation.PatchMapping|annotation.PostMapping|annotation.PutMapping|annotation.RequestMapping|annotation.ResourceMapping|javax.ws.rs.DELETE|javax.ws.rs.GET|javax.ws.rs.PATH|javax.ws.rs.POST|javax.ws.rs.PUT</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>mvc mapping set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.messaging.handler.annotation.MessageMapping|org.springframework.web.bind.annotation.RequestMapping</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>JWS interface set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>jws.mvc.rpc.annotation.Path</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>param source</string>
+        </entry>
+        <entry>
+          <string>xpath</string>
+          <string>./self::FormalParameter[../../..[@Public=&apos;true&apos; and @Void=&apos;false&apos; and @Static=&apos;false&apos;] and ancestor::TypeDeclaration/Annotation/SingleMemberAnnotation/Name[@RawClassName=&apos;com.alibaba.jakes.RestResource&apos;] and not(ancestor::ClassOrInterfaceBodyDeclaration//Annotation/MarkerAnnotation/Name[@RawClassName=&apos;com.alibaba.jakes.NotExposed&apos;])]</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source jws</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bparams.getAll\b|\bparams.get\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>param source</string>
+        </entry>
+        <entry>
+          <string>tag</string>
+          <string>UDF</string>
+        </entry>
+        <entry>
+          <string>xpath</string>
+          <string>./self::FormalParameter[../../..[@Public=&apos;true&apos; and @Static=&apos;false&apos; and @MethodName=&apos;evaluate&apos;] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,&apos;com.aliyun.odps.udf.UDF&apos;)]]</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>param source</string>
+        </entry>
+        <entry>
+          <string>tag</string>
+          <string>UDTF</string>
+        </entry>
+        <entry>
+          <string>xpath</string>
+          <string>./self::FormalParameter[../../..[@Public=&apos;true&apos; and @Static=&apos;false&apos; and @MethodName=&apos;process&apos;] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,&apos;com.aliyun.odps.udf.UDTF&apos;)]]</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>param source</string>
+        </entry>
+        <entry>
+          <string>tag</string>
+          <string>UDAF</string>
+        </entry>
+        <entry>
+          <string>xpath</string>
+          <string>./self::FormalParameter[@ChildIndex = 1 and ../../..[@Public=&apos;true&apos; and @Static=&apos;false&apos; and @MethodName=&apos;iterate&apos;] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,&apos;com.aliyun.odps.udf.Aggregator&apos;)]]</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.tmall.wireless.tac.client.domain.Context.get|com.tmall.wireless.tac.client.domain.Context.getParams|com.tmall.recommend.biz.model.context.RpmRequestContext.getParamByKey|com.tmall.recommend.biz.model.context.RpmRequestContext.getParamMap</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.taobao.recommendplatform.protocol.solution.Context.get</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com\.alibaba\.search\.robot\.common\.RobotFactoryFuncDTO\.(getSysInput|getSysParams|getParams)</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>DfaasSource.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.DfaasSource</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classXpath</string>
+          <string>./self::Annotation/NormalAnnotation/MemberValuePairs/MemberValuePair[@Image=&quot;to&quot;]/MemberValue/PrimaryExpression/PrimaryPrefix/ResultType</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>method redirect set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>me.ele.napos.vine.processor.aop.Redirected</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>NcpServiceImplEntrance.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.stc.pmd.rule.security.userdfineclass.NcpServiceImplEntrance</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define entrance file</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>NcpServiceImplParamSource.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.stc.pmd.rule.security.userdfineclass.NcpServiceImplParamSource</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>GraphQLSource.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.GraphQLSource</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>CarrySource.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.CarrySource</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>CarryEntrance.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.CarryEntrance</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define entrance file</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>source annotation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.ai.tool.annotation.ToolParam</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>MCPTool</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>mvc mapping set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>dev.langchain4j.agent.tool.Tool</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>MCPTool</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>mvc mapping set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.ai.tool.annotation.Tool</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.httpclient.methods.GetMethod.setPath|org.apache.commons.httpclient.methods.PostMethod.setPath|org.apache.commons.httpclient.HttpMethodBase.setPath|org.apache.http.client.methods.RequestBuilder.setUri|org.apache.http.client.methods.RequestBuilder.get.setUri|org.apache.http.client.methods.HttpRequestBase.setURI|org.apache.http.client.methods.HttpGet.setURI|org.apache.http.client.methods.HttpPost.setURI|org.apache.http.client.methods.HttpDelete.setURI|org.apache.http.client.methods.HttpPut.setURI|org.apache.http.client.methods.HttpHead.setURI|org.apache.http.client.methods.HttpOptions.setURI|org.apache.http.client.methods.HttpTrace.setURI|org.apache.http.client.methods.HttpPatch.setURI|com.aliyun.api.console.common.service.AliyunApiRequest.execCommandByParams|com.aliyun.api.console.common.service.AliyunApiRequest.execCommandByParamsNoUpper|com.aliyun.api.console.common.service.AliyunApiRequest.setBaseServiceHost|jws.lib.WS.url|jws.http.SimpleHttpClient.doGet|jws.http.SimpleHttpClient.doGetBatch|jws.http.SimpleHttpClient.doPost|jws.http.SimpleHttpClient.doPostAll|okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URL&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.imageio.ImageIO.read|org.apache.commons.io.IOUtils.toByteArray|org.apache.commons.io.IOUtils.toString|org.apache.commons.io.FileUtils.copyURLToFile|org.apache.commons.io.file.PathUtils.copyFile|org.apache.commons.io.file.PathUtils.copyFileToDirectory</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URI&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.imageio.ImageIO.read|org.apache.commons.io.IOUtils.toByteArray|org.apache.commons.io.IOUtils.toString|org.apache.commons.io.FileUtils.copyURLToFile|org.apache.commons.io.file.PathUtils.copyFile|org.apache.commons.io.file.PathUtils.copyFileToDirectory</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>okhttp3\.OkHttpClient\.newCall|okhttp\.OkHttpClient\.newCall|ExecutableClient\.newGetClient|ExecutableClient\.newPostClient</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org\.apache\.commons\.io\.input\.XmlStreamReader</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org\.springframework\.web\.client\.RestTemplate\.(getFor.*|headForHeaders|postFor.*|patchFor.*|optionsFor.*|put|delete|exchange|execute)|org.apache.http.client.fluent.Request.Get\b|org.apache.http.client.fluent.Request.Post\b|com.taobao.pandora.boot.utils.DownloadUtils.download|org.jsoup.Jsoup.connect</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java\.net\.URL\.openConnection|java\.net\.URL\.getContent|java\.net\.URL\.openStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.httpclient.methods.GetMethod|org.apache.commons.httpclient.methods.PostMethod|org.apache.commons.httpclient.HttpMethodBase|org.apache.http.client.methods.HttpGet|org.apache.http.client.methods.HttpPost|org.apache.http.client.methods.HttpDelete|org.apache.http.client.methods.HttpPut|org.apache.http.client.methods.HttpHead|org.apache.http.client.methods.HttpOptions|org.apache.http.client.methods.HttpTrace|org.apache.http.client.methods.HttpPatch|com.aliyun.market.core.openapi.OpenApiClient|jws.http.Request|okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string></string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink object set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.http.client.ClientHttpRequest.execute|java.net.URL.openConnection|java.net.URL.getContent|java.net.URL.openStream|com.aliyuncs.fc.client.FunctionComputeClient.deleteService</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyuncs.fc.http.HttpRequest.getHttpConnection|com.aliyuncs.fc.http.HttpResponse.getResponse</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>kong.unirest.UnirestInstance.get</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.http.HttpHost._init_.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URL&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>ws.schild.jave.MultimediaObject._init_.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URI&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.net.http.HttpRequest.newBuilder|java.net.http.HttpRequest.newBuilder.uri</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.eclipse.jetty.client.HttpClient.newRequest</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.web.reactive.function.client.WebClient.create</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.web.reactive.function.client.WebClient.Builder.baseUrl</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>play.libs.ws.WSClient.url</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>play.libs.ws.StandaloneWSClient.url</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>retrofit2.Retrofit.Builder.baseUrl</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>ThreadPoolUserDefineInvoke.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.ThreadPoolUserDefineInvoke</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>object to param propagate</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\b.*Stream\.read\b|\b.*Reader\.read\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>definite no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.toString|^com.alibaba.citrus.*|^com.alibaba.common.*|^com.alibaba.fasttext.*|^com.alibaba.turbine.*|^com.google.*|^java.*|^javax.*</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe method no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(?i)org\.springframework\.orm\.ibatis\.SqlMapClientOperations\.|org\.apache\.ibatis\.session\.SqlSession\.select|org\.apache\.ibatis\.session\.SqlSession\.selectList|org\.apache\.ibatis\.session\.SqlSession\.selectMap|org\.apache\.ibatis\.session\.SqlSession\.selectOne|org\.hibernate\.Query\.list|org\.springframework\.jdbc\.core\.JdbcTemplate\.execute|org\.springframework\.jdbc\.core\.JdbcTemplate\.query|org\.springframework\.jdbc\.core\.JdbcTemplate\.queryForList|org\.springframework\.jdbc\.core\.JdbcTemplate\.queryForMap|org\.springframework\.jdbc\.core\.JdbcTemplate\.queryForObject|org\.springframework\.jdbc\.core\.JdbcTemplate\.queryForRowSet|java\.sql\.ResultSet|java\.sql\.Statement\.|org\.springframework\.jdbc\.core\.namedparam\.NamedParameterJdbcTemplate\.query|objRedisTemplate\.opsForValue\.get|redisTemplate\.opsForValue\.get|objRedisTemplate\.opsForValue\.get|redisTemplate\.opsForValue\.get|redis.clients.jedis.Jedis.get</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>JdbcTemplate</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe method no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>JdbcTemplate\.|\bqueryForList\b|\bqueryForObject\b|\bquery\b|getSqlMapClientTemplate</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>HSFSanitizers</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe method no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(?i)\w*?hsf\w*?\.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>HSFSanitizers</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>definite no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>^com.taobao.hsf.*</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>StoredSanitizers</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe method no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(?i)(OSSService|ossclient)|(?i)md5|JSONObject\.getString|(?i)\.\w*?search\w*?$|(?i)\w*?uic\w+\.getUser|(?i)dao\.(get|find)|(?i)dao\.*|(?i)dao\.get|(?i)query|(?i)select|(?i)service\.get|(?i)service\.load|\bexecute|\bfind|\binsert|\bquery|\bselect|\bupdate|\w*?TfsManager\.\w+|getHibernateTemplate</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe method no source file</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(?i)(\benum|enum\b)</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>0</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>Velocity\.evaluate</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>object</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bStringBuilder\.getChars\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate set</string>
+        </entry>
+        <entry>
+          <string>precise</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>0</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.beanutils.PropertyUtils.copyProperties|org.apache.commons.beanutils.BeanUtilsBean.getInstance.copyProperties|org.apache.commons.beanutils.BeanUtilsBean.copyProperties|org.springframework.cglib.beans.BeanCopier.copy|net.sf.cglib.beans.BeanCopier.create.copy|net.sf.cglib.beans.BeanCopier.copy</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>0</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate set</string>
+        </entry>
+        <entry>
+          <string>precise</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>cn.hutool.core.bean.BeanUtil.copyProperties</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>0</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate set</string>
+        </entry>
+        <entry>
+          <string>precise</string>
+          <string>true</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.data.security.client.DataSecurity.protectFile|ma.glasnost.orika.MapperFacade</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>streamRelatedType</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>int</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>Double|double|java.lang.Double|Float|float|java.lang.Float|Integer|java.lang.Integer|Long|long|java.lang.Long|Short|short|java.lang.Short|bool|boolean|java.lang.Boolean|char|java.lang.Character|byte|java.lang.Byte</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>BigDecimal</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.math.BigDecimal|java.math.BigInteger</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>ch.ethz.ssh2.log.Logger|ch.qos.logback.classic.Logger|com.alibaba.common.logging.Logger|com.esotericsoftware.minlog.Log.Logger|com.jcraft.jsch.Logger|com.taobao.common.logs.LoggerUtil|com.taobao.top.link.Logger|com.trilead.ssh2.log.Logger|java.util.logging.Logger|org.apache.commons.logging.Log|org.apache.log4j.Logger|org.slf4j.Logger</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.IOException|java.lang.Exception</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.lang.System|java.lang.Class|java.lang.reflect.Field|java.lang.reflect.Method</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.lang.reflect.Method.invoke</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.sql.Date|java.text.DateFormat|java.util.Calendar|java.util.Date|cn.hutool.core.date.DateTime</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.poi.hssf.usermodel.HSSFWorkbook|org.apache.poi.xssf.usermodel.XSSFWorkbook|org.apache.zookeeper.ZooKeeper|groovy.lang.Binding</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe types</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.CriteriaQuery$|java\.time.*</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.lang.Double.parseDouble|java.lang.Boolean.valueOf|java.lang.Float.valueOf|java.lang.Integer.parseInt|java.lang.Integer.valueOf|java.lang.Long.parseLong|java.lang.Long.valueOf|java.lang.System.out.println</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.service.rundata.parser.ParameterParser.getBoolean|com.alibaba.service.rundata.parser.ParameterParser.getDate|com.alibaba.service.rundata.parser.ParameterParser.getDouble|com.alibaba.service.rundata.parser.ParameterParser.getFloat|com.alibaba.service.rundata.parser.ParameterParser.getInt|com.alibaba.service.rundata.parser.ParameterParser.getLong|com.alibaba.service.rundata.parser.ParameterParser.getShort</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.text.DateFormat.format|java.text.DateFormat.parse|java.text.SimpleDateFormat.format|java.text.SimpleDateFormat.parse</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>sql</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.orm.ibatis.SqlMapClientOperations|org.apache.ibatis.session.SqlSession.select|org.apache.ibatis.session.SqlSession.selectList|org.apache.ibatis.session.SqlSession.selectMap|org.apache.ibatis.session.SqlSession.selectOne|org.hibernate.Query.list|org.springframework.jdbc.core.JdbcTemplate.execute|org.springframework.jdbc.core.JdbcTemplate.query|org.springframework.jdbc.core.JdbcTemplate.queryForList|org.springframework.jdbc.core.JdbcTemplate.queryForMap|org.springframework.jdbc.core.JdbcTemplate.queryForObject|org.springframework.jdbc.core.JdbcTemplate.queryForRowSet|java.sql.ResultSet|java.sql.Statement|org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.crypto.Cipher.doFinal|javax.crypto.Mac.doFinal|javax.validation.Validator.validate|java.security.Signature.update|com.hichina.bc.utils.StringUtils.encodeString</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.intl.commons.security.DESEncryptUtils.encrypt|com.alipay.common.lang.signature.DSASignature.check</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>oss</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.oss.OSS.getObject|com.aliyun.oss.OSSClient.getObject|com.aliyun.oss.OSSClient.generatePresignedUrl|com.aliyun.oss.OSS.generatePresignedUrl</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.buc.api.AccessControlService.checkPermissions|com.alibaba.ascp.tools.gei.processor.api.service.TaskFacade.getGeiTask|com.aliyun.dataworks.dac.app.instance.query.AssetInstanceDomainQueryService.getPluginObjectByUuid</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.getBean|\.getBoolean\b|\.getDouble\b|\.getFloat\b|\.getInt\b|\.getInts\b|\.getLong\b|\.getLongs\b|\.getShort\b|\.length\b|\.size\b|org.apache.commons.lang.math.NumberUtils\.*</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.toDate|LocalDate\.parse</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bselectNodes\b|com.taobao.common.tfs\.\w*?TfsManager\.\w+|com.taobao.tair.*\.get|com\.taobao\.diamond\.client\.Diamond\.getConfig|com\.taobao\.diamond\.client\.Diamond\.getConfigFromSnapShot|com\.taobao\.metaq\.client\.MetaProducer\.send|com\.taobao\.metaq\.client\.MetaPullConsumer\.pull</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>GetMethod\.get|PostMethod\.get|HttpMethod\.get|TripKvStore.get|\bgetAcsResponse\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org\.apache\.hadoop\.hbase\.client\.Connection\.getTable|org\.apache\.hadoop\.hbase\.client\.HTablePool\.getTable|com\.taobao\.rdb2\.smart\.RdbSmartApi\.init|com\.taobao\.tlog\.hbase\.client\.TLogHBaseClient\.getData|RedisSyncApi\.get|Jedis\.get|.*cache[A-Za-z_$]\.get|JedisCluster\.get|com\.google\.common\.cache</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>encode</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>Base64\.encode|org.apache.commons.codec.digest.DigestUtils\.\w+Hex</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>JobClient\.|com\.alibaba\.schedulerx\.worker\.SchedulerxWorker\.init|com\.alibaba\.buc\.[\w\.]*?\.find|com\.alibaba\.buc\.[\w\.]*?\.get|com\.taobao\.clouddrive\.api\.*|com\.taobao\.notify\.remotingclient\.NotifyManager\.sendMessage|com\.taobao\.vipserver\.client\.core\.VIPClient\.getAllHosts|\.taobao\.vipserver\.client\.core\.VIPClient\.getHosts</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string></string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.isDigits|\.isNumber|\.isNumeric</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>SafeVarnames</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe varnames</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>(?i)(service|manager|dao)$|(?i)(service|manager|dao)Impl|response$</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>SafeServletType</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.servlet.ServletRequest|javax.servlet.http.HttpServletRequest|javax.servlet.http.HttpSession</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>sql</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sanitizer object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>Select.execute</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>sql</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.hadoop.hbase.client.Get</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>oss</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.oss.OSS|com.aliyun.oss.OSSClient</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>0</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bSystem\.arraycopy\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>object</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>2</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.lang.String.getChars</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+  <rosterItems/>
+  <comRosterItems/>
+  <sinks/>
+  <sources/>
+  <safes/>
+</net.sourceforge.pmd.ParamRule>

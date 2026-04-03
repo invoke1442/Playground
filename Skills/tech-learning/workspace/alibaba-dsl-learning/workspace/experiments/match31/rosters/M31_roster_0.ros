@@ -1,0 +1,7 @@
+Roster M31_roster {
+    sink.methodArg += {
+        precise = true;
+        value = "java.util.regex.Pattern.compile";
+        param = "[{'position':0,'tainted':false,'value':'\\.\\*'}]";
+    };
+}

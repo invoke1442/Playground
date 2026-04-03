@@ -1,0 +1,7 @@
+Roster m12_xpath {
+    general.entranceFileXpath = "//CompilationUnit[.//MarkerAnnotation/Name/@Image='Controller']";
+    general.scanAllFiles = true;
+    general.taintOnlyBySummary = true;
+    general.handlePolymorphism = true;
+    general.polyHandleNum = 1;
+}

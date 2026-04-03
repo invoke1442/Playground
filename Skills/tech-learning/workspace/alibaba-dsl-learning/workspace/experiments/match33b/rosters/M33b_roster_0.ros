@@ -1,0 +1,6 @@
+Roster M33b_roster {
+    sink.xpath += {
+        value = "//PrimaryExpression[PrimaryPrefix/Name[@Image='Pattern.compile']]";
+        tag = "patternCompileUsage";
+    };
+}

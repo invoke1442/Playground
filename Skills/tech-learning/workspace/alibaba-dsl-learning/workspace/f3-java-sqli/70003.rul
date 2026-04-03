@@ -1,0 +1,4 @@
+Rule SQLiComplete extends AbstractTaintRule {
+    type = "SQLi";
+    subType = "SQLInjection";
+}

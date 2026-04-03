@@ -1,0 +1,66 @@
+{
+  "_sqlite3.connect": [
+    "advanced_source.sql_injection"
+  ],
+  "advanced_source.step1": [
+    "advanced_source.indirect_rce"
+  ],
+  "advanced_source.step2": [
+    "advanced_source.indirect_rce"
+  ],
+  "advanced_source.step3": [
+    "advanced_source.indirect_rce"
+  ],
+  "input": [
+    "advanced_source.rce_os_system",
+    "advanced_source.rce_subprocess",
+    "advanced_source.safe_function",
+    "advanced_source.sql_injection",
+    "advanced_source.step1",
+    "advanced_source.unsafe_deserialization",
+    "advanced_source.unsafe_yaml_load",
+    "source.convert"
+  ],
+  "os.system": [
+    "advanced_source.rce_os_system",
+    "advanced_source.step3",
+    "source.get_image"
+  ],
+  "pickle.loads": [
+    "advanced_source.unsafe_deserialization"
+  ],
+  "source.get_image": [
+    "source.convert"
+  ],
+  "subprocess.run": [
+    "advanced_source.rce_subprocess"
+  ],
+  "yaml.load": [
+    "advanced_source.unsafe_yaml_load"
+  ],
+  "int.__new__": [
+    "advanced_source.safe_function"
+  ],
+  "object.__init__": [
+    "advanced_source.safe_function"
+  ],
+  "sqlite3.Connection.cursor": [
+    "advanced_source.sql_injection"
+  ],
+  "sqlite3.Cursor.execute": [
+    "advanced_source.sql_injection"
+  ],
+  "sqlite3.Cursor.fetchall": [
+    "advanced_source.sql_injection"
+  ],
+  "str.__add__": [
+    "advanced_source.step2"
+  ],
+  "str.encode": [
+    "advanced_source.unsafe_deserialization"
+  ],
+  "str.format": [
+    "advanced_source.sql_injection",
+    "source.get_image"
+  ]
+}

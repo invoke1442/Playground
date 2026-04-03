@@ -1,0 +1,1 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-ts-43\",\"default_template\":\"Line {}, Column {}: custom define config: {} can only be string value\",\"type\":\"error\",\"values\":[\"2\",\"4\",\"propagate.methodReturn\"]}]","execution_time_ms":291}}

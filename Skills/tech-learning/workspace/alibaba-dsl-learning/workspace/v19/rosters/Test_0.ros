@@ -1,0 +1,6 @@
+Roster Test {
+    source.expression += {
+        value += "/ctx\\.sql$/";
+        taintTag = "sql_tag";
+    };
+}

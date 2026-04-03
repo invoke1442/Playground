@@ -1,0 +1,23 @@
+Roster My_Custom_Roster {
+    source.methodReturn += {
+        precise = true;
+        value = "com.antigravity.demo.Source.generatePayload";
+    };
+
+    sink.methodArg += {
+        precise = true;
+        value = "com.antigravity.demo.Sink.execute";
+    };
+
+    sanitizer.methodReturn += {
+        value = "com.antigravity.demo.Sanitizer.cleanse";
+    };
+    
+    group AllPlatforms {
+        includePlatforms = "*";
+        excludePlatforms = "legacy";
+        sanitizer.methodReturn += {
+            value = "com.antigravity.demo.Safety.wrap";
+        };
+    };
+}

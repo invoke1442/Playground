@@ -1,0 +1,4 @@
+Rule XssEntry_70004 extends AbstractTaintRule {
+    type = "Xss";
+    subType = "XssTs";
+}

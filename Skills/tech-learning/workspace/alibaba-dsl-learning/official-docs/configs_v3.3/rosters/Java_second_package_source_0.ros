@@ -1,0 +1,10 @@
+Roster Java_second_package_source {
+	group jar_sourcecode_sources {
+		includePlatforms = "AONE_SECOND_PARTY,SAR";
+		excludePlatforms = "";
+		general.scanAllFiles = true;
+		propagate.bAllPublicMethod += {
+			value = true;
+		};
+	};
+}

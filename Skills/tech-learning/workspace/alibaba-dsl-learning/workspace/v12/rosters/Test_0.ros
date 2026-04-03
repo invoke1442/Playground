@@ -1,0 +1,6 @@
+Roster Test {
+    source.expression += {
+        value += "/ctx\\.request\\.body$/";
+        pattern += "/ctx\\.request\\.body$/";
+    };
+}

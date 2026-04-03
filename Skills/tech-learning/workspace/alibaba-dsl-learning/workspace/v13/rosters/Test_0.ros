@@ -1,0 +1,5 @@
+Roster Test {
+    source.paramDecorator += {
+        value = "/@Query\\b/";
+    };
+}

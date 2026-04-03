@@ -1,0 +1,9 @@
+Roster m08_vmContext {
+    propagate.vmContext += {
+        precise = true;
+        value = "com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute";
+    };
+    propagate.vmContext += {
+        value = "\\bTemplateContext.put\\b";
+    };
+}

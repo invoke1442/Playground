@@ -1,0 +1,5 @@
+Roster NodeJS_xss_core {
+    source.methodReturn += { value += "/\\breq\\.query\\b|\\breq\\.body\\b/"; };
+    sink.methodArg += { pattern += "/\\bres\\.send\\b|\\bres\\.write\\b/"; };
+    sanitizer.methodReturn += { pattern += "/\\bescapeHtml\\b/"; };
+}

@@ -1,0 +1,6 @@
+ModelQuery(
+  name = "find_all_input_functions",
+  find = "functions",
+  where = [name.matches("input")],
+  model = Returns(TaintSource[UserControlled])
+)

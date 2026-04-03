@@ -1,0 +1,15 @@
+[2026-03-01 10:33:16] [javac-extractor-2550971] Starting extraction for:
+                                                sun.java.command=com.semmle.extractor.java.JavaExtractor --jdk-version 17 --javac-args @@@/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/codeql-ast-demo-db/log/ext/javac.args
+                                                user.dir=/home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo
+[2026-03-01 10:33:16] [javac-extractor-2550971] Compilation name /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/codeql-ast-demo-db/trap/java/diagnostics/diagnostic.trap.gz
+[2026-03-01 10:33:16] [javac-extractor-2550971] [WARN] Appending source destination directory /home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/target/generated-sources/annotations to sourcepath
+[2026-03-01 10:33:17] [javac-extractor-2550971] Annotation processor class 'lombok.launch.AnnotationProcessorHider$AnnotationProcessor' initialized.
+[2026-03-01 10:33:17] [javac-extractor-2550971] Annotation processor class 'lombok.launch.AnnotationProcessorHider$ClaimingProcessor' initialized.
+[2026-03-01 10:33:17] [javac-extractor-2550971] 1 files will be passed to the attrib/flow phase
+[2026-03-01 10:33:17] [javac-extractor-2550971] Processing file /home/nyn/Desktop/Projects/Java/Java-learning/src/codeql-ast-demo/src/main/java/org/example/ast/AstShowcase.java
+[2026-03-01 10:33:18] [javac-extractor-2550971] Processing module java.base
+[2026-03-01 10:33:18] [javac-extractor-2550971] Javac init time: 1.0s
+[2026-03-01 10:33:18] [javac-extractor-2550971] Javac attr time: 0.1s
+[2026-03-01 10:33:18] [javac-extractor-2550971] Extractor time: 1.5s
+[2026-03-01 10:33:18] [javac-extractor-2550971] Other time: 0.2s
+[2026-03-01 10:33:18] [javac-extractor-2550971] Total time: 2.8s

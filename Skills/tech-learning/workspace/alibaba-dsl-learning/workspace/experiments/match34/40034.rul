@@ -1,0 +1,5 @@
+Rule MatchTest34 extends AbstractTaintRule {
+    import roster M34_roster;
+    type = "Test"; subType = "MatchTest";
+    sink.methodArg += { precise = true; value = "java.lang.Runtime.exec"; };
+}

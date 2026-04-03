@@ -1,0 +1,10 @@
+Rule NewXSSJava extends AbstractTaintRule {
+	import roster Java_common_propagate;
+	import roster Java_xss_propagate;
+	import roster Java_network_io_sanitizer;
+	import roster Java_stream_io_sanitizer;
+	import roster Java_Param_new_callbackxss_sink;
+	import roster Java_common_source exclude FrontendExcludeMe;
+	type = "XSSJava";
+	subType = "callbackxss";
+}

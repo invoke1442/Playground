@@ -1,0 +1,4 @@
+Rule TestRule extends AbstractTaintRule {
+    type = "Test";
+    subType = "TestRule";
+}

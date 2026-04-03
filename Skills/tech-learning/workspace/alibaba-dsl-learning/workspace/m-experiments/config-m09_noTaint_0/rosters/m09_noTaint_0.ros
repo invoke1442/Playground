@@ -1,0 +1,9 @@
+Roster m09_noTaint {
+    propagate.noTaintNoSourceFile += {
+        value = "(?i)select|(?i)query|(?i)dao.*|\\binsert|\\bfind|\\bupdate";
+    };
+    propagate.noTaintNoSourceFile += {
+        value = "JSONObject.getString";
+        excludeTag = "ignoreMe";
+    };
+}

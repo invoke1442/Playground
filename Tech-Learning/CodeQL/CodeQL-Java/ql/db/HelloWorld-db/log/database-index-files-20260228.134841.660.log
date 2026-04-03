@@ -1,0 +1,10 @@
+[2026-02-28 13:48:41] This is codeql database index-files --include-extension=.properties --size-limit=5m --language properties -- /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db
+[2026-02-28 13:48:41] Log file was started late.
+[2026-02-28 13:48:41] Using index-files script /home/nyn/Desktop/dev_tools/codeql/properties/tools/index-files.sh.
+[2026-02-28 13:48:41] [PROGRESS] database index-files> Scanning for files in /home/nyn/Desktop/Projects/Java/Java-learning/src...
+[2026-02-28 13:48:41] Calling plumbing command: codeql resolve files --include-extension=.properties --size-limit=5m /home/nyn/Desktop/Projects/Java/Java-learning/src --format=json
+[2026-02-28 13:48:41] [PROGRESS] resolve files> Scanning /home/nyn/Desktop/Projects/Java/Java-learning/src...
+[2026-02-28 13:48:41] Plumbing command codeql resolve files completed:
+                      [ ]
+[2026-02-28 13:48:41] [DETAILS] database index-files> Found 0 files.
+[2026-02-28 13:48:41] Terminating normally.

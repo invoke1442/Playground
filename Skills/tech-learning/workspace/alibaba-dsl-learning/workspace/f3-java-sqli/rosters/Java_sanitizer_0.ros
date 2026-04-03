@@ -1,0 +1,3 @@
+Roster Java_sanitizer {
+    sanitizer.methodReturn += { value = "com.example.SQLFilter.escape"; };
+}

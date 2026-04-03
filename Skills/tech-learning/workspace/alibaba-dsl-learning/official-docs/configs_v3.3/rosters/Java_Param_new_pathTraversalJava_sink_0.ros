@@ -1,0 +1,83 @@
+Roster Java_Param_new_pathTraversalJava_sink {
+	sink.methodArgJws += {
+		value = "\\brender\\b|\\brenderTemplate\\b|\\brenderHtml\\b|\\brenderArgs.put\\b";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "javax.servlet.jsp.JspWriter.write|javax.servlet.jsp.JspWriter.print|javax.servlet.jsp.JspWriter.println|javax.servlet.ServletOutputStream.write|javax.servlet.ServletOutputStream.print|javax.servlet.ServletOutputStream.println|javax.servlet.http.HttpServletResponse.getWriter.write|javax.servlet.http.HttpServletResponse.getWriter.print|javax.servlet.http.HttpServletResponse.getWriter.println|javax.servlet.http.HttpServletResponse.getOutputStream.write|javax.servlet.http.HttpServletResponse.getOutputStream.print|javax.servlet.http.HttpServletResponse.getOutputStream.println";
+	};
+	sink.methodArg += {
+		value = "\\bgetResponse.getWriter.write$|\\bgetResponse.getWriter.print$|\\bgetResponse.getWriter.println$";
+	};
+	propagate.methodReturnUpcast += {
+		precise = true;
+		value = "javax.servlet.http.HttpServletResponse.getWriter|javax.servlet.http.HttpServletResponse.getOutputStream";
+	};
+	propagate.methodReturnUpcast += {
+		value = "\\bgetResponse.getWriter$|\\bgetResponse.getOutputStream$";
+	};
+	sink.methoArgUpcast += {
+		precise = true;
+		value = "java.io.Writer.write|java.io.PrintWriter.print|java.io.PrintWriter.println|java.io.PrintWriter.write|java.io.OutputStream.write";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute";
+	};
+	propagate.vmContext += {
+		value = "\\bTemplateContext.put\\b";
+	};
+	sink.responseBody += {
+		value = "annotation.ResponseBody";
+	};
+	sink.responseClass += {
+		value = "annotation.RestController";
+	};
+	propagate.bUseCritical += {
+		value = true;
+	};
+	propagate.criticalType += {
+		precise = true;
+		value = "java.io.File|java.io.FileInputStream|java.io.FileReader|java.io.RandomAccessFile|File|FileInputStream|FileReader|RandomAccessFile|java.io.InputStream";
+	};
+	propagate.methodArgToReturnCritical += {
+		precise = true;
+		value = "com.alibaba.intl.commons.file.client.FileClient.readFileToByteArray|org.apache.commons.io.FileUtils.readFileToByteArray|java.nio.file.Paths.get|java.nio.file.Files.newInputStream";
+	};
+	propagate.methodObjectToFirstArgCritical += {
+		precise = true;
+		value = "java.io.BufferedInputStream.read|java.io.BufferedReader.read|java.io.ByteArrayInputStream.read|java.io.DataInputStream.read|java.io.FileInputStream.read|java.io.InputStream.read|java.io.FileReader.read|java.io.PrintStream.read|java.io.InputStream.read";
+	};
+	propagate.methodObjectToReturnCritical += {
+		precise = true;
+		value = "java.io.BufferedInputStream.read|java.io.BufferedReader.read|java.io.ByteArrayInputStream.read|java.io.DataInputStream.read|java.io.FileInputStream.read|java.io.InputStream.read|java.io.FileReader.read|java.io.PrintStream.read";
+	};
+ 	sink.methodObject += {
+		value = "java.io.File.delete";
+      	flag = "new sink";
+	};
+   	sink.methodObject += {
+		value = "org.apache.commons.io.FileUtils.(forceDelete|deleteDirectory|deleteQuietly)";
+      	flag = "new sink";
+	};
+	sink.methodCritical += {
+		precise = true;
+		value = "org.apache.commons.io.IOUtils.copy|org.apache.commons.io.IOUtils.copyLarge|org.apache.commons.io.FileUtils.copyFile";
+	};
+	sink.methodArg += { // #modify 30024
+		value = "java.io.File.<init>|java.io.FileInputStream.<init>|java.io.FileOutputStream.<init>|java.io.RandomAccessFile.<init>";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30025
+		value = "java.nio.file.Files.(newBufferedReader|newBufferedWriter|newByteChannel|newDirectoryStream|newInputStream|newOutputStream|readAllBytes|readAllLines|lines|copy|move|createFile|createDirectory|createDirectories|createTempFile|createTempDirectory|write|delete|deleteIfExists)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30040
+		value = "java.io.FileReader.<init>";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30041
+		value = "java.nio.file.Files.lines";
+		param = "[{'position':0,'tainted':true}]";
+	};
+}

@@ -1,0 +1,14 @@
+Roster m04_customPropagate {
+    propagate.customMethodPropagate += {
+        value = "java.lang.String.join";
+        from = "1";
+        to = "return";
+    };
+    propagate.customMethodPropagate += {
+        precise = true;
+        value = "org.apache.commons.lang3.StringUtils.replace";
+        from = "0";
+        to = "return";
+        accurate = true;
+    };
+}

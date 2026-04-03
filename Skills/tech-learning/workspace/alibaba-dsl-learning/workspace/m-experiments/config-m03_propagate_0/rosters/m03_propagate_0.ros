@@ -1,0 +1,8 @@
+Roster m03_propagate {
+    propagate.methodObjectToReturn += {
+        value = "append|concat|toString|composeUrl";
+    };
+    propagate.methodObjectToFirstArg += {
+        value = "java.util.List.add|java.util.Map.put";
+    };
+}

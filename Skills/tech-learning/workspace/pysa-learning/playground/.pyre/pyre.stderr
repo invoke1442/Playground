@@ -1,0 +1,2321 @@
+2026-04-01 15:27:00,715 [PID 4023259] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:27:00,715 [PID 4023259] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:27:00,715 [PID 4023259] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:27:00,715 [PID 4023259] INFO No typeshed specified, looking for it...
+2026-04-01 15:27:00,715 [PID 4023259] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:27:00,716 [PID 4023259] INFO Writing arguments into /tmp/pyre_arguments_ftkv7fp_.json...
+2026-04-01 15:27:00,716 [PID 4023259] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:27:00,758 [PID 4023259] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:27:00,778 [PID 4023259] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:27:00,779 [PID 4023259] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:27:00,779 [PID 4023259] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:27:00,779 [PID 4023259] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:27:00,779 [PID 4023259] INFO  Verifying model syntax...
+2026-04-01 15:27:00,780 [PID 4023259] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:27:00,780 [PID 4023259] INFO  Verified model syntax: 0.000s
+2026-04-01 15:27:00,780 [PID 4023259] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:27:00,780 [PID 4023259] INFO  Parsing taint models modes...
+2026-04-01 15:27:00,780 [PID 4023259] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:27:00,780 [PID 4023259] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:27:00,781 [PID 4023259] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:27:00,781 [PID 4023259] INFO  Building module tracker...
+2026-04-01 15:27:00,812 [PID 4023259] PERFORMANCE  Module tracker built: 0.026s
+2026-04-01 15:27:00,812 [PID 4023259] PERFORMANCE  Full environment built: 0.026s
+2026-04-01 15:27:00,812 [PID 4023259] INFO  Starting type checking...
+2026-04-01 15:27:00,812 [PID 4023259] INFO  Found 917 modules
+2026-04-01 15:27:00,812 [PID 4023259] INFO  Collecting all definitions...
+2026-04-01 15:27:01,190 [PID 4023259] PERFORMANCE  Collected definitions (defines: 20291): 0.378s
+2026-04-01 15:27:01,190 [PID 4023259] INFO  Found 20291 functions
+2026-04-01 15:27:01,190 [PID 4023259] INFO  Checking 20291 functions...
+2026-04-01 15:27:01,509 [PID 4023259] INFO  Processed 328 of 20291 functions
+2026-04-01 15:27:01,520 [PID 4023259] INFO  Processed 656 of 20291 functions
+2026-04-01 15:27:01,541 [PID 4023259] INFO  Processed 984 of 20291 functions
+2026-04-01 15:27:01,541 [PID 4023259] INFO  Processed 1312 of 20291 functions
+2026-04-01 15:27:01,552 [PID 4023259] INFO  Processed 1640 of 20291 functions
+2026-04-01 15:27:01,563 [PID 4023259] INFO  Processed 1968 of 20291 functions
+2026-04-01 15:27:01,574 [PID 4023259] INFO  Processed 2296 of 20291 functions
+2026-04-01 15:27:01,574 [PID 4023259] INFO  Processed 2624 of 20291 functions
+2026-04-01 15:27:01,585 [PID 4023259] INFO  Processed 2952 of 20291 functions
+2026-04-01 15:27:01,585 [PID 4023259] INFO  Processed 3280 of 20291 functions
+2026-04-01 15:27:01,586 [PID 4023259] INFO  Processed 3608 of 20291 functions
+2026-04-01 15:27:01,586 [PID 4023259] INFO  Processed 3936 of 20291 functions
+2026-04-01 15:27:01,597 [PID 4023259] INFO  Processed 4264 of 20291 functions
+2026-04-01 15:27:01,597 [PID 4023259] INFO  Processed 4592 of 20291 functions
+2026-04-01 15:27:01,597 [PID 4023259] INFO  Processed 4920 of 20291 functions
+2026-04-01 15:27:01,608 [PID 4023259] INFO  Processed 5248 of 20291 functions
+2026-04-01 15:27:01,609 [PID 4023259] INFO  Processed 5576 of 20291 functions
+2026-04-01 15:27:01,609 [PID 4023259] INFO  Processed 5904 of 20291 functions
+2026-04-01 15:27:01,609 [PID 4023259] INFO  Processed 6232 of 20291 functions
+2026-04-01 15:27:01,609 [PID 4023259] INFO  Processed 6560 of 20291 functions
+2026-04-01 15:27:01,620 [PID 4023259] INFO  Processed 6888 of 20291 functions
+2026-04-01 15:27:01,620 [PID 4023259] INFO  Processed 7216 of 20291 functions
+2026-04-01 15:27:01,641 [PID 4023259] INFO  Processed 7544 of 20291 functions
+2026-04-01 15:27:01,641 [PID 4023259] INFO  Processed 7872 of 20291 functions
+2026-04-01 15:27:01,703 [PID 4023259] INFO  Processed 8200 of 20291 functions
+2026-04-01 15:27:01,714 [PID 4023259] INFO  Processed 8528 of 20291 functions
+2026-04-01 15:27:01,735 [PID 4023259] INFO  Processed 8856 of 20291 functions
+2026-04-01 15:27:01,766 [PID 4023259] INFO  Processed 9184 of 20291 functions
+2026-04-01 15:27:01,767 [PID 4023259] INFO  Processed 9512 of 20291 functions
+2026-04-01 15:27:01,808 [PID 4023259] INFO  Processed 9840 of 20291 functions
+2026-04-01 15:27:01,809 [PID 4023259] INFO  Processed 10168 of 20291 functions
+2026-04-01 15:27:01,819 [PID 4023259] INFO  Processed 10496 of 20291 functions
+2026-04-01 15:27:01,819 [PID 4023259] INFO  Processed 10824 of 20291 functions
+2026-04-01 15:27:01,830 [PID 4023259] INFO  Processed 11152 of 20291 functions
+2026-04-01 15:27:01,831 [PID 4023259] INFO  Processed 11480 of 20291 functions
+2026-04-01 15:27:01,852 [PID 4023259] INFO  Processed 11808 of 20291 functions
+2026-04-01 15:27:01,853 [PID 4023259] INFO  Processed 12136 of 20291 functions
+2026-04-01 15:27:01,863 [PID 4023259] INFO  Processed 12464 of 20291 functions
+2026-04-01 15:27:01,864 [PID 4023259] INFO  Processed 12792 of 20291 functions
+2026-04-01 15:27:01,864 [PID 4023259] INFO  Processed 13120 of 20291 functions
+2026-04-01 15:27:01,875 [PID 4023259] INFO  Processed 13448 of 20291 functions
+2026-04-01 15:27:01,897 [PID 4023259] INFO  Processed 13776 of 20291 functions
+2026-04-01 15:27:01,897 [PID 4023259] INFO  Processed 14104 of 20291 functions
+2026-04-01 15:27:01,897 [PID 4023259] INFO  Processed 14432 of 20291 functions
+2026-04-01 15:27:01,908 [PID 4023259] INFO  Processed 14760 of 20291 functions
+2026-04-01 15:27:01,929 [PID 4023259] INFO  Processed 15088 of 20291 functions
+2026-04-01 15:27:01,929 [PID 4023259] INFO  Processed 15416 of 20291 functions
+2026-04-01 15:27:01,930 [PID 4023259] INFO  Processed 15744 of 20291 functions
+2026-04-01 15:27:01,940 [PID 4023259] INFO  Processed 16072 of 20291 functions
+2026-04-01 15:27:01,940 [PID 4023259] INFO  Processed 16400 of 20291 functions
+2026-04-01 15:27:01,951 [PID 4023259] INFO  Processed 16728 of 20291 functions
+2026-04-01 15:27:01,962 [PID 4023259] INFO  Processed 17056 of 20291 functions
+2026-04-01 15:27:01,972 [PID 4023259] INFO  Processed 17384 of 20291 functions
+2026-04-01 15:27:01,983 [PID 4023259] INFO  Processed 17712 of 20291 functions
+2026-04-01 15:27:01,983 [PID 4023259] INFO  Processed 18040 of 20291 functions
+2026-04-01 15:27:01,994 [PID 4023259] INFO  Processed 18368 of 20291 functions
+2026-04-01 15:27:01,994 [PID 4023259] INFO  Processed 18696 of 20291 functions
+2026-04-01 15:27:02,025 [PID 4023259] INFO  Processed 19024 of 20291 functions
+2026-04-01 15:27:02,066 [PID 4023259] INFO  Processed 19307 of 20291 functions
+2026-04-01 15:27:02,077 [PID 4023259] INFO  Processed 19635 of 20291 functions
+2026-04-01 15:27:02,088 [PID 4023259] INFO  Processed 19963 of 20291 functions
+2026-04-01 15:27:02,108 [PID 4023259] INFO  Processed 20291 of 20291 functions
+2026-04-01 15:27:02,109 [PID 4023259] PERFORMANCE  Check_TypeCheck: 0.916s
+2026-04-01 15:27:02,109 [PID 4023259] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:27:02,109 [PID 4023259] INFO  Computing class hierarchy graph...
+2026-04-01 15:27:02,272 [PID 4023259] INFO  Computed class hierarchy graph: 0.164s
+2026-04-01 15:27:02,273 [PID 4023259] PERFORMANCE  Computed class hierarchy graph: 0.164s
+2026-04-01 15:27:02,273 [PID 4023259] INFO  Computing class intervals...
+2026-04-01 15:27:02,273 [PID 4023259] INFO  Computed class intervals: 0.008s
+2026-04-01 15:27:02,273 [PID 4023259] PERFORMANCE  Computed class intervals: 0.008s
+2026-04-01 15:27:02,304 [PID 4023259] INFO  Fetching initial callables to analyze...
+2026-04-01 15:27:02,459 [PID 4023259] INFO  Fetched initial callables to analyze: 0.159s
+2026-04-01 15:27:02,460 [PID 4023259] PERFORMANCE  Fetched initial callables to analyze (definitions: 43, internals: 3, stubs: 15779): 0.159s
+2026-04-01 15:27:02,460 [PID 4023259] INFO  Building a map from callable names to definitions...
+2026-04-01 15:27:02,716 [PID 4023259] INFO  Map from callable names to definitions built: 0.247s
+2026-04-01 15:27:02,716 [PID 4023259] PERFORMANCE  Map from callable names to definitions built: 0.247s
+2026-04-01 15:27:02,716 [PID 4023259] INFO  Parsing taint models...
+2026-04-01 15:27:02,829 [PID 4023259] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:27:02,891 [PID 4023259] INFO  Parsed taint models: 0.174s
+2026-04-01 15:27:02,891 [PID 4023259] PERFORMANCE  Parsed taint models (models: 2, queries: 0): 0.174s
+2026-04-01 15:27:02,891 [PID 4023259] INFO  Computing inferred models...
+2026-04-01 15:27:03,034 [PID 4023259] INFO  Computed inferred models: 0.151s
+2026-04-01 15:27:03,034 [PID 4023259] PERFORMANCE  Computed inferred models (models: 83): 0.151s
+2026-04-01 15:27:03,096 [PID 4023259] INFO  Computing overrides...
+2026-04-01 15:27:03,372 [PID 4023259] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:03,373 [PID 4023259] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:03,373 [PID 4023259] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:03,373 [PID 4023259] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:03,374 [PID 4023259] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:03,374 [PID 4023259] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:03,395 [PID 4023259] INFO  Overrides computed: 0.297s
+2026-04-01 15:27:03,395 [PID 4023259] PERFORMANCE  Overrides computed: 0.297s
+2026-04-01 15:27:03,395 [PID 4023259] INFO  Indexing global constants...
+2026-04-01 15:27:03,538 [PID 4023259] INFO  Finished constant propagation analysis: 0.137s
+2026-04-01 15:27:03,538 [PID 4023259] PERFORMANCE  Finished constant propagation analysis: 0.137s
+2026-04-01 15:27:03,539 [PID 4023259] INFO  Building map from callables to decorators...
+2026-04-01 15:27:03,569 [PID 4023259] INFO  Map from callables to decorators built: 0.035s
+2026-04-01 15:27:03,570 [PID 4023259] PERFORMANCE  Map from callables to decorators built: 0.035s
+2026-04-01 15:27:03,570 [PID 4023259] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:27:03,702 [PID 4023259] INFO  Defines and call graphs of decorated targets built: 0.130s
+2026-04-01 15:27:03,702 [PID 4023259] PERFORMANCE  Defines and call graphs of decorated targets built: 0.130s
+2026-04-01 15:27:03,703 [PID 4023259] INFO  Building call graph...
+2026-04-01 15:27:03,835 [PID 4023259] INFO  Call graph built: 0.131s
+2026-04-01 15:27:03,836 [PID 4023259] PERFORMANCE  Call graph built: 0.131s
+2026-04-01 15:27:03,836 [PID 4023259] INFO  Computing dependencies...
+2026-04-01 15:27:03,857 [PID 4023259] INFO  Computed dependencies: 0.023s
+2026-04-01 15:27:03,857 [PID 4023259] PERFORMANCE  Computed dependencies: 0.023s
+2026-04-01 15:27:03,857 [PID 4023259] INFO  Computing higher order call graphs...
+2026-04-01 15:27:04,092 [PID 4023259] PERFORMANCE  Recorded initial models: 0.121s
+2026-04-01 15:27:04,093 [PID 4023259] INFO  Iteration #0. 3 callables [source.get_image, source.convert, source.$toplevel]
+2026-04-01 15:27:04,134 [PID 4023259] INFO  Processed 3 of 3 callables
+2026-04-01 15:27:04,134 [PID 4023259] INFO  Iteration #0, 3 callables, heap size 0.028GB took 0.04s
+2026-04-01 15:27:04,238 [PID 4023259] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:27:04,288 [PID 4023259] INFO  Computed higher order call graphs: 0.435s
+2026-04-01 15:27:04,289 [PID 4023259] PERFORMANCE  Computed higher order call graphs: 0.435s
+2026-04-01 15:27:04,289 [PID 4023259] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:27:04,320 [PID 4023259] INFO  Computed dependencies from higher order call graphs: 0.029s
+2026-04-01 15:27:04,320 [PID 4023259] PERFORMANCE  Computed dependencies from higher order call graphs: 0.029s
+2026-04-01 15:27:04,402 [PID 4023259] INFO  Purging shared memory...
+2026-04-01 15:27:04,413 [PID 4023259] PERFORMANCE  Purged shared memory: 0.004s
+2026-04-01 15:27:04,413 [PID 4023259] INFO  Purging shared memory...
+2026-04-01 15:27:04,413 [PID 4023259] PERFORMANCE  Purged shared memory: 0.004s
+2026-04-01 15:27:04,413 [PID 4023259] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:27:04,414 [PID 4023259] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:27:04,414 [PID 4023259] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:27:04,414 [PID 4023259] INFO  Analysis fixpoint started for 4197 overrides and 6 functions......
+2026-04-01 15:27:04,690 [PID 4023259] PERFORMANCE  Recorded initial models: 0.280s
+2026-04-01 15:27:04,691 [PID 4023259] INFO  Iteration #0. 3 callables [source.get_image, source.convert, source.$toplevel]
+2026-04-01 15:27:04,752 [PID 4023259] INFO  Processed 3 of 3 callables
+2026-04-01 15:27:04,753 [PID 4023259] INFO  Iteration #0, 3 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:27:04,753 [PID 4023259] INFO  Iteration #1. 2 callables [source.get_image, source.convert]
+2026-04-01 15:27:04,805 [PID 4023259] INFO  Processed 2 of 2 callables
+2026-04-01 15:27:04,805 [PID 4023259] INFO  Iteration #1, 2 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:27:04,866 [PID 4023259] INFO  Found 1 issues
+2026-04-01 15:27:04,867 [PID 4023259] INFO  Analysis fixpoint complete: 0.447s
+2026-04-01 15:27:04,867 [PID 4023259] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31109824, issues: 1): 0.447s
+2026-04-01 15:27:04,867 [PID 4023259] PERFORMANCE  Analyze: 4.083s
+2026-04-01 15:27:13,033 [PID 4024422] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:27:13,033 [PID 4024422] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:27:13,033 [PID 4024422] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:27:13,034 [PID 4024422] INFO No typeshed specified, looking for it...
+2026-04-01 15:27:13,034 [PID 4024422] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:27:13,034 [PID 4024422] INFO Writing arguments into /tmp/pyre_arguments_22393nmd.json...
+2026-04-01 15:27:13,034 [PID 4024422] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:27:13,076 [PID 4024422] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:27:13,097 [PID 4024422] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:27:13,097 [PID 4024422] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:27:13,098 [PID 4024422] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:27:13,098 [PID 4024422] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:27:13,098 [PID 4024422] INFO  Verifying model syntax...
+2026-04-01 15:27:13,098 [PID 4024422] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:27:13,098 [PID 4024422] INFO  Verified model syntax: 0.000s
+2026-04-01 15:27:13,098 [PID 4024422] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:27:13,099 [PID 4024422] INFO  Parsing taint models modes...
+2026-04-01 15:27:13,099 [PID 4024422] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:27:13,099 [PID 4024422] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:27:13,099 [PID 4024422] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:27:13,099 [PID 4024422] INFO  Building module tracker...
+2026-04-01 15:27:13,130 [PID 4024422] PERFORMANCE  Module tracker built: 0.025s
+2026-04-01 15:27:13,130 [PID 4024422] PERFORMANCE  Full environment built: 0.025s
+2026-04-01 15:27:13,130 [PID 4024422] INFO  Starting type checking...
+2026-04-01 15:27:13,131 [PID 4024422] INFO  Found 917 modules
+2026-04-01 15:27:13,131 [PID 4024422] INFO  Collecting all definitions...
+2026-04-01 15:27:13,549 [PID 4024422] PERFORMANCE  Collected definitions (defines: 20291): 0.422s
+2026-04-01 15:27:13,549 [PID 4024422] INFO  Found 20291 functions
+2026-04-01 15:27:13,550 [PID 4024422] INFO  Checking 20291 functions...
+2026-04-01 15:27:13,868 [PID 4024422] INFO  Processed 328 of 20291 functions
+2026-04-01 15:27:13,889 [PID 4024422] INFO  Processed 656 of 20291 functions
+2026-04-01 15:27:13,900 [PID 4024422] INFO  Processed 984 of 20291 functions
+2026-04-01 15:27:13,911 [PID 4024422] INFO  Processed 1312 of 20291 functions
+2026-04-01 15:27:13,911 [PID 4024422] INFO  Processed 1640 of 20291 functions
+2026-04-01 15:27:13,922 [PID 4024422] INFO  Processed 1968 of 20291 functions
+2026-04-01 15:27:13,922 [PID 4024422] INFO  Processed 2296 of 20291 functions
+2026-04-01 15:27:13,922 [PID 4024422] INFO  Processed 2624 of 20291 functions
+2026-04-01 15:27:13,943 [PID 4024422] INFO  Processed 2952 of 20291 functions
+2026-04-01 15:27:13,943 [PID 4024422] INFO  Processed 3280 of 20291 functions
+2026-04-01 15:27:13,944 [PID 4024422] INFO  Processed 3608 of 20291 functions
+2026-04-01 15:27:13,954 [PID 4024422] INFO  Processed 3936 of 20291 functions
+2026-04-01 15:27:13,955 [PID 4024422] INFO  Processed 4264 of 20291 functions
+2026-04-01 15:27:13,955 [PID 4024422] INFO  Processed 4592 of 20291 functions
+2026-04-01 15:27:13,955 [PID 4024422] INFO  Processed 4920 of 20291 functions
+2026-04-01 15:27:13,965 [PID 4024422] INFO  Processed 5248 of 20291 functions
+2026-04-01 15:27:13,966 [PID 4024422] INFO  Processed 5576 of 20291 functions
+2026-04-01 15:27:13,966 [PID 4024422] INFO  Processed 5904 of 20291 functions
+2026-04-01 15:27:13,977 [PID 4024422] INFO  Processed 6232 of 20291 functions
+2026-04-01 15:27:13,987 [PID 4024422] INFO  Processed 6560 of 20291 functions
+2026-04-01 15:27:13,998 [PID 4024422] INFO  Processed 6888 of 20291 functions
+2026-04-01 15:27:13,999 [PID 4024422] INFO  Processed 7216 of 20291 functions
+2026-04-01 15:27:14,009 [PID 4024422] INFO  Processed 7544 of 20291 functions
+2026-04-01 15:27:14,010 [PID 4024422] INFO  Processed 7872 of 20291 functions
+2026-04-01 15:27:14,020 [PID 4024422] INFO  Processed 8200 of 20291 functions
+2026-04-01 15:27:14,041 [PID 4024422] INFO  Processed 8528 of 20291 functions
+2026-04-01 15:27:14,073 [PID 4024422] INFO  Processed 8856 of 20291 functions
+2026-04-01 15:27:14,073 [PID 4024422] INFO  Processed 9184 of 20291 functions
+2026-04-01 15:27:14,073 [PID 4024422] INFO  Processed 9512 of 20291 functions
+2026-04-01 15:27:14,115 [PID 4024422] INFO  Processed 9840 of 20291 functions
+2026-04-01 15:27:14,136 [PID 4024422] INFO  Processed 10168 of 20291 functions
+2026-04-01 15:27:14,136 [PID 4024422] INFO  Processed 10496 of 20291 functions
+2026-04-01 15:27:14,167 [PID 4024422] INFO  Processed 10824 of 20291 functions
+2026-04-01 15:27:14,189 [PID 4024422] INFO  Processed 11152 of 20291 functions
+2026-04-01 15:27:14,189 [PID 4024422] INFO  Processed 11480 of 20291 functions
+2026-04-01 15:27:14,200 [PID 4024422] INFO  Processed 11808 of 20291 functions
+2026-04-01 15:27:14,200 [PID 4024422] INFO  Processed 12136 of 20291 functions
+2026-04-01 15:27:14,211 [PID 4024422] INFO  Processed 12464 of 20291 functions
+2026-04-01 15:27:14,211 [PID 4024422] INFO  Processed 12792 of 20291 functions
+2026-04-01 15:27:14,222 [PID 4024422] INFO  Processed 13120 of 20291 functions
+2026-04-01 15:27:14,222 [PID 4024422] INFO  Processed 13448 of 20291 functions
+2026-04-01 15:27:14,233 [PID 4024422] INFO  Processed 13776 of 20291 functions
+2026-04-01 15:27:14,233 [PID 4024422] INFO  Processed 14104 of 20291 functions
+2026-04-01 15:27:14,244 [PID 4024422] INFO  Processed 14432 of 20291 functions
+2026-04-01 15:27:14,244 [PID 4024422] INFO  Processed 14760 of 20291 functions
+2026-04-01 15:27:14,255 [PID 4024422] INFO  Processed 15088 of 20291 functions
+2026-04-01 15:27:14,255 [PID 4024422] INFO  Processed 15416 of 20291 functions
+2026-04-01 15:27:14,265 [PID 4024422] INFO  Processed 15744 of 20291 functions
+2026-04-01 15:27:14,276 [PID 4024422] INFO  Processed 16072 of 20291 functions
+2026-04-01 15:27:14,286 [PID 4024422] INFO  Processed 16400 of 20291 functions
+2026-04-01 15:27:14,287 [PID 4024422] INFO  Processed 16728 of 20291 functions
+2026-04-01 15:27:14,297 [PID 4024422] INFO  Processed 17056 of 20291 functions
+2026-04-01 15:27:14,318 [PID 4024422] INFO  Processed 17384 of 20291 functions
+2026-04-01 15:27:14,339 [PID 4024422] INFO  Processed 17712 of 20291 functions
+2026-04-01 15:27:14,339 [PID 4024422] INFO  Processed 18040 of 20291 functions
+2026-04-01 15:27:14,350 [PID 4024422] INFO  Processed 18323 of 20291 functions
+2026-04-01 15:27:14,380 [PID 4024422] INFO  Processed 18651 of 20291 functions
+2026-04-01 15:27:14,391 [PID 4024422] INFO  Processed 18979 of 20291 functions
+2026-04-01 15:27:14,391 [PID 4024422] INFO  Processed 19307 of 20291 functions
+2026-04-01 15:27:14,411 [PID 4024422] INFO  Processed 19635 of 20291 functions
+2026-04-01 15:27:14,422 [PID 4024422] INFO  Processed 19963 of 20291 functions
+2026-04-01 15:27:14,443 [PID 4024422] INFO  Processed 20291 of 20291 functions
+2026-04-01 15:27:14,443 [PID 4024422] PERFORMANCE  Check_TypeCheck: 0.896s
+2026-04-01 15:27:14,443 [PID 4024422] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:27:14,443 [PID 4024422] INFO  Computing class hierarchy graph...
+2026-04-01 15:27:14,617 [PID 4024422] INFO  Computed class hierarchy graph: 0.166s
+2026-04-01 15:27:14,617 [PID 4024422] PERFORMANCE  Computed class hierarchy graph: 0.166s
+2026-04-01 15:27:14,618 [PID 4024422] INFO  Computing class intervals...
+2026-04-01 15:27:14,628 [PID 4024422] INFO  Computed class intervals: 0.012s
+2026-04-01 15:27:14,628 [PID 4024422] PERFORMANCE  Computed class intervals: 0.012s
+2026-04-01 15:27:14,649 [PID 4024422] INFO  Fetching initial callables to analyze...
+2026-04-01 15:27:14,822 [PID 4024422] INFO  Fetched initial callables to analyze: 0.172s
+2026-04-01 15:27:14,823 [PID 4024422] PERFORMANCE  Fetched initial callables to analyze (definitions: 43, internals: 3, stubs: 15779): 0.172s
+2026-04-01 15:27:14,823 [PID 4024422] INFO  Building a map from callable names to definitions...
+2026-04-01 15:27:15,027 [PID 4024422] INFO  Map from callable names to definitions built: 0.200s
+2026-04-01 15:27:15,027 [PID 4024422] PERFORMANCE  Map from callable names to definitions built: 0.200s
+2026-04-01 15:27:15,027 [PID 4024422] INFO  Parsing taint models...
+2026-04-01 15:27:15,180 [PID 4024422] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:27:15,231 [PID 4024422] INFO  Parsed taint models: 0.208s
+2026-04-01 15:27:15,232 [PID 4024422] PERFORMANCE  Parsed taint models (models: 2, queries: 0): 0.209s
+2026-04-01 15:27:15,232 [PID 4024422] INFO  Computing inferred models...
+2026-04-01 15:27:15,385 [PID 4024422] INFO  Computed inferred models: 0.146s
+2026-04-01 15:27:15,385 [PID 4024422] PERFORMANCE  Computed inferred models (models: 83): 0.146s
+2026-04-01 15:27:15,457 [PID 4024422] INFO  Computing overrides...
+2026-04-01 15:27:15,773 [PID 4024422] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:15,774 [PID 4024422] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:15,774 [PID 4024422] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:15,774 [PID 4024422] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:15,774 [PID 4024422] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:15,774 [PID 4024422] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:27:15,785 [PID 4024422] INFO  Overrides computed: 0.336s
+2026-04-01 15:27:15,785 [PID 4024422] PERFORMANCE  Overrides computed: 0.336s
+2026-04-01 15:27:15,785 [PID 4024422] INFO  Indexing global constants...
+2026-04-01 15:27:15,908 [PID 4024422] INFO  Finished constant propagation analysis: 0.119s
+2026-04-01 15:27:15,908 [PID 4024422] PERFORMANCE  Finished constant propagation analysis: 0.119s
+2026-04-01 15:27:15,909 [PID 4024422] INFO  Building map from callables to decorators...
+2026-04-01 15:27:15,960 [PID 4024422] INFO  Map from callables to decorators built: 0.051s
+2026-04-01 15:27:15,960 [PID 4024422] PERFORMANCE  Map from callables to decorators built: 0.051s
+2026-04-01 15:27:15,960 [PID 4024422] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:27:16,093 [PID 4024422] INFO  Defines and call graphs of decorated targets built: 0.128s
+2026-04-01 15:27:16,093 [PID 4024422] PERFORMANCE  Defines and call graphs of decorated targets built: 0.129s
+2026-04-01 15:27:16,093 [PID 4024422] INFO  Building call graph...
+2026-04-01 15:27:16,226 [PID 4024422] INFO  Call graph built: 0.131s
+2026-04-01 15:27:16,226 [PID 4024422] PERFORMANCE  Call graph built: 0.131s
+2026-04-01 15:27:16,226 [PID 4024422] INFO  Computing dependencies...
+2026-04-01 15:27:16,238 [PID 4024422] INFO  Computed dependencies: 0.019s
+2026-04-01 15:27:16,238 [PID 4024422] PERFORMANCE  Computed dependencies: 0.019s
+2026-04-01 15:27:16,238 [PID 4024422] INFO  Computing higher order call graphs...
+2026-04-01 15:27:16,482 [PID 4024422] PERFORMANCE  Recorded initial models: 0.119s
+2026-04-01 15:27:16,482 [PID 4024422] INFO  Iteration #0. 3 callables [source.$toplevel, source.get_image, source.convert]
+2026-04-01 15:27:16,523 [PID 4024422] INFO  Processed 3 of 3 callables
+2026-04-01 15:27:16,524 [PID 4024422] INFO  Iteration #0, 3 callables, heap size 0.028GB took 0.05s
+2026-04-01 15:27:16,626 [PID 4024422] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:27:16,688 [PID 4024422] INFO  Computed higher order call graphs: 0.446s
+2026-04-01 15:27:16,689 [PID 4024422] PERFORMANCE  Computed higher order call graphs: 0.446s
+2026-04-01 15:27:16,689 [PID 4024422] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:27:16,710 [PID 4024422] INFO  Computed dependencies from higher order call graphs: 0.023s
+2026-04-01 15:27:16,710 [PID 4024422] PERFORMANCE  Computed dependencies from higher order call graphs: 0.023s
+2026-04-01 15:27:16,781 [PID 4024422] INFO  Purging shared memory...
+2026-04-01 15:27:16,792 [PID 4024422] PERFORMANCE  Purged shared memory: 0.003s
+2026-04-01 15:27:16,792 [PID 4024422] INFO  Purging shared memory...
+2026-04-01 15:27:16,792 [PID 4024422] PERFORMANCE  Purged shared memory: 0.002s
+2026-04-01 15:27:16,792 [PID 4024422] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:27:16,793 [PID 4024422] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:27:16,793 [PID 4024422] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:27:16,793 [PID 4024422] INFO  Analysis fixpoint started for 4197 overrides and 6 functions......
+2026-04-01 15:27:17,059 [PID 4024422] PERFORMANCE  Recorded initial models: 0.263s
+2026-04-01 15:27:17,059 [PID 4024422] INFO  Iteration #0. 3 callables [source.$toplevel, source.get_image, source.convert]
+2026-04-01 15:27:17,100 [PID 4024422] INFO  Processed 3 of 3 callables
+2026-04-01 15:27:17,100 [PID 4024422] INFO  Iteration #0, 3 callables, heap size 0.031GB took 0.05s
+2026-04-01 15:27:17,101 [PID 4024422] INFO  Iteration #1. 2 callables [source.get_image, source.convert]
+2026-04-01 15:27:17,152 [PID 4024422] INFO  Processed 2 of 2 callables
+2026-04-01 15:27:17,152 [PID 4024422] INFO  Iteration #1, 2 callables, heap size 0.031GB took 0.05s
+2026-04-01 15:27:17,214 [PID 4024422] INFO  Found 1 issues
+2026-04-01 15:27:17,214 [PID 4024422] INFO  Analysis fixpoint complete: 0.418s
+2026-04-01 15:27:17,214 [PID 4024422] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31109888, issues: 1): 0.418s
+2026-04-01 15:27:17,215 [PID 4024422] PERFORMANCE  Analyze: 4.112s
+2026-04-01 15:28:12,832 [PID 4026511] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:28:12,832 [PID 4026511] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:28:12,832 [PID 4026511] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:28:12,833 [PID 4026511] INFO No typeshed specified, looking for it...
+2026-04-01 15:28:12,833 [PID 4026511] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:28:12,833 [PID 4026511] INFO Writing arguments into /tmp/pyre_arguments_o_eiuezv.json...
+2026-04-01 15:28:12,833 [PID 4026511] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "save_results_to": "./pysa_results",
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:28:12,875 [PID 4026511] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:28:12,896 [PID 4026511] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.020s
+2026-04-01 15:28:12,896 [PID 4026511] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:28:12,897 [PID 4026511] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:28:12,897 [PID 4026511] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:28:12,897 [PID 4026511] INFO  Verifying model syntax...
+2026-04-01 15:28:12,897 [PID 4026511] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:12,897 [PID 4026511] INFO  Verified model syntax: 0.000s
+2026-04-01 15:28:12,898 [PID 4026511] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:28:12,898 [PID 4026511] INFO  Parsing taint models modes...
+2026-04-01 15:28:12,898 [PID 4026511] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:12,898 [PID 4026511] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:28:12,898 [PID 4026511] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:28:12,898 [PID 4026511] INFO  Building module tracker...
+2026-04-01 15:28:12,929 [PID 4026511] PERFORMANCE  Module tracker built: 0.025s
+2026-04-01 15:28:12,930 [PID 4026511] PERFORMANCE  Full environment built: 0.025s
+2026-04-01 15:28:12,930 [PID 4026511] INFO  Starting type checking...
+2026-04-01 15:28:12,930 [PID 4026511] INFO  Found 918 modules
+2026-04-01 15:28:12,930 [PID 4026511] INFO  Collecting all definitions...
+2026-04-01 15:28:13,319 [PID 4026511] PERFORMANCE  Collected definitions (defines: 20302): 0.385s
+2026-04-01 15:28:13,319 [PID 4026511] INFO  Found 20302 functions
+2026-04-01 15:28:13,320 [PID 4026511] INFO  Writing modules to `./pysa_results/modules.json`...
+2026-04-01 15:28:13,320 [PID 4026511] INFO  Wrote modules: 0.010s
+2026-04-01 15:28:13,320 [PID 4026511] PERFORMANCE  Wrote modules: 0.010s
+2026-04-01 15:28:13,320 [PID 4026511] INFO  Writing functions to `./pysa_results/functions.json`...
+2026-04-01 15:28:13,412 [PID 4026511] INFO  Wrote functions: 0.087s
+2026-04-01 15:28:13,413 [PID 4026511] PERFORMANCE  Wrote functions: 0.087s
+2026-04-01 15:28:13,413 [PID 4026511] INFO  Checking 20302 functions...
+2026-04-01 15:28:13,742 [PID 4026511] INFO  Processed 328 of 20302 functions
+2026-04-01 15:28:13,752 [PID 4026511] INFO  Processed 656 of 20302 functions
+2026-04-01 15:28:13,753 [PID 4026511] INFO  Processed 984 of 20302 functions
+2026-04-01 15:28:13,763 [PID 4026511] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:28:13,764 [PID 4026511] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:28:13,774 [PID 4026511] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:28:13,775 [PID 4026511] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:28:13,785 [PID 4026511] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:28:13,786 [PID 4026511] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:28:13,786 [PID 4026511] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:28:13,796 [PID 4026511] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:28:13,797 [PID 4026511] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:28:13,807 [PID 4026511] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:28:13,808 [PID 4026511] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:28:13,808 [PID 4026511] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:28:13,819 [PID 4026511] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:28:13,819 [PID 4026511] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:28:13,819 [PID 4026511] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:28:13,820 [PID 4026511] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:28:13,830 [PID 4026511] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:28:13,841 [PID 4026511] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:28:13,852 [PID 4026511] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:28:13,853 [PID 4026511] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:28:13,863 [PID 4026511] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:28:13,885 [PID 4026511] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:28:13,906 [PID 4026511] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:28:13,916 [PID 4026511] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:28:13,978 [PID 4026511] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:28:13,979 [PID 4026511] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:28:13,989 [PID 4026511] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:28:14,000 [PID 4026511] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:28:14,001 [PID 4026511] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:28:14,032 [PID 4026511] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:28:14,032 [PID 4026511] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:28:14,033 [PID 4026511] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:28:14,043 [PID 4026511] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:28:14,044 [PID 4026511] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:28:14,054 [PID 4026511] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:28:14,055 [PID 4026511] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:28:14,065 [PID 4026511] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:28:14,066 [PID 4026511] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:28:14,076 [PID 4026511] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:28:14,077 [PID 4026511] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:28:14,087 [PID 4026511] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:28:14,098 [PID 4026511] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:28:14,098 [PID 4026511] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:28:14,099 [PID 4026511] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:28:14,099 [PID 4026511] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:28:14,109 [PID 4026511] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:28:14,130 [PID 4026511] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:28:14,151 [PID 4026511] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:28:14,151 [PID 4026511] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:28:14,172 [PID 4026511] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:28:14,173 [PID 4026511] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:28:14,183 [PID 4026511] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:28:14,204 [PID 4026511] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:28:14,245 [PID 4026511] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:28:14,256 [PID 4026511] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:28:14,267 [PID 4026511] INFO  Processed 19318 of 20302 functions
+2026-04-01 15:28:14,298 [PID 4026511] INFO  Processed 19646 of 20302 functions
+2026-04-01 15:28:14,318 [PID 4026511] INFO  Processed 19974 of 20302 functions
+2026-04-01 15:28:14,360 [PID 4026511] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:28:14,360 [PID 4026511] PERFORMANCE  Check_TypeCheck: 0.948s
+2026-04-01 15:28:14,360 [PID 4026511] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:28:14,360 [PID 4026511] INFO  Computing class hierarchy graph...
+2026-04-01 15:28:14,514 [PID 4026511] INFO  Computed class hierarchy graph: 0.148s
+2026-04-01 15:28:14,514 [PID 4026511] PERFORMANCE  Computed class hierarchy graph: 0.148s
+2026-04-01 15:28:14,514 [PID 4026511] INFO  Computing class intervals...
+2026-04-01 15:28:14,525 [PID 4026511] INFO  Computed class intervals: 0.010s
+2026-04-01 15:28:14,525 [PID 4026511] PERFORMANCE  Computed class intervals: 0.010s
+2026-04-01 15:28:14,556 [PID 4026511] INFO  Fetching initial callables to analyze...
+2026-04-01 15:28:14,729 [PID 4026511] INFO  Fetched initial callables to analyze: 0.173s
+2026-04-01 15:28:14,730 [PID 4026511] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.173s
+2026-04-01 15:28:14,730 [PID 4026511] INFO  Building a map from callable names to definitions...
+2026-04-01 15:28:14,944 [PID 4026511] INFO  Map from callable names to definitions built: 0.207s
+2026-04-01 15:28:14,944 [PID 4026511] PERFORMANCE  Map from callable names to definitions built: 0.207s
+2026-04-01 15:28:14,945 [PID 4026511] INFO  Parsing taint models...
+2026-04-01 15:28:15,057 [PID 4026511] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:15,161 [PID 4026511] ERROR  Found 3 model verification errors!
+2026-04-01 15:28:15,161 [PID 4026511] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:28:15,162 [PID 4026511] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:28:15,162 [PID 4026511] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:28:15,162 [PID 4026511] INFO  Parsed taint models: 0.223s
+2026-04-01 15:28:15,162 [PID 4026511] PERFORMANCE  Parsed taint models (models: 7, queries: 0): 0.223s
+2026-04-01 15:28:15,162 [PID 4026511] INFO  Computing inferred models...
+2026-04-01 15:28:15,316 [PID 4026511] INFO  Computed inferred models: 0.150s
+2026-04-01 15:28:15,316 [PID 4026511] PERFORMANCE  Computed inferred models (models: 83): 0.150s
+2026-04-01 15:28:15,419 [PID 4026511] INFO  Computing overrides...
+2026-04-01 15:28:15,715 [PID 4026511] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:15,715 [PID 4026511] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:15,716 [PID 4026511] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:15,716 [PID 4026511] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:15,716 [PID 4026511] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:15,716 [PID 4026511] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:15,727 [PID 4026511] INFO  Writing the override graph to `./pysa_results/override-graph.json`
+2026-04-01 15:28:15,737 [PID 4026511] INFO  Overrides computed: 0.313s
+2026-04-01 15:28:15,738 [PID 4026511] PERFORMANCE  Overrides computed: 0.313s
+2026-04-01 15:28:15,738 [PID 4026511] INFO  Indexing global constants...
+2026-04-01 15:28:15,881 [PID 4026511] INFO  Finished constant propagation analysis: 0.143s
+2026-04-01 15:28:15,881 [PID 4026511] PERFORMANCE  Finished constant propagation analysis: 0.144s
+2026-04-01 15:28:15,882 [PID 4026511] INFO  Building map from callables to decorators...
+2026-04-01 15:28:15,923 [PID 4026511] INFO  Map from callables to decorators built: 0.040s
+2026-04-01 15:28:15,923 [PID 4026511] PERFORMANCE  Map from callables to decorators built: 0.040s
+2026-04-01 15:28:15,923 [PID 4026511] INFO  Writing the decorator counts to `./pysa_results`
+2026-04-01 15:28:15,923 [PID 4026511] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:28:16,036 [PID 4026511] INFO  Defines and call graphs of decorated targets built: 0.114s
+2026-04-01 15:28:16,036 [PID 4026511] PERFORMANCE  Defines and call graphs of decorated targets built: 0.114s
+2026-04-01 15:28:16,037 [PID 4026511] INFO  Building call graph...
+2026-04-01 15:28:16,170 [PID 4026511] INFO  Writing the call graphs to `./pysa_results`
+2026-04-01 15:28:16,170 [PID 4026511] INFO  Call graph built: 0.136s
+2026-04-01 15:28:16,170 [PID 4026511] PERFORMANCE  Call graph built: 0.136s
+2026-04-01 15:28:16,171 [PID 4026511] INFO  Computing dependencies...
+2026-04-01 15:28:16,181 [PID 4026511] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:28:16,181 [PID 4026511] INFO  Computed dependencies: 0.014s
+2026-04-01 15:28:16,182 [PID 4026511] PERFORMANCE  Computed dependencies: 0.014s
+2026-04-01 15:28:16,182 [PID 4026511] INFO  Computing higher order call graphs...
+2026-04-01 15:28:16,437 [PID 4026511] PERFORMANCE  Recorded initial models: 0.130s
+2026-04-01 15:28:16,437 [PID 4026511] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:28:16,478 [PID 4026511] INFO  Processed 14 of 14 callables
+2026-04-01 15:28:16,479 [PID 4026511] INFO  Iteration #0, 14 callables, heap size 0.028GB took 0.04s
+2026-04-01 15:28:16,571 [PID 4026511] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:28:16,571 [PID 4026511] INFO  Writing the higher order call graphs to `./pysa_results`
+2026-04-01 15:28:16,653 [PID 4026511] INFO  Computed higher order call graphs: 0.464s
+2026-04-01 15:28:16,654 [PID 4026511] PERFORMANCE  Computed higher order call graphs: 0.464s
+2026-04-01 15:28:16,654 [PID 4026511] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:28:16,664 [PID 4026511] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:28:16,665 [PID 4026511] INFO  Computed dependencies from higher order call graphs: 0.018s
+2026-04-01 15:28:16,665 [PID 4026511] PERFORMANCE  Computed dependencies from higher order call graphs: 0.018s
+2026-04-01 15:28:16,726 [PID 4026511] INFO  Purging shared memory...
+2026-04-01 15:28:16,737 [PID 4026511] PERFORMANCE  Purged shared memory: 0.003s
+2026-04-01 15:28:16,737 [PID 4026511] INFO  Purging shared memory...
+2026-04-01 15:28:16,738 [PID 4026511] PERFORMANCE  Purged shared memory: 0.006s
+2026-04-01 15:28:16,738 [PID 4026511] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:28:16,738 [PID 4026511] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:28:16,738 [PID 4026511] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:28:16,738 [PID 4026511] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:28:17,014 [PID 4026511] PERFORMANCE  Recorded initial models: 0.276s
+2026-04-01 15:28:17,015 [PID 4026511] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:28:17,076 [PID 4026511] INFO  Processed 14 of 14 callables
+2026-04-01 15:28:17,076 [PID 4026511] INFO  Iteration #0, 14 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:28:17,077 [PID 4026511] INFO  Iteration #1. 9 callables [...]
+2026-04-01 15:28:17,128 [PID 4026511] INFO  Processed 9 of 9 callables
+2026-04-01 15:28:17,128 [PID 4026511] INFO  Iteration #1, 9 callables, heap size 0.031GB took 0.05s
+2026-04-01 15:28:17,179 [PID 4026511] INFO  Found 5 issues
+2026-04-01 15:28:17,180 [PID 4026511] INFO  Analysis fixpoint complete: 0.442s
+2026-04-01 15:28:17,180 [PID 4026511] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31146816, issues: 5): 0.442s
+2026-04-01 15:28:17,180 [PID 4026511] INFO  Writing analysis results to `./pysa_results`...
+2026-04-01 15:28:17,190 [PID 4026511] INFO  Wrote analysis results: 0.008s
+2026-04-01 15:28:17,190 [PID 4026511] PERFORMANCE  Wrote analysis results: 0.008s
+2026-04-01 15:28:17,190 [PID 4026511] PERFORMANCE  Analyze: 4.292s
+2026-04-01 15:28:17,440 [PID 4026511] ERROR [Errno 32] Broken pipe
+2026-04-01 15:28:18,251 [PID 4027481] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:28:18,251 [PID 4027481] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:28:18,251 [PID 4027481] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:28:18,251 [PID 4027481] INFO No typeshed specified, looking for it...
+2026-04-01 15:28:18,252 [PID 4027481] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:28:18,252 [PID 4027481] INFO Writing arguments into /tmp/pyre_arguments_x57wxea6.json...
+2026-04-01 15:28:18,252 [PID 4027481] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "save_results_to": "./pysa_results",
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:28:18,294 [PID 4027481] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:28:18,315 [PID 4027481] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:28:18,315 [PID 4027481] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:28:18,315 [PID 4027481] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:28:18,315 [PID 4027481] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:28:18,315 [PID 4027481] INFO  Verifying model syntax...
+2026-04-01 15:28:18,316 [PID 4027481] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:18,316 [PID 4027481] INFO  Verified model syntax: 0.000s
+2026-04-01 15:28:18,316 [PID 4027481] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:28:18,316 [PID 4027481] INFO  Parsing taint models modes...
+2026-04-01 15:28:18,316 [PID 4027481] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:18,317 [PID 4027481] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:28:18,317 [PID 4027481] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:28:18,317 [PID 4027481] INFO  Building module tracker...
+2026-04-01 15:28:18,347 [PID 4027481] PERFORMANCE  Module tracker built: 0.025s
+2026-04-01 15:28:18,347 [PID 4027481] PERFORMANCE  Full environment built: 0.025s
+2026-04-01 15:28:18,348 [PID 4027481] INFO  Starting type checking...
+2026-04-01 15:28:18,348 [PID 4027481] INFO  Found 918 modules
+2026-04-01 15:28:18,348 [PID 4027481] INFO  Collecting all definitions...
+2026-04-01 15:28:18,706 [PID 4027481] PERFORMANCE  Collected definitions (defines: 20302): 0.360s
+2026-04-01 15:28:18,706 [PID 4027481] INFO  Found 20302 functions
+2026-04-01 15:28:18,706 [PID 4027481] INFO  Writing modules to `./pysa_results/modules.json`...
+2026-04-01 15:28:18,717 [PID 4027481] INFO  Wrote modules: 0.008s
+2026-04-01 15:28:18,717 [PID 4027481] PERFORMANCE  Wrote modules: 0.008s
+2026-04-01 15:28:18,717 [PID 4027481] INFO  Writing functions to `./pysa_results/functions.json`...
+2026-04-01 15:28:18,799 [PID 4027481] INFO  Wrote functions: 0.085s
+2026-04-01 15:28:18,800 [PID 4027481] PERFORMANCE  Wrote functions: 0.085s
+2026-04-01 15:28:18,800 [PID 4027481] INFO  Checking 20302 functions...
+2026-04-01 15:28:19,129 [PID 4027481] INFO  Processed 328 of 20302 functions
+2026-04-01 15:28:19,140 [PID 4027481] INFO  Processed 656 of 20302 functions
+2026-04-01 15:28:19,161 [PID 4027481] INFO  Processed 984 of 20302 functions
+2026-04-01 15:28:19,172 [PID 4027481] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:28:19,172 [PID 4027481] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:28:19,173 [PID 4027481] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:28:19,173 [PID 4027481] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:28:19,183 [PID 4027481] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:28:19,194 [PID 4027481] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:28:19,195 [PID 4027481] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:28:19,205 [PID 4027481] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:28:19,216 [PID 4027481] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:28:19,217 [PID 4027481] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:28:19,217 [PID 4027481] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:28:19,217 [PID 4027481] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:28:19,217 [PID 4027481] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:28:19,228 [PID 4027481] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:28:19,239 [PID 4027481] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:28:19,249 [PID 4027481] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:28:19,250 [PID 4027481] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:28:19,250 [PID 4027481] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:28:19,261 [PID 4027481] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:28:19,282 [PID 4027481] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:28:19,293 [PID 4027481] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:28:19,293 [PID 4027481] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:28:19,304 [PID 4027481] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:28:19,305 [PID 4027481] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:28:19,326 [PID 4027481] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:28:19,347 [PID 4027481] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:28:19,347 [PID 4027481] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:28:19,399 [PID 4027481] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:28:19,421 [PID 4027481] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:28:19,452 [PID 4027481] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:28:19,463 [PID 4027481] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:28:19,463 [PID 4027481] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:28:19,484 [PID 4027481] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:28:19,484 [PID 4027481] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:28:19,485 [PID 4027481] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:28:19,495 [PID 4027481] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:28:19,496 [PID 4027481] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:28:19,496 [PID 4027481] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:28:19,517 [PID 4027481] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:28:19,538 [PID 4027481] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:28:19,538 [PID 4027481] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:28:19,538 [PID 4027481] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:28:19,538 [PID 4027481] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:28:19,539 [PID 4027481] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:28:19,549 [PID 4027481] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:28:19,550 [PID 4027481] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:28:19,560 [PID 4027481] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:28:19,571 [PID 4027481] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:28:19,571 [PID 4027481] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:28:19,571 [PID 4027481] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:28:19,582 [PID 4027481] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:28:19,592 [PID 4027481] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:28:19,593 [PID 4027481] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:28:19,613 [PID 4027481] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:28:19,614 [PID 4027481] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:28:19,614 [PID 4027481] INFO  Processed 19352 of 20302 functions
+2026-04-01 15:28:19,645 [PID 4027481] INFO  Processed 19646 of 20302 functions
+2026-04-01 15:28:19,676 [PID 4027481] INFO  Processed 19974 of 20302 functions
+2026-04-01 15:28:19,697 [PID 4027481] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:28:19,697 [PID 4027481] PERFORMANCE  Check_TypeCheck: 0.894s
+2026-04-01 15:28:19,697 [PID 4027481] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:28:19,697 [PID 4027481] INFO  Computing class hierarchy graph...
+2026-04-01 15:28:19,840 [PID 4027481] INFO  Computed class hierarchy graph: 0.144s
+2026-04-01 15:28:19,841 [PID 4027481] PERFORMANCE  Computed class hierarchy graph: 0.144s
+2026-04-01 15:28:19,841 [PID 4027481] INFO  Computing class intervals...
+2026-04-01 15:28:19,851 [PID 4027481] INFO  Computed class intervals: 0.008s
+2026-04-01 15:28:19,852 [PID 4027481] PERFORMANCE  Computed class intervals: 0.008s
+2026-04-01 15:28:19,883 [PID 4027481] INFO  Fetching initial callables to analyze...
+2026-04-01 15:28:20,068 [PID 4027481] INFO  Fetched initial callables to analyze: 0.188s
+2026-04-01 15:28:20,068 [PID 4027481] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.188s
+2026-04-01 15:28:20,068 [PID 4027481] INFO  Building a map from callable names to definitions...
+2026-04-01 15:28:20,262 [PID 4027481] INFO  Map from callable names to definitions built: 0.191s
+2026-04-01 15:28:20,263 [PID 4027481] PERFORMANCE  Map from callable names to definitions built: 0.192s
+2026-04-01 15:28:20,263 [PID 4027481] INFO  Parsing taint models...
+2026-04-01 15:28:20,426 [PID 4027481] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:20,519 [PID 4027481] ERROR  Found 3 model verification errors!
+2026-04-01 15:28:20,519 [PID 4027481] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:28:20,519 [PID 4027481] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:28:20,520 [PID 4027481] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:28:20,520 [PID 4027481] INFO  Parsed taint models: 0.260s
+2026-04-01 15:28:20,520 [PID 4027481] PERFORMANCE  Parsed taint models (models: 7, queries: 0): 0.260s
+2026-04-01 15:28:20,520 [PID 4027481] INFO  Computing inferred models...
+2026-04-01 15:28:20,673 [PID 4027481] INFO  Computed inferred models: 0.145s
+2026-04-01 15:28:20,673 [PID 4027481] PERFORMANCE  Computed inferred models (models: 83): 0.145s
+2026-04-01 15:28:20,786 [PID 4027481] INFO  Computing overrides...
+2026-04-01 15:28:21,114 [PID 4027481] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:21,114 [PID 4027481] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:21,114 [PID 4027481] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:21,114 [PID 4027481] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:21,115 [PID 4027481] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:21,115 [PID 4027481] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:21,135 [PID 4027481] INFO  Writing the override graph to `./pysa_results/override-graph.json`
+2026-04-01 15:28:21,146 [PID 4027481] INFO  Overrides computed: 0.357s
+2026-04-01 15:28:21,146 [PID 4027481] PERFORMANCE  Overrides computed: 0.357s
+2026-04-01 15:28:21,147 [PID 4027481] INFO  Indexing global constants...
+2026-04-01 15:28:21,259 [PID 4027481] INFO  Finished constant propagation analysis: 0.112s
+2026-04-01 15:28:21,260 [PID 4027481] PERFORMANCE  Finished constant propagation analysis: 0.113s
+2026-04-01 15:28:21,260 [PID 4027481] INFO  Building map from callables to decorators...
+2026-04-01 15:28:21,291 [PID 4027481] INFO  Map from callables to decorators built: 0.034s
+2026-04-01 15:28:21,291 [PID 4027481] PERFORMANCE  Map from callables to decorators built: 0.034s
+2026-04-01 15:28:21,291 [PID 4027481] INFO  Writing the decorator counts to `./pysa_results`
+2026-04-01 15:28:21,291 [PID 4027481] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:28:21,435 [PID 4027481] INFO  Defines and call graphs of decorated targets built: 0.144s
+2026-04-01 15:28:21,435 [PID 4027481] PERFORMANCE  Defines and call graphs of decorated targets built: 0.144s
+2026-04-01 15:28:21,435 [PID 4027481] INFO  Building call graph...
+2026-04-01 15:28:21,578 [PID 4027481] INFO  Writing the call graphs to `./pysa_results`
+2026-04-01 15:28:21,589 [PID 4027481] INFO  Call graph built: 0.149s
+2026-04-01 15:28:21,589 [PID 4027481] PERFORMANCE  Call graph built: 0.149s
+2026-04-01 15:28:21,589 [PID 4027481] INFO  Computing dependencies...
+2026-04-01 15:28:21,610 [PID 4027481] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:28:21,610 [PID 4027481] INFO  Computed dependencies: 0.022s
+2026-04-01 15:28:21,610 [PID 4027481] PERFORMANCE  Computed dependencies: 0.022s
+2026-04-01 15:28:21,611 [PID 4027481] INFO  Computing higher order call graphs...
+2026-04-01 15:28:21,845 [PID 4027481] PERFORMANCE  Recorded initial models: 0.122s
+2026-04-01 15:28:21,846 [PID 4027481] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:28:21,887 [PID 4027481] INFO  Processed 14 of 14 callables
+2026-04-01 15:28:21,887 [PID 4027481] INFO  Iteration #0, 14 callables, heap size 0.028GB took 0.04s
+2026-04-01 15:28:21,979 [PID 4027481] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:28:21,979 [PID 4027481] INFO  Writing the higher order call graphs to `./pysa_results`
+2026-04-01 15:28:22,061 [PID 4027481] INFO  Computed higher order call graphs: 0.452s
+2026-04-01 15:28:22,061 [PID 4027481] PERFORMANCE  Computed higher order call graphs: 0.452s
+2026-04-01 15:28:22,061 [PID 4027481] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:28:22,133 [PID 4027481] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:28:22,134 [PID 4027481] INFO  Computed dependencies from higher order call graphs: 0.073s
+2026-04-01 15:28:22,134 [PID 4027481] PERFORMANCE  Computed dependencies from higher order call graphs: 0.073s
+2026-04-01 15:28:22,216 [PID 4027481] INFO  Purging shared memory...
+2026-04-01 15:28:22,216 [PID 4027481] PERFORMANCE  Purged shared memory: 0.003s
+2026-04-01 15:28:22,217 [PID 4027481] INFO  Purging shared memory...
+2026-04-01 15:28:22,217 [PID 4027481] PERFORMANCE  Purged shared memory: 0.002s
+2026-04-01 15:28:22,217 [PID 4027481] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:28:22,217 [PID 4027481] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:28:22,217 [PID 4027481] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:28:22,217 [PID 4027481] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:28:22,482 [PID 4027481] PERFORMANCE  Recorded initial models: 0.264s
+2026-04-01 15:28:22,483 [PID 4027481] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:28:22,554 [PID 4027481] INFO  Processed 14 of 14 callables
+2026-04-01 15:28:22,555 [PID 4027481] INFO  Iteration #0, 14 callables, heap size 0.031GB took 0.07s
+2026-04-01 15:28:22,555 [PID 4027481] INFO  Iteration #1. 9 callables [...]
+2026-04-01 15:28:22,617 [PID 4027481] INFO  Processed 9 of 9 callables
+2026-04-01 15:28:22,617 [PID 4027481] INFO  Iteration #1, 9 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:28:22,668 [PID 4027481] INFO  Found 5 issues
+2026-04-01 15:28:22,668 [PID 4027481] INFO  Analysis fixpoint complete: 0.443s
+2026-04-01 15:28:22,669 [PID 4027481] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31147136, issues: 5): 0.443s
+2026-04-01 15:28:22,669 [PID 4027481] INFO  Writing analysis results to `./pysa_results`...
+2026-04-01 15:28:22,669 [PID 4027481] INFO  Wrote analysis results: 0.008s
+2026-04-01 15:28:22,669 [PID 4027481] PERFORMANCE  Wrote analysis results: 0.008s
+2026-04-01 15:28:22,669 [PID 4027481] PERFORMANCE  Analyze: 4.356s
+2026-04-01 15:28:31,961 [PID 4028676] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:28:31,961 [PID 4028676] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:28:31,961 [PID 4028676] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:28:31,961 [PID 4028676] INFO No typeshed specified, looking for it...
+2026-04-01 15:28:31,961 [PID 4028676] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:28:31,962 [PID 4028676] INFO Writing arguments into /tmp/pyre_arguments_1mct27i9.json...
+2026-04-01 15:28:31,962 [PID 4028676] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "save_results_to": "./pysa_results",
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:28:32,004 [PID 4028676] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:28:32,025 [PID 4028676] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:28:32,025 [PID 4028676] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:28:32,025 [PID 4028676] INFO  Initialized and verified taint configuration: 0.001s
+2026-04-01 15:28:32,026 [PID 4028676] PERFORMANCE  Initialized and verified taint configuration: 0.001s
+2026-04-01 15:28:32,026 [PID 4028676] INFO  Verifying model syntax...
+2026-04-01 15:28:32,026 [PID 4028676] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:32,026 [PID 4028676] INFO  Verified model syntax: 0.000s
+2026-04-01 15:28:32,026 [PID 4028676] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:28:32,026 [PID 4028676] INFO  Parsing taint models modes...
+2026-04-01 15:28:32,027 [PID 4028676] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:32,027 [PID 4028676] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:28:32,027 [PID 4028676] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:28:32,027 [PID 4028676] INFO  Building module tracker...
+2026-04-01 15:28:32,048 [PID 4028676] PERFORMANCE  Module tracker built: 0.019s
+2026-04-01 15:28:32,048 [PID 4028676] PERFORMANCE  Full environment built: 0.019s
+2026-04-01 15:28:32,048 [PID 4028676] INFO  Starting type checking...
+2026-04-01 15:28:32,048 [PID 4028676] INFO  Found 918 modules
+2026-04-01 15:28:32,048 [PID 4028676] INFO  Collecting all definitions...
+2026-04-01 15:28:32,447 [PID 4028676] PERFORMANCE  Collected definitions (defines: 20302): 0.406s
+2026-04-01 15:28:32,447 [PID 4028676] INFO  Found 20302 functions
+2026-04-01 15:28:32,448 [PID 4028676] INFO  Writing modules to `./pysa_results/modules.json`...
+2026-04-01 15:28:32,468 [PID 4028676] INFO  Wrote modules: 0.012s
+2026-04-01 15:28:32,469 [PID 4028676] PERFORMANCE  Wrote modules: 0.012s
+2026-04-01 15:28:32,469 [PID 4028676] INFO  Writing functions to `./pysa_results/functions.json`...
+2026-04-01 15:28:32,551 [PID 4028676] INFO  Wrote functions: 0.089s
+2026-04-01 15:28:32,551 [PID 4028676] PERFORMANCE  Wrote functions: 0.089s
+2026-04-01 15:28:32,551 [PID 4028676] INFO  Checking 20302 functions...
+2026-04-01 15:28:32,890 [PID 4028676] INFO  Processed 328 of 20302 functions
+2026-04-01 15:28:32,911 [PID 4028676] INFO  Processed 656 of 20302 functions
+2026-04-01 15:28:32,912 [PID 4028676] INFO  Processed 984 of 20302 functions
+2026-04-01 15:28:32,922 [PID 4028676] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:28:32,922 [PID 4028676] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:28:32,922 [PID 4028676] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:28:32,933 [PID 4028676] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:28:32,944 [PID 4028676] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:28:32,944 [PID 4028676] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:28:32,944 [PID 4028676] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:28:32,945 [PID 4028676] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:28:32,965 [PID 4028676] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:28:32,966 [PID 4028676] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:28:32,966 [PID 4028676] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:28:32,966 [PID 4028676] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:28:32,977 [PID 4028676] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:28:32,977 [PID 4028676] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:28:32,978 [PID 4028676] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:28:32,978 [PID 4028676] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:28:32,988 [PID 4028676] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:28:33,020 [PID 4028676] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:28:33,020 [PID 4028676] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:28:33,031 [PID 4028676] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:28:33,042 [PID 4028676] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:28:33,042 [PID 4028676] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:28:33,053 [PID 4028676] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:28:33,064 [PID 4028676] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:28:33,075 [PID 4028676] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:28:33,095 [PID 4028676] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:28:33,106 [PID 4028676] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:28:33,147 [PID 4028676] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:28:33,158 [PID 4028676] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:28:33,180 [PID 4028676] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:28:33,201 [PID 4028676] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:28:33,201 [PID 4028676] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:28:33,212 [PID 4028676] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:28:33,222 [PID 4028676] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:28:33,223 [PID 4028676] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:28:33,223 [PID 4028676] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:28:33,223 [PID 4028676] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:28:33,234 [PID 4028676] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:28:33,234 [PID 4028676] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:28:33,234 [PID 4028676] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:28:33,235 [PID 4028676] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:28:33,235 [PID 4028676] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:28:33,245 [PID 4028676] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:28:33,246 [PID 4028676] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:28:33,267 [PID 4028676] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:28:33,287 [PID 4028676] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:28:33,318 [PID 4028676] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:28:33,319 [PID 4028676] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:28:33,319 [PID 4028676] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:28:33,340 [PID 4028676] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:28:33,340 [PID 4028676] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:28:33,340 [PID 4028676] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:28:33,371 [PID 4028676] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:28:33,372 [PID 4028676] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:28:33,392 [PID 4028676] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:28:33,403 [PID 4028676] INFO  Processed 19352 of 20302 functions
+2026-04-01 15:28:33,403 [PID 4028676] INFO  Processed 19680 of 20302 functions
+2026-04-01 15:28:33,434 [PID 4028676] INFO  Processed 20008 of 20302 functions
+2026-04-01 15:28:33,485 [PID 4028676] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:28:33,486 [PID 4028676] PERFORMANCE  Check_TypeCheck: 0.932s
+2026-04-01 15:28:33,486 [PID 4028676] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:28:33,486 [PID 4028676] INFO  Computing class hierarchy graph...
+2026-04-01 15:28:33,650 [PID 4028676] INFO  Computed class hierarchy graph: 0.163s
+2026-04-01 15:28:33,650 [PID 4028676] PERFORMANCE  Computed class hierarchy graph: 0.163s
+2026-04-01 15:28:33,650 [PID 4028676] INFO  Computing class intervals...
+2026-04-01 15:28:33,661 [PID 4028676] INFO  Computed class intervals: 0.006s
+2026-04-01 15:28:33,661 [PID 4028676] PERFORMANCE  Computed class intervals: 0.007s
+2026-04-01 15:28:33,682 [PID 4028676] INFO  Fetching initial callables to analyze...
+2026-04-01 15:28:33,856 [PID 4028676] INFO  Fetched initial callables to analyze: 0.168s
+2026-04-01 15:28:33,857 [PID 4028676] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.168s
+2026-04-01 15:28:33,857 [PID 4028676] INFO  Building a map from callable names to definitions...
+2026-04-01 15:28:34,071 [PID 4028676] INFO  Map from callable names to definitions built: 0.218s
+2026-04-01 15:28:34,071 [PID 4028676] PERFORMANCE  Map from callable names to definitions built: 0.218s
+2026-04-01 15:28:34,071 [PID 4028676] INFO  Parsing taint models...
+2026-04-01 15:28:34,235 [PID 4028676] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:28:34,337 [PID 4028676] ERROR  Found 3 model verification errors!
+2026-04-01 15:28:34,338 [PID 4028676] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:28:34,338 [PID 4028676] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:28:34,338 [PID 4028676] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:28:34,338 [PID 4028676] INFO  Parsed taint models: 0.262s
+2026-04-01 15:28:34,338 [PID 4028676] PERFORMANCE  Parsed taint models (models: 7, queries: 0): 0.262s
+2026-04-01 15:28:34,339 [PID 4028676] INFO  Computing inferred models...
+2026-04-01 15:28:34,481 [PID 4028676] INFO  Computed inferred models: 0.147s
+2026-04-01 15:28:34,482 [PID 4028676] PERFORMANCE  Computed inferred models (models: 83): 0.147s
+2026-04-01 15:28:34,584 [PID 4028676] INFO  Computing overrides...
+2026-04-01 15:28:34,861 [PID 4028676] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:34,862 [PID 4028676] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:34,862 [PID 4028676] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:34,862 [PID 4028676] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:34,862 [PID 4028676] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:34,863 [PID 4028676] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:28:34,883 [PID 4028676] INFO  Writing the override graph to `./pysa_results/override-graph.json`
+2026-04-01 15:28:34,894 [PID 4028676] INFO  Overrides computed: 0.304s
+2026-04-01 15:28:34,894 [PID 4028676] PERFORMANCE  Overrides computed: 0.304s
+2026-04-01 15:28:34,894 [PID 4028676] INFO  Indexing global constants...
+2026-04-01 15:28:35,037 [PID 4028676] INFO  Finished constant propagation analysis: 0.145s
+2026-04-01 15:28:35,038 [PID 4028676] PERFORMANCE  Finished constant propagation analysis: 0.146s
+2026-04-01 15:28:35,038 [PID 4028676] INFO  Building map from callables to decorators...
+2026-04-01 15:28:35,068 [PID 4028676] INFO  Map from callables to decorators built: 0.034s
+2026-04-01 15:28:35,069 [PID 4028676] PERFORMANCE  Map from callables to decorators built: 0.034s
+2026-04-01 15:28:35,069 [PID 4028676] INFO  Writing the decorator counts to `./pysa_results`
+2026-04-01 15:28:35,069 [PID 4028676] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:28:35,222 [PID 4028676] INFO  Defines and call graphs of decorated targets built: 0.144s
+2026-04-01 15:28:35,222 [PID 4028676] PERFORMANCE  Defines and call graphs of decorated targets built: 0.144s
+2026-04-01 15:28:35,223 [PID 4028676] INFO  Building call graph...
+2026-04-01 15:28:35,396 [PID 4028676] INFO  Writing the call graphs to `./pysa_results`
+2026-04-01 15:28:35,407 [PID 4028676] INFO  Call graph built: 0.183s
+2026-04-01 15:28:35,408 [PID 4028676] PERFORMANCE  Call graph built: 0.184s
+2026-04-01 15:28:35,408 [PID 4028676] INFO  Computing dependencies...
+2026-04-01 15:28:35,418 [PID 4028676] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:28:35,419 [PID 4028676] INFO  Computed dependencies: 0.018s
+2026-04-01 15:28:35,419 [PID 4028676] PERFORMANCE  Computed dependencies: 0.018s
+2026-04-01 15:28:35,419 [PID 4028676] INFO  Computing higher order call graphs...
+2026-04-01 15:28:35,654 [PID 4028676] PERFORMANCE  Recorded initial models: 0.117s
+2026-04-01 15:28:35,654 [PID 4028676] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:28:35,715 [PID 4028676] INFO  Processed 14 of 14 callables
+2026-04-01 15:28:35,716 [PID 4028676] INFO  Iteration #0, 14 callables, heap size 0.028GB took 0.06s
+2026-04-01 15:28:35,818 [PID 4028676] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:28:35,818 [PID 4028676] INFO  Writing the higher order call graphs to `./pysa_results`
+2026-04-01 15:28:35,899 [PID 4028676] INFO  Computed higher order call graphs: 0.480s
+2026-04-01 15:28:35,900 [PID 4028676] PERFORMANCE  Computed higher order call graphs: 0.480s
+2026-04-01 15:28:35,900 [PID 4028676] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:28:35,931 [PID 4028676] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:28:35,931 [PID 4028676] INFO  Computed dependencies from higher order call graphs: 0.026s
+2026-04-01 15:28:35,931 [PID 4028676] PERFORMANCE  Computed dependencies from higher order call graphs: 0.026s
+2026-04-01 15:28:36,043 [PID 4028676] INFO  Purging shared memory...
+2026-04-01 15:28:36,044 [PID 4028676] PERFORMANCE  Purged shared memory: 0.003s
+2026-04-01 15:28:36,044 [PID 4028676] INFO  Purging shared memory...
+2026-04-01 15:28:36,044 [PID 4028676] PERFORMANCE  Purged shared memory: 0.002s
+2026-04-01 15:28:36,044 [PID 4028676] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:28:36,045 [PID 4028676] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:28:36,045 [PID 4028676] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:28:36,045 [PID 4028676] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:28:36,329 [PID 4028676] PERFORMANCE  Recorded initial models: 0.283s
+2026-04-01 15:28:36,330 [PID 4028676] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:28:36,401 [PID 4028676] INFO  Processed 14 of 14 callables
+2026-04-01 15:28:36,402 [PID 4028676] INFO  Iteration #0, 14 callables, heap size 0.031GB took 0.07s
+2026-04-01 15:28:36,402 [PID 4028676] INFO  Iteration #1. 9 callables [...]
+2026-04-01 15:28:36,464 [PID 4028676] INFO  Processed 9 of 9 callables
+2026-04-01 15:28:36,464 [PID 4028676] INFO  Iteration #1, 9 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:28:36,515 [PID 4028676] INFO  Found 5 issues
+2026-04-01 15:28:36,516 [PID 4028676] INFO  Analysis fixpoint complete: 0.464s
+2026-04-01 15:28:36,516 [PID 4028676] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31147072, issues: 5): 0.464s
+2026-04-01 15:28:36,516 [PID 4028676] INFO  Writing analysis results to `./pysa_results`...
+2026-04-01 15:28:36,526 [PID 4028676] INFO  Wrote analysis results: 0.007s
+2026-04-01 15:28:36,527 [PID 4028676] PERFORMANCE  Wrote analysis results: 0.007s
+2026-04-01 15:28:36,527 [PID 4028676] PERFORMANCE  Analyze: 4.502s
+2026-04-01 15:29:10,811 [PID 4030341] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:29:10,811 [PID 4030341] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:29:10,811 [PID 4030341] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:29:10,812 [PID 4030341] INFO No typeshed specified, looking for it...
+2026-04-01 15:29:10,812 [PID 4030341] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:29:10,812 [PID 4030341] INFO Writing arguments into /tmp/pyre_arguments_d5sk6mls.json...
+2026-04-01 15:29:10,813 [PID 4030341] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "rule_filter": [
+    5005
+  ],
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:29:10,854 [PID 4030341] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:29:10,875 [PID 4030341] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:29:10,875 [PID 4030341] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:29:10,886 [PID 4030341] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:29:10,886 [PID 4030341] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:29:10,886 [PID 4030341] INFO  Verifying model syntax...
+2026-04-01 15:29:10,886 [PID 4030341] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:10,886 [PID 4030341] INFO  Verified model syntax: 0.000s
+2026-04-01 15:29:10,887 [PID 4030341] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:29:10,887 [PID 4030341] INFO  Parsing taint models modes...
+2026-04-01 15:29:10,887 [PID 4030341] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:10,887 [PID 4030341] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:29:10,887 [PID 4030341] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:29:10,887 [PID 4030341] INFO  Building module tracker...
+2026-04-01 15:29:10,908 [PID 4030341] PERFORMANCE  Module tracker built: 0.026s
+2026-04-01 15:29:10,908 [PID 4030341] PERFORMANCE  Full environment built: 0.026s
+2026-04-01 15:29:10,909 [PID 4030341] INFO  Starting type checking...
+2026-04-01 15:29:10,909 [PID 4030341] INFO  Found 918 modules
+2026-04-01 15:29:10,909 [PID 4030341] INFO  Collecting all definitions...
+2026-04-01 15:29:11,296 [PID 4030341] PERFORMANCE  Collected definitions (defines: 20302): 0.383s
+2026-04-01 15:29:11,297 [PID 4030341] INFO  Found 20302 functions
+2026-04-01 15:29:11,297 [PID 4030341] INFO  Checking 20302 functions...
+2026-04-01 15:29:11,637 [PID 4030341] INFO  Processed 328 of 20302 functions
+2026-04-01 15:29:11,658 [PID 4030341] INFO  Processed 656 of 20302 functions
+2026-04-01 15:29:11,658 [PID 4030341] INFO  Processed 984 of 20302 functions
+2026-04-01 15:29:11,658 [PID 4030341] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:29:11,669 [PID 4030341] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:29:11,669 [PID 4030341] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:29:11,669 [PID 4030341] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:29:11,669 [PID 4030341] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:29:11,680 [PID 4030341] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:29:11,680 [PID 4030341] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:29:11,680 [PID 4030341] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:29:11,680 [PID 4030341] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:29:11,691 [PID 4030341] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:29:11,691 [PID 4030341] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:29:11,692 [PID 4030341] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:29:11,702 [PID 4030341] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:29:11,702 [PID 4030341] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:29:11,702 [PID 4030341] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:29:11,703 [PID 4030341] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:29:11,713 [PID 4030341] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:29:11,713 [PID 4030341] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:29:11,724 [PID 4030341] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:29:11,735 [PID 4030341] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:29:11,746 [PID 4030341] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:29:11,799 [PID 4030341] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:29:11,799 [PID 4030341] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:29:11,800 [PID 4030341] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:29:11,841 [PID 4030341] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:29:11,862 [PID 4030341] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:29:11,883 [PID 4030341] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:29:11,883 [PID 4030341] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:29:11,904 [PID 4030341] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:29:11,915 [PID 4030341] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:29:11,937 [PID 4030341] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:29:11,937 [PID 4030341] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:29:11,948 [PID 4030341] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:29:11,948 [PID 4030341] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:29:11,949 [PID 4030341] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:29:11,959 [PID 4030341] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:29:11,960 [PID 4030341] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:29:11,970 [PID 4030341] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:29:11,991 [PID 4030341] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:29:11,992 [PID 4030341] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:29:11,992 [PID 4030341] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:29:11,992 [PID 4030341] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:29:12,013 [PID 4030341] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:29:12,024 [PID 4030341] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:29:12,034 [PID 4030341] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:29:12,035 [PID 4030341] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:29:12,055 [PID 4030341] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:29:12,066 [PID 4030341] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:29:12,067 [PID 4030341] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:29:12,067 [PID 4030341] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:29:12,077 [PID 4030341] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:29:12,088 [PID 4030341] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:29:12,108 [PID 4030341] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:29:12,129 [PID 4030341] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:29:12,129 [PID 4030341] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:29:12,140 [PID 4030341] INFO  Processed 19352 of 20302 functions
+2026-04-01 15:29:12,181 [PID 4030341] INFO  Processed 19646 of 20302 functions
+2026-04-01 15:29:12,222 [PID 4030341] INFO  Processed 19974 of 20302 functions
+2026-04-01 15:29:12,233 [PID 4030341] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:29:12,233 [PID 4030341] PERFORMANCE  Check_TypeCheck: 0.935s
+2026-04-01 15:29:12,234 [PID 4030341] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:29:12,234 [PID 4030341] INFO  Computing class hierarchy graph...
+2026-04-01 15:29:12,356 [PID 4030341] INFO  Computed class hierarchy graph: 0.124s
+2026-04-01 15:29:12,356 [PID 4030341] PERFORMANCE  Computed class hierarchy graph: 0.124s
+2026-04-01 15:29:12,356 [PID 4030341] INFO  Computing class intervals...
+2026-04-01 15:29:12,357 [PID 4030341] INFO  Computed class intervals: 0.007s
+2026-04-01 15:29:12,357 [PID 4030341] PERFORMANCE  Computed class intervals: 0.007s
+2026-04-01 15:29:12,398 [PID 4030341] INFO  Fetching initial callables to analyze...
+2026-04-01 15:29:12,582 [PID 4030341] INFO  Fetched initial callables to analyze: 0.182s
+2026-04-01 15:29:12,583 [PID 4030341] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.182s
+2026-04-01 15:29:12,583 [PID 4030341] INFO  Building a map from callable names to definitions...
+2026-04-01 15:29:12,776 [PID 4030341] INFO  Map from callable names to definitions built: 0.196s
+2026-04-01 15:29:12,776 [PID 4030341] PERFORMANCE  Map from callable names to definitions built: 0.197s
+2026-04-01 15:29:12,777 [PID 4030341] INFO  Parsing taint models...
+2026-04-01 15:29:12,920 [PID 4030341] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:13,063 [PID 4030341] ERROR  Found 3 model verification errors!
+2026-04-01 15:29:13,063 [PID 4030341] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:29:13,063 [PID 4030341] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:29:13,064 [PID 4030341] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:29:13,064 [PID 4030341] INFO  Parsed taint models: 0.291s
+2026-04-01 15:29:13,064 [PID 4030341] PERFORMANCE  Parsed taint models (models: 7, queries: 0): 0.291s
+2026-04-01 15:29:13,064 [PID 4030341] INFO  Computing inferred models...
+2026-04-01 15:29:13,207 [PID 4030341] INFO  Computed inferred models: 0.142s
+2026-04-01 15:29:13,207 [PID 4030341] PERFORMANCE  Computed inferred models (models: 83): 0.142s
+2026-04-01 15:29:13,279 [PID 4030341] INFO  Computing overrides...
+2026-04-01 15:29:13,564 [PID 4030341] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:13,564 [PID 4030341] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:13,564 [PID 4030341] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:13,564 [PID 4030341] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:13,564 [PID 4030341] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:13,564 [PID 4030341] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:13,585 [PID 4030341] INFO  Overrides computed: 0.307s
+2026-04-01 15:29:13,585 [PID 4030341] PERFORMANCE  Overrides computed: 0.307s
+2026-04-01 15:29:13,585 [PID 4030341] INFO  Indexing global constants...
+2026-04-01 15:29:13,687 [PID 4030341] INFO  Finished constant propagation analysis: 0.104s
+2026-04-01 15:29:13,688 [PID 4030341] PERFORMANCE  Finished constant propagation analysis: 0.104s
+2026-04-01 15:29:13,688 [PID 4030341] INFO  Building map from callables to decorators...
+2026-04-01 15:29:13,719 [PID 4030341] INFO  Map from callables to decorators built: 0.036s
+2026-04-01 15:29:13,719 [PID 4030341] PERFORMANCE  Map from callables to decorators built: 0.037s
+2026-04-01 15:29:13,719 [PID 4030341] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:29:13,872 [PID 4030341] INFO  Defines and call graphs of decorated targets built: 0.146s
+2026-04-01 15:29:13,873 [PID 4030341] PERFORMANCE  Defines and call graphs of decorated targets built: 0.146s
+2026-04-01 15:29:13,873 [PID 4030341] INFO  Building call graph...
+2026-04-01 15:29:14,016 [PID 4030341] INFO  Call graph built: 0.143s
+2026-04-01 15:29:14,016 [PID 4030341] PERFORMANCE  Call graph built: 0.143s
+2026-04-01 15:29:14,017 [PID 4030341] INFO  Computing dependencies...
+2026-04-01 15:29:14,037 [PID 4030341] INFO  Computed dependencies: 0.022s
+2026-04-01 15:29:14,038 [PID 4030341] PERFORMANCE  Computed dependencies: 0.022s
+2026-04-01 15:29:14,038 [PID 4030341] INFO  Computing higher order call graphs...
+2026-04-01 15:29:14,282 [PID 4030341] PERFORMANCE  Recorded initial models: 0.118s
+2026-04-01 15:29:14,283 [PID 4030341] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:29:14,324 [PID 4030341] INFO  Processed 14 of 14 callables
+2026-04-01 15:29:14,324 [PID 4030341] INFO  Iteration #0, 14 callables, heap size 0.028GB took 0.04s
+2026-04-01 15:29:14,426 [PID 4030341] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:29:14,477 [PID 4030341] INFO  Computed higher order call graphs: 0.442s
+2026-04-01 15:29:14,478 [PID 4030341] PERFORMANCE  Computed higher order call graphs: 0.442s
+2026-04-01 15:29:14,478 [PID 4030341] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:29:14,498 [PID 4030341] INFO  Computed dependencies from higher order call graphs: 0.024s
+2026-04-01 15:29:14,499 [PID 4030341] PERFORMANCE  Computed dependencies from higher order call graphs: 0.024s
+2026-04-01 15:29:14,581 [PID 4030341] INFO  Purging shared memory...
+2026-04-01 15:29:14,581 [PID 4030341] PERFORMANCE  Purged shared memory: 0.003s
+2026-04-01 15:29:14,581 [PID 4030341] INFO  Purging shared memory...
+2026-04-01 15:29:14,581 [PID 4030341] PERFORMANCE  Purged shared memory: 0.003s
+2026-04-01 15:29:14,582 [PID 4030341] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:29:14,582 [PID 4030341] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:29:14,582 [PID 4030341] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:29:14,582 [PID 4030341] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:29:14,866 [PID 4030341] PERFORMANCE  Recorded initial models: 0.279s
+2026-04-01 15:29:14,867 [PID 4030341] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:29:14,928 [PID 4030341] INFO  Processed 14 of 14 callables
+2026-04-01 15:29:14,929 [PID 4030341] INFO  Iteration #0, 14 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:29:14,929 [PID 4030341] INFO  Iteration #1. 8 callables [...]
+2026-04-01 15:29:14,980 [PID 4030341] INFO  Processed 8 of 8 callables
+2026-04-01 15:29:14,981 [PID 4030341] INFO  Iteration #1, 8 callables, heap size 0.031GB took 0.05s
+2026-04-01 15:29:15,032 [PID 4030341] INFO  Found 0 issues
+2026-04-01 15:29:15,033 [PID 4030341] INFO  Analysis fixpoint complete: 0.446s
+2026-04-01 15:29:15,033 [PID 4030341] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31142912, issues: 0): 0.446s
+2026-04-01 15:29:15,033 [PID 4030341] PERFORMANCE  Analyze: 4.153s
+2026-04-01 15:29:22,608 [PID 4031588] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:29:22,608 [PID 4031588] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:29:22,608 [PID 4031588] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:29:22,608 [PID 4031588] INFO No typeshed specified, looking for it...
+2026-04-01 15:29:22,609 [PID 4031588] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:29:22,609 [PID 4031588] INFO Writing arguments into /tmp/pyre_arguments_s7ggxfj_.json...
+2026-04-01 15:29:22,609 [PID 4031588] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "dump_call_graph": "./call-graph-dump.json",
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:29:22,651 [PID 4031588] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:29:22,672 [PID 4031588] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:29:22,672 [PID 4031588] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:29:22,672 [PID 4031588] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:29:22,673 [PID 4031588] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:29:22,673 [PID 4031588] INFO  Verifying model syntax...
+2026-04-01 15:29:22,673 [PID 4031588] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:22,673 [PID 4031588] INFO  Verified model syntax: 0.000s
+2026-04-01 15:29:22,673 [PID 4031588] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:29:22,673 [PID 4031588] INFO  Parsing taint models modes...
+2026-04-01 15:29:22,673 [PID 4031588] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:22,674 [PID 4031588] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:29:22,674 [PID 4031588] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:29:22,674 [PID 4031588] INFO  Building module tracker...
+2026-04-01 15:29:22,705 [PID 4031588] PERFORMANCE  Module tracker built: 0.025s
+2026-04-01 15:29:22,705 [PID 4031588] PERFORMANCE  Full environment built: 0.025s
+2026-04-01 15:29:22,705 [PID 4031588] INFO  Starting type checking...
+2026-04-01 15:29:22,705 [PID 4031588] INFO  Found 918 modules
+2026-04-01 15:29:22,706 [PID 4031588] INFO  Collecting all definitions...
+2026-04-01 15:29:23,073 [PID 4031588] PERFORMANCE  Collected definitions (defines: 20302): 0.368s
+2026-04-01 15:29:23,073 [PID 4031588] INFO  Found 20302 functions
+2026-04-01 15:29:23,074 [PID 4031588] INFO  Checking 20302 functions...
+2026-04-01 15:29:23,403 [PID 4031588] INFO  Processed 328 of 20302 functions
+2026-04-01 15:29:23,404 [PID 4031588] INFO  Processed 656 of 20302 functions
+2026-04-01 15:29:23,404 [PID 4031588] INFO  Processed 984 of 20302 functions
+2026-04-01 15:29:23,425 [PID 4031588] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:29:23,436 [PID 4031588] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:29:23,437 [PID 4031588] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:29:23,437 [PID 4031588] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:29:23,447 [PID 4031588] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:29:23,448 [PID 4031588] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:29:23,448 [PID 4031588] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:29:23,459 [PID 4031588] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:29:23,459 [PID 4031588] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:29:23,470 [PID 4031588] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:29:23,471 [PID 4031588] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:29:23,471 [PID 4031588] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:29:23,471 [PID 4031588] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:29:23,482 [PID 4031588] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:29:23,482 [PID 4031588] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:29:23,493 [PID 4031588] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:29:23,494 [PID 4031588] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:29:23,494 [PID 4031588] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:29:23,494 [PID 4031588] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:29:23,494 [PID 4031588] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:29:23,515 [PID 4031588] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:29:23,546 [PID 4031588] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:29:23,587 [PID 4031588] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:29:23,587 [PID 4031588] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:29:23,598 [PID 4031588] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:29:23,629 [PID 4031588] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:29:23,640 [PID 4031588] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:29:23,692 [PID 4031588] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:29:23,693 [PID 4031588] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:29:23,703 [PID 4031588] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:29:23,714 [PID 4031588] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:29:23,715 [PID 4031588] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:29:23,725 [PID 4031588] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:29:23,726 [PID 4031588] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:29:23,737 [PID 4031588] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:29:23,737 [PID 4031588] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:29:23,748 [PID 4031588] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:29:23,748 [PID 4031588] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:29:23,759 [PID 4031588] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:29:23,759 [PID 4031588] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:29:23,770 [PID 4031588] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:29:23,770 [PID 4031588] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:29:23,791 [PID 4031588] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:29:23,791 [PID 4031588] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:29:23,812 [PID 4031588] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:29:23,812 [PID 4031588] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:29:23,823 [PID 4031588] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:29:23,833 [PID 4031588] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:29:23,834 [PID 4031588] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:29:23,834 [PID 4031588] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:29:23,834 [PID 4031588] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:29:23,844 [PID 4031588] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:29:23,886 [PID 4031588] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:29:23,896 [PID 4031588] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:29:23,897 [PID 4031588] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:29:23,897 [PID 4031588] INFO  Processed 19352 of 20302 functions
+2026-04-01 15:29:23,907 [PID 4031588] INFO  Processed 19680 of 20302 functions
+2026-04-01 15:29:23,918 [PID 4031588] INFO  Processed 20008 of 20302 functions
+2026-04-01 15:29:23,929 [PID 4031588] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:29:23,929 [PID 4031588] PERFORMANCE  Check_TypeCheck: 0.861s
+2026-04-01 15:29:23,929 [PID 4031588] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:29:23,929 [PID 4031588] INFO  Computing class hierarchy graph...
+2026-04-01 15:29:24,093 [PID 4031588] INFO  Computed class hierarchy graph: 0.162s
+2026-04-01 15:29:24,093 [PID 4031588] PERFORMANCE  Computed class hierarchy graph: 0.162s
+2026-04-01 15:29:24,093 [PID 4031588] INFO  Computing class intervals...
+2026-04-01 15:29:24,104 [PID 4031588] INFO  Computed class intervals: 0.008s
+2026-04-01 15:29:24,104 [PID 4031588] PERFORMANCE  Computed class intervals: 0.008s
+2026-04-01 15:29:24,135 [PID 4031588] INFO  Fetching initial callables to analyze...
+2026-04-01 15:29:24,300 [PID 4031588] INFO  Fetched initial callables to analyze: 0.165s
+2026-04-01 15:29:24,301 [PID 4031588] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.165s
+2026-04-01 15:29:24,301 [PID 4031588] INFO  Building a map from callable names to definitions...
+2026-04-01 15:29:24,505 [PID 4031588] INFO  Map from callable names to definitions built: 0.202s
+2026-04-01 15:29:24,505 [PID 4031588] PERFORMANCE  Map from callable names to definitions built: 0.202s
+2026-04-01 15:29:24,505 [PID 4031588] INFO  Parsing taint models...
+2026-04-01 15:29:24,659 [PID 4031588] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:24,771 [PID 4031588] ERROR  Found 3 model verification errors!
+2026-04-01 15:29:24,772 [PID 4031588] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:29:24,772 [PID 4031588] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:29:24,772 [PID 4031588] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:29:24,772 [PID 4031588] INFO  Parsed taint models: 0.267s
+2026-04-01 15:29:24,773 [PID 4031588] PERFORMANCE  Parsed taint models (models: 7, queries: 0): 0.267s
+2026-04-01 15:29:24,773 [PID 4031588] INFO  Computing inferred models...
+2026-04-01 15:29:24,926 [PID 4031588] INFO  Computed inferred models: 0.153s
+2026-04-01 15:29:24,926 [PID 4031588] PERFORMANCE  Computed inferred models (models: 83): 0.153s
+2026-04-01 15:29:25,008 [PID 4031588] INFO  Computing overrides...
+2026-04-01 15:29:25,305 [PID 4031588] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:25,305 [PID 4031588] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:25,306 [PID 4031588] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:25,306 [PID 4031588] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:25,306 [PID 4031588] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:25,306 [PID 4031588] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:25,317 [PID 4031588] INFO  Overrides computed: 0.307s
+2026-04-01 15:29:25,317 [PID 4031588] PERFORMANCE  Overrides computed: 0.307s
+2026-04-01 15:29:25,317 [PID 4031588] INFO  Indexing global constants...
+2026-04-01 15:29:25,459 [PID 4031588] INFO  Finished constant propagation analysis: 0.146s
+2026-04-01 15:29:25,460 [PID 4031588] PERFORMANCE  Finished constant propagation analysis: 0.146s
+2026-04-01 15:29:25,460 [PID 4031588] INFO  Building map from callables to decorators...
+2026-04-01 15:29:25,501 [PID 4031588] INFO  Map from callables to decorators built: 0.038s
+2026-04-01 15:29:25,502 [PID 4031588] PERFORMANCE  Map from callables to decorators built: 0.038s
+2026-04-01 15:29:25,502 [PID 4031588] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:29:25,634 [PID 4031588] INFO  Defines and call graphs of decorated targets built: 0.137s
+2026-04-01 15:29:25,635 [PID 4031588] PERFORMANCE  Defines and call graphs of decorated targets built: 0.137s
+2026-04-01 15:29:25,635 [PID 4031588] INFO  Building call graph...
+2026-04-01 15:29:25,788 [PID 4031588] WARNING  Emitting the contents of the call graph to `./call-graph-dump.json`
+2026-04-01 15:29:25,789 [PID 4031588] INFO  Call graph built: 0.148s
+2026-04-01 15:29:25,789 [PID 4031588] PERFORMANCE  Call graph built: 0.148s
+2026-04-01 15:29:25,789 [PID 4031588] INFO  Computing dependencies...
+2026-04-01 15:29:25,809 [PID 4031588] INFO  Computed dependencies: 0.018s
+2026-04-01 15:29:25,810 [PID 4031588] PERFORMANCE  Computed dependencies: 0.018s
+2026-04-01 15:29:25,810 [PID 4031588] INFO  Computing higher order call graphs...
+2026-04-01 15:29:26,053 [PID 4031588] PERFORMANCE  Recorded initial models: 0.126s
+2026-04-01 15:29:26,054 [PID 4031588] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:29:26,095 [PID 4031588] INFO  Processed 14 of 14 callables
+2026-04-01 15:29:26,095 [PID 4031588] INFO  Iteration #0, 14 callables, heap size 0.028GB took 0.04s
+2026-04-01 15:29:26,197 [PID 4031588] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:29:26,197 [PID 4031588] WARNING  Emitting the contents of the call graph to `./call-graph-dump.json`
+2026-04-01 15:29:26,279 [PID 4031588] INFO  Computed higher order call graphs: 0.471s
+2026-04-01 15:29:26,280 [PID 4031588] PERFORMANCE  Computed higher order call graphs: 0.471s
+2026-04-01 15:29:26,280 [PID 4031588] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:29:26,311 [PID 4031588] INFO  Computed dependencies from higher order call graphs: 0.030s
+2026-04-01 15:29:26,311 [PID 4031588] PERFORMANCE  Computed dependencies from higher order call graphs: 0.030s
+2026-04-01 15:29:26,383 [PID 4031588] INFO  Purging shared memory...
+2026-04-01 15:29:26,383 [PID 4031588] PERFORMANCE  Purged shared memory: 0.004s
+2026-04-01 15:29:26,383 [PID 4031588] INFO  Purging shared memory...
+2026-04-01 15:29:26,394 [PID 4031588] PERFORMANCE  Purged shared memory: 0.002s
+2026-04-01 15:29:26,394 [PID 4031588] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:29:26,394 [PID 4031588] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:29:26,395 [PID 4031588] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:29:26,395 [PID 4031588] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:29:26,691 [PID 4031588] PERFORMANCE  Recorded initial models: 0.297s
+2026-04-01 15:29:26,692 [PID 4031588] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:29:26,753 [PID 4031588] INFO  Processed 14 of 14 callables
+2026-04-01 15:29:26,754 [PID 4031588] INFO  Iteration #0, 14 callables, heap size 0.031GB took 0.07s
+2026-04-01 15:29:26,754 [PID 4031588] INFO  Iteration #1. 9 callables [...]
+2026-04-01 15:29:26,815 [PID 4031588] INFO  Processed 9 of 9 callables
+2026-04-01 15:29:26,816 [PID 4031588] INFO  Iteration #1, 9 callables, heap size 0.031GB took 0.06s
+2026-04-01 15:29:26,867 [PID 4031588] INFO  Found 5 issues
+2026-04-01 15:29:26,868 [PID 4031588] INFO  Analysis fixpoint complete: 0.475s
+2026-04-01 15:29:26,868 [PID 4031588] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31146816, issues: 5): 0.475s
+2026-04-01 15:29:26,868 [PID 4031588] PERFORMANCE  Analyze: 4.195s
+2026-04-01 15:29:37,850 [PID 4032766] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:29:37,851 [PID 4032766] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:29:37,851 [PID 4032766] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:29:37,851 [PID 4032766] INFO No typeshed specified, looking for it...
+2026-04-01 15:29:37,851 [PID 4032766] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:29:37,852 [PID 4032766] INFO Writing arguments into /tmp/pyre_arguments_zh3ctwkp.json...
+2026-04-01 15:29:37,852 [PID 4032766] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "dump_model_query_results": "./model-query-results.json",
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:29:37,894 [PID 4032766] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:29:37,914 [PID 4032766] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.019s
+2026-04-01 15:29:37,915 [PID 4032766] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:29:37,915 [PID 4032766] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:29:37,915 [PID 4032766] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:29:37,915 [PID 4032766] INFO  Verifying model syntax...
+2026-04-01 15:29:37,916 [PID 4032766] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:37,916 [PID 4032766] INFO  Verified model syntax: 0.000s
+2026-04-01 15:29:37,916 [PID 4032766] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:29:37,916 [PID 4032766] INFO  Parsing taint models modes...
+2026-04-01 15:29:37,916 [PID 4032766] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:37,916 [PID 4032766] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:29:37,917 [PID 4032766] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:29:37,917 [PID 4032766] INFO  Building module tracker...
+2026-04-01 15:29:37,937 [PID 4032766] PERFORMANCE  Module tracker built: 0.025s
+2026-04-01 15:29:37,938 [PID 4032766] PERFORMANCE  Full environment built: 0.025s
+2026-04-01 15:29:37,938 [PID 4032766] INFO  Starting type checking...
+2026-04-01 15:29:37,938 [PID 4032766] INFO  Found 918 modules
+2026-04-01 15:29:37,938 [PID 4032766] INFO  Collecting all definitions...
+2026-04-01 15:29:38,295 [PID 4032766] PERFORMANCE  Collected definitions (defines: 20302): 0.354s
+2026-04-01 15:29:38,295 [PID 4032766] INFO  Found 20302 functions
+2026-04-01 15:29:38,295 [PID 4032766] INFO  Checking 20302 functions...
+2026-04-01 15:29:38,625 [PID 4032766] INFO  Processed 328 of 20302 functions
+2026-04-01 15:29:38,636 [PID 4032766] INFO  Processed 656 of 20302 functions
+2026-04-01 15:29:38,657 [PID 4032766] INFO  Processed 984 of 20302 functions
+2026-04-01 15:29:38,658 [PID 4032766] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:29:38,668 [PID 4032766] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:29:38,669 [PID 4032766] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:29:38,669 [PID 4032766] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:29:38,680 [PID 4032766] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:29:38,680 [PID 4032766] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:29:38,690 [PID 4032766] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:29:38,691 [PID 4032766] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:29:38,691 [PID 4032766] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:29:38,691 [PID 4032766] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:29:38,692 [PID 4032766] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:29:38,702 [PID 4032766] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:29:38,702 [PID 4032766] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:29:38,702 [PID 4032766] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:29:38,702 [PID 4032766] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:29:38,703 [PID 4032766] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:29:38,713 [PID 4032766] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:29:38,713 [PID 4032766] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:29:38,724 [PID 4032766] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:29:38,734 [PID 4032766] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:29:38,756 [PID 4032766] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:29:38,756 [PID 4032766] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:29:38,787 [PID 4032766] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:29:38,798 [PID 4032766] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:29:38,829 [PID 4032766] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:29:38,830 [PID 4032766] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:29:38,830 [PID 4032766] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:29:38,872 [PID 4032766] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:29:38,903 [PID 4032766] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:29:38,924 [PID 4032766] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:29:38,945 [PID 4032766] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:29:38,956 [PID 4032766] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:29:38,957 [PID 4032766] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:29:38,957 [PID 4032766] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:29:38,968 [PID 4032766] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:29:38,978 [PID 4032766] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:29:38,979 [PID 4032766] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:29:39,000 [PID 4032766] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:29:39,000 [PID 4032766] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:29:39,011 [PID 4032766] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:29:39,011 [PID 4032766] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:29:39,022 [PID 4032766] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:29:39,022 [PID 4032766] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:29:39,022 [PID 4032766] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:29:39,043 [PID 4032766] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:29:39,044 [PID 4032766] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:29:39,054 [PID 4032766] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:29:39,054 [PID 4032766] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:29:39,055 [PID 4032766] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:29:39,055 [PID 4032766] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:29:39,076 [PID 4032766] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:29:39,086 [PID 4032766] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:29:39,097 [PID 4032766] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:29:39,097 [PID 4032766] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:29:39,108 [PID 4032766] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:29:39,119 [PID 4032766] INFO  Processed 19352 of 20302 functions
+2026-04-01 15:29:39,129 [PID 4032766] INFO  Processed 19646 of 20302 functions
+2026-04-01 15:29:39,170 [PID 4032766] INFO  Processed 19974 of 20302 functions
+2026-04-01 15:29:39,263 [PID 4032766] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:29:39,263 [PID 4032766] PERFORMANCE  Check_TypeCheck: 0.967s
+2026-04-01 15:29:39,263 [PID 4032766] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:29:39,263 [PID 4032766] INFO  Computing class hierarchy graph...
+2026-04-01 15:29:39,426 [PID 4032766] INFO  Computed class hierarchy graph: 0.158s
+2026-04-01 15:29:39,427 [PID 4032766] PERFORMANCE  Computed class hierarchy graph: 0.159s
+2026-04-01 15:29:39,427 [PID 4032766] INFO  Computing class intervals...
+2026-04-01 15:29:39,437 [PID 4032766] INFO  Computed class intervals: 0.008s
+2026-04-01 15:29:39,437 [PID 4032766] PERFORMANCE  Computed class intervals: 0.008s
+2026-04-01 15:29:39,468 [PID 4032766] INFO  Fetching initial callables to analyze...
+2026-04-01 15:29:39,654 [PID 4032766] INFO  Fetched initial callables to analyze: 0.183s
+2026-04-01 15:29:39,654 [PID 4032766] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.183s
+2026-04-01 15:29:39,655 [PID 4032766] INFO  Building a map from callable names to definitions...
+2026-04-01 15:29:39,849 [PID 4032766] INFO  Map from callable names to definitions built: 0.202s
+2026-04-01 15:29:39,849 [PID 4032766] PERFORMANCE  Map from callable names to definitions built: 0.203s
+2026-04-01 15:29:39,849 [PID 4032766] INFO  Parsing taint models...
+2026-04-01 15:29:40,003 [PID 4032766] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:29:40,105 [PID 4032766] ERROR  Found 3 model verification errors!
+2026-04-01 15:29:40,105 [PID 4032766] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:29:40,106 [PID 4032766] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:29:40,106 [PID 4032766] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:29:40,106 [PID 4032766] INFO  Parsed taint models: 0.252s
+2026-04-01 15:29:40,106 [PID 4032766] PERFORMANCE  Parsed taint models (models: 7, queries: 1): 0.252s
+2026-04-01 15:29:40,106 [PID 4032766] INFO  Generating models from model queries...
+2026-04-01 15:29:40,137 [PID 4032766] INFO  Generating models from 1 regular callable model queries...
+2026-04-01 15:29:40,179 [PID 4032766] INFO  Target `input` matches all constraints for the model query `find_all_input_functions`.
+2026-04-01 15:29:40,189 [PID 4032766] INFO  Target `turtle.numinput` matches all constraints for the model query `find_all_input_functions`.
+2026-04-01 15:29:40,200 [PID 4032766] INFO  Target `turtle.textinput` matches all constraints for the model query `find_all_input_functions`.
+2026-04-01 15:29:40,200 [PID 4032766] INFO  Target `xml.sax.saxutils.prepare_input_source` matches all constraints for the model query `find_all_input_functions`.
+2026-04-01 15:29:40,221 [PID 4032766] INFO  Target `fileinput.input` matches all constraints for the model query `find_all_input_functions`.
+2026-04-01 15:29:40,262 [PID 4032766] INFO  Target `readline.set_pre_input_hook` matches all constraints for the model query `find_all_input_functions`.
+2026-04-01 15:29:40,262 [PID 4032766] INFO  Generated 6 models from regular callable model queries.
+2026-04-01 15:29:40,262 [PID 4032766] INFO  Building cache for 0 callable model queries...
+2026-04-01 15:29:40,262 [PID 4032766] INFO  Generating models from 0 cached callable model queries...
+2026-04-01 15:29:40,263 [PID 4032766] INFO  Generated 0 models from cached callable model queries.
+2026-04-01 15:29:40,263 [PID 4032766] INFO  Model Query `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions` generated 6 models.
+2026-04-01 15:29:40,263 [PID 4032766] WARNING  Emitting the model query results to `./model-query-results.json`
+2026-04-01 15:29:40,263 [PID 4032766] INFO  Generated models from model queries: 0.159s
+2026-04-01 15:29:40,263 [PID 4032766] PERFORMANCE  Generated models from model queries (models: 6): 0.159s
+2026-04-01 15:29:40,263 [PID 4032766] INFO  Computing inferred models...
+2026-04-01 15:29:40,415 [PID 4032766] INFO  Computed inferred models: 0.148s
+2026-04-01 15:29:40,416 [PID 4032766] PERFORMANCE  Computed inferred models (models: 83): 0.148s
+2026-04-01 15:29:40,467 [PID 4032766] INFO  Computing overrides...
+2026-04-01 15:29:40,803 [PID 4032766] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:40,803 [PID 4032766] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:40,804 [PID 4032766] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:40,804 [PID 4032766] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:40,804 [PID 4032766] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:40,804 [PID 4032766] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:29:40,815 [PID 4032766] INFO  Overrides computed: 0.343s
+2026-04-01 15:29:40,815 [PID 4032766] PERFORMANCE  Overrides computed: 0.343s
+2026-04-01 15:29:40,815 [PID 4032766] INFO  Indexing global constants...
+2026-04-01 15:29:40,958 [PID 4032766] INFO  Finished constant propagation analysis: 0.143s
+2026-04-01 15:29:40,958 [PID 4032766] PERFORMANCE  Finished constant propagation analysis: 0.144s
+2026-04-01 15:29:40,958 [PID 4032766] INFO  Building map from callables to decorators...
+2026-04-01 15:29:40,989 [PID 4032766] INFO  Map from callables to decorators built: 0.032s
+2026-04-01 15:29:40,990 [PID 4032766] PERFORMANCE  Map from callables to decorators built: 0.033s
+2026-04-01 15:29:40,990 [PID 4032766] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:29:41,133 [PID 4032766] INFO  Defines and call graphs of decorated targets built: 0.142s
+2026-04-01 15:29:41,133 [PID 4032766] PERFORMANCE  Defines and call graphs of decorated targets built: 0.142s
+2026-04-01 15:29:41,133 [PID 4032766] INFO  Building call graph...
+2026-04-01 15:29:41,286 [PID 4032766] INFO  Call graph built: 0.146s
+2026-04-01 15:29:41,286 [PID 4032766] PERFORMANCE  Call graph built: 0.146s
+2026-04-01 15:29:41,287 [PID 4032766] INFO  Computing dependencies...
+2026-04-01 15:29:41,307 [PID 4032766] INFO  Computed dependencies: 0.025s
+2026-04-01 15:29:41,308 [PID 4032766] PERFORMANCE  Computed dependencies: 0.025s
+2026-04-01 15:29:41,308 [PID 4032766] INFO  Computing higher order call graphs...
+2026-04-01 15:29:41,552 [PID 4032766] PERFORMANCE  Recorded initial models: 0.128s
+2026-04-01 15:29:41,553 [PID 4032766] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:29:41,614 [PID 4032766] INFO  Processed 14 of 14 callables
+2026-04-01 15:29:41,614 [PID 4032766] INFO  Iteration #0, 14 callables, heap size 0.029GB took 0.06s
+2026-04-01 15:29:41,727 [PID 4032766] INFO  Dropping decorated targets in models took 0.11s
+2026-04-01 15:29:41,778 [PID 4032766] INFO  Computed higher order call graphs: 0.473s
+2026-04-01 15:29:41,779 [PID 4032766] PERFORMANCE  Computed higher order call graphs: 0.473s
+2026-04-01 15:29:41,779 [PID 4032766] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:29:41,810 [PID 4032766] INFO  Computed dependencies from higher order call graphs: 0.025s
+2026-04-01 15:29:41,810 [PID 4032766] PERFORMANCE  Computed dependencies from higher order call graphs: 0.025s
+2026-04-01 15:29:41,892 [PID 4032766] INFO  Purging shared memory...
+2026-04-01 15:29:41,893 [PID 4032766] PERFORMANCE  Purged shared memory: 0.004s
+2026-04-01 15:29:41,893 [PID 4032766] INFO  Purging shared memory...
+2026-04-01 15:29:41,903 [PID 4032766] PERFORMANCE  Purged shared memory: 0.005s
+2026-04-01 15:29:41,904 [PID 4032766] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:29:41,904 [PID 4032766] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:29:41,904 [PID 4032766] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:29:41,904 [PID 4032766] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:29:42,221 [PID 4032766] PERFORMANCE  Recorded initial models: 0.316s
+2026-04-01 15:29:42,221 [PID 4032766] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:29:42,262 [PID 4032766] INFO  Processed 14 of 14 callables
+2026-04-01 15:29:42,263 [PID 4032766] INFO  Iteration #0, 14 callables, heap size 0.031GB took 0.05s
+2026-04-01 15:29:42,263 [PID 4032766] INFO  Iteration #1. 9 callables [...]
+2026-04-01 15:29:42,334 [PID 4032766] INFO  Processed 9 of 9 callables
+2026-04-01 15:29:42,335 [PID 4032766] INFO  Iteration #1, 9 callables, heap size 0.031GB took 0.07s
+2026-04-01 15:29:42,396 [PID 4032766] INFO  Found 5 issues
+2026-04-01 15:29:42,397 [PID 4032766] INFO  Analysis fixpoint complete: 0.492s
+2026-04-01 15:29:42,397 [PID 4032766] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31426688, issues: 5): 0.492s
+2026-04-01 15:29:42,397 [PID 4032766] PERFORMANCE  Analyze: 4.479s
+2026-04-01 15:30:01,397 [PID 4034164] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:30:01,397 [PID 4034164] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:30:01,398 [PID 4034164] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:30:01,398 [PID 4034164] INFO No typeshed specified, looking for it...
+2026-04-01 15:30:01,398 [PID 4034164] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:30:01,398 [PID 4034164] INFO Writing arguments into /tmp/pyre_arguments_wo8xtsz5.json...
+2026-04-01 15:30:01,399 [PID 4034164] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": true,
+  "verify_dsl": false,
+  "verify_taint_config_only": false,
+  "save_results_to": "./pysa_results",
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": true,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:30:01,440 [PID 4034164] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.001s
+2026-04-01 15:30:01,450 [PID 4034164] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.015s
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Initialized and verified taint configuration: 0.001s
+2026-04-01 15:30:01,451 [PID 4034164] PERFORMANCE  Initialized and verified taint configuration: 0.001s
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Verifying model syntax...
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Verified model syntax: 0.000s
+2026-04-01 15:30:01,451 [PID 4034164] PERFORMANCE  Verified model syntax: 0.000s
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Parsing taint models modes...
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Parsed taint models modes: 0.000s
+2026-04-01 15:30:01,451 [PID 4034164] PERFORMANCE  Parsed taint models modes: 0.000s
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Could not find local cache. Fetching cache from saved states.
+2026-04-01 15:30:01,451 [PID 4034164] INFO  Initializing file watching service...
+2026-04-01 15:30:01,452 [PID 4034164] WARNING  Could not fetch a saved state: Cannot find watchman exectuable under PATH
+2026-04-01 15:30:01,452 [PID 4034164] INFO  Building module tracker...
+2026-04-01 15:30:01,472 [PID 4034164] PERFORMANCE  Module tracker built: 0.019s
+2026-04-01 15:30:01,472 [PID 4034164] PERFORMANCE  Full environment built: 0.019s
+2026-04-01 15:30:01,472 [PID 4034164] INFO  Starting type checking...
+2026-04-01 15:30:01,472 [PID 4034164] INFO  Found 918 modules
+2026-04-01 15:30:01,472 [PID 4034164] INFO  Collecting all definitions...
+2026-04-01 15:30:01,808 [PID 4034164] PERFORMANCE  Collected definitions (defines: 20302): 0.334s
+2026-04-01 15:30:01,808 [PID 4034164] INFO  Found 20302 functions
+2026-04-01 15:30:01,808 [PID 4034164] INFO  Writing modules to `./pysa_results/modules.json`...
+2026-04-01 15:30:01,818 [PID 4034164] INFO  Wrote modules: 0.005s
+2026-04-01 15:30:01,819 [PID 4034164] PERFORMANCE  Wrote modules: 0.005s
+2026-04-01 15:30:01,819 [PID 4034164] INFO  Writing functions to `./pysa_results/functions.json`...
+2026-04-01 15:30:01,880 [PID 4034164] INFO  Wrote functions: 0.065s
+2026-04-01 15:30:01,880 [PID 4034164] PERFORMANCE  Wrote functions: 0.065s
+2026-04-01 15:30:01,880 [PID 4034164] INFO  Checking 20302 functions...
+2026-04-01 15:30:02,208 [PID 4034164] INFO  Processed 328 of 20302 functions
+2026-04-01 15:30:02,239 [PID 4034164] INFO  Processed 656 of 20302 functions
+2026-04-01 15:30:02,239 [PID 4034164] INFO  Processed 984 of 20302 functions
+2026-04-01 15:30:02,249 [PID 4034164] INFO  Processed 1312 of 20302 functions
+2026-04-01 15:30:02,260 [PID 4034164] INFO  Processed 1640 of 20302 functions
+2026-04-01 15:30:02,270 [PID 4034164] INFO  Processed 1968 of 20302 functions
+2026-04-01 15:30:02,271 [PID 4034164] INFO  Processed 2296 of 20302 functions
+2026-04-01 15:30:02,281 [PID 4034164] INFO  Processed 2624 of 20302 functions
+2026-04-01 15:30:02,291 [PID 4034164] INFO  Processed 2952 of 20302 functions
+2026-04-01 15:30:02,291 [PID 4034164] INFO  Processed 3280 of 20302 functions
+2026-04-01 15:30:02,291 [PID 4034164] INFO  Processed 3608 of 20302 functions
+2026-04-01 15:30:02,302 [PID 4034164] INFO  Processed 3936 of 20302 functions
+2026-04-01 15:30:02,302 [PID 4034164] INFO  Processed 4264 of 20302 functions
+2026-04-01 15:30:02,302 [PID 4034164] INFO  Processed 4592 of 20302 functions
+2026-04-01 15:30:02,302 [PID 4034164] INFO  Processed 4920 of 20302 functions
+2026-04-01 15:30:02,302 [PID 4034164] INFO  Processed 5248 of 20302 functions
+2026-04-01 15:30:02,302 [PID 4034164] INFO  Processed 5576 of 20302 functions
+2026-04-01 15:30:02,323 [PID 4034164] INFO  Processed 5904 of 20302 functions
+2026-04-01 15:30:02,323 [PID 4034164] INFO  Processed 6232 of 20302 functions
+2026-04-01 15:30:02,344 [PID 4034164] INFO  Processed 6560 of 20302 functions
+2026-04-01 15:30:02,354 [PID 4034164] INFO  Processed 6888 of 20302 functions
+2026-04-01 15:30:02,365 [PID 4034164] INFO  Processed 7216 of 20302 functions
+2026-04-01 15:30:02,386 [PID 4034164] INFO  Processed 7544 of 20302 functions
+2026-04-01 15:30:02,387 [PID 4034164] INFO  Processed 7872 of 20302 functions
+2026-04-01 15:30:02,387 [PID 4034164] INFO  Processed 8200 of 20302 functions
+2026-04-01 15:30:02,407 [PID 4034164] INFO  Processed 8528 of 20302 functions
+2026-04-01 15:30:02,418 [PID 4034164] INFO  Processed 8856 of 20302 functions
+2026-04-01 15:30:02,439 [PID 4034164] INFO  Processed 9184 of 20302 functions
+2026-04-01 15:30:02,450 [PID 4034164] INFO  Processed 9512 of 20302 functions
+2026-04-01 15:30:02,450 [PID 4034164] INFO  Processed 9840 of 20302 functions
+2026-04-01 15:30:02,450 [PID 4034164] INFO  Processed 10168 of 20302 functions
+2026-04-01 15:30:02,461 [PID 4034164] INFO  Processed 10496 of 20302 functions
+2026-04-01 15:30:02,472 [PID 4034164] INFO  Processed 10824 of 20302 functions
+2026-04-01 15:30:02,514 [PID 4034164] INFO  Processed 11152 of 20302 functions
+2026-04-01 15:30:02,524 [PID 4034164] INFO  Processed 11480 of 20302 functions
+2026-04-01 15:30:02,525 [PID 4034164] INFO  Processed 11808 of 20302 functions
+2026-04-01 15:30:02,535 [PID 4034164] INFO  Processed 12136 of 20302 functions
+2026-04-01 15:30:02,536 [PID 4034164] INFO  Processed 12464 of 20302 functions
+2026-04-01 15:30:02,556 [PID 4034164] INFO  Processed 12792 of 20302 functions
+2026-04-01 15:30:02,557 [PID 4034164] INFO  Processed 13120 of 20302 functions
+2026-04-01 15:30:02,567 [PID 4034164] INFO  Processed 13448 of 20302 functions
+2026-04-01 15:30:02,578 [PID 4034164] INFO  Processed 13776 of 20302 functions
+2026-04-01 15:30:02,578 [PID 4034164] INFO  Processed 14104 of 20302 functions
+2026-04-01 15:30:02,579 [PID 4034164] INFO  Processed 14432 of 20302 functions
+2026-04-01 15:30:02,579 [PID 4034164] INFO  Processed 14760 of 20302 functions
+2026-04-01 15:30:02,579 [PID 4034164] INFO  Processed 15088 of 20302 functions
+2026-04-01 15:30:02,579 [PID 4034164] INFO  Processed 15416 of 20302 functions
+2026-04-01 15:30:02,590 [PID 4034164] INFO  Processed 15744 of 20302 functions
+2026-04-01 15:30:02,590 [PID 4034164] INFO  Processed 16072 of 20302 functions
+2026-04-01 15:30:02,610 [PID 4034164] INFO  Processed 16400 of 20302 functions
+2026-04-01 15:30:02,621 [PID 4034164] INFO  Processed 16728 of 20302 functions
+2026-04-01 15:30:02,631 [PID 4034164] INFO  Processed 17056 of 20302 functions
+2026-04-01 15:30:02,652 [PID 4034164] INFO  Processed 17384 of 20302 functions
+2026-04-01 15:30:02,663 [PID 4034164] INFO  Processed 17712 of 20302 functions
+2026-04-01 15:30:02,674 [PID 4034164] INFO  Processed 18040 of 20302 functions
+2026-04-01 15:30:02,684 [PID 4034164] INFO  Processed 18368 of 20302 functions
+2026-04-01 15:30:02,705 [PID 4034164] INFO  Processed 18696 of 20302 functions
+2026-04-01 15:30:02,705 [PID 4034164] INFO  Processed 19024 of 20302 functions
+2026-04-01 15:30:02,716 [PID 4034164] INFO  Processed 19318 of 20302 functions
+2026-04-01 15:30:02,716 [PID 4034164] INFO  Processed 19646 of 20302 functions
+2026-04-01 15:30:02,737 [PID 4034164] INFO  Processed 19974 of 20302 functions
+2026-04-01 15:30:02,737 [PID 4034164] INFO  Processed 20302 of 20302 functions
+2026-04-01 15:30:02,738 [PID 4034164] PERFORMANCE  Check_TypeCheck: 0.858s
+2026-04-01 15:30:02,738 [PID 4034164] MEMORY  Shared memory size post-typecheck (size: 19)
+2026-04-01 15:30:02,799 [PID 4034164] INFO  Saved type environment to cache shared memory.
+2026-04-01 15:30:02,799 [PID 4034164] INFO  Computing class hierarchy graph...
+2026-04-01 15:30:02,932 [PID 4034164] INFO  Computed class hierarchy graph: 0.131s
+2026-04-01 15:30:02,932 [PID 4034164] PERFORMANCE  Computed class hierarchy graph: 0.131s
+2026-04-01 15:30:02,943 [PID 4034164] INFO  Saved class hierarchy graph to cache.
+2026-04-01 15:30:02,943 [PID 4034164] INFO  Computing class intervals...
+2026-04-01 15:30:02,953 [PID 4034164] INFO  Computed class intervals: 0.006s
+2026-04-01 15:30:02,954 [PID 4034164] PERFORMANCE  Computed class intervals: 0.006s
+2026-04-01 15:30:02,954 [PID 4034164] INFO  Saved class interval graph to cache.
+2026-04-01 15:30:02,985 [PID 4034164] INFO  Fetching initial callables to analyze...
+2026-04-01 15:30:03,150 [PID 4034164] INFO  Fetched initial callables to analyze: 0.169s
+2026-04-01 15:30:03,151 [PID 4034164] PERFORMANCE  Fetched initial callables to analyze (definitions: 54, internals: 14, stubs: 15779): 0.169s
+2026-04-01 15:30:03,151 [PID 4034164] INFO  Building a map from callable names to definitions...
+2026-04-01 15:30:03,355 [PID 4034164] INFO  Map from callable names to definitions built: 0.203s
+2026-04-01 15:30:03,355 [PID 4034164] PERFORMANCE  Map from callable names to definitions built: 0.203s
+2026-04-01 15:30:03,355 [PID 4034164] INFO  Parsing taint models...
+2026-04-01 15:30:03,478 [PID 4034164] INFO  Finding taint models in `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint`.
+2026-04-01 15:30:03,580 [PID 4034164] ERROR  Found 3 model verification errors!
+2026-04-01 15:30:03,581 [PID 4034164] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:20: Model signature parameters for `str.__add__` do not match implementation `(LiteralString, LiteralString) -> LiteralString`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:30:03,581 [PID 4034164] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:13: Model signature parameters for `pickle.loads` do not match implementation `def loads(unknown, fix_imports: bool = ..., encoding: str = ..., errors: str = ..., buffers: Iterable[Any] | None = ...) -> Any: ...`. Reason: unexpected named parameter: `data`.
+2026-04-01 15:30:03,581 [PID 4034164] ERROR  /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/general.pysa:10: Model signature parameters for `sqlite3.Cursor.execute` do not match implementation `(_Self_sqlite3_Cursor__, str, SupportsLenAndGetItem[Any] | Mapping[str, Any]=...) -> _Self_sqlite3_Cursor__`. Reason: unexpected named parameter: `self`.
+2026-04-01 15:30:03,582 [PID 4034164] INFO  Parsed taint models: 0.222s
+2026-04-01 15:30:03,582 [PID 4034164] PERFORMANCE  Parsed taint models (models: 7, queries: 1): 0.222s
+2026-04-01 15:30:03,582 [PID 4034164] INFO  Generating models from model queries...
+2026-04-01 15:30:03,602 [PID 4034164] INFO  Generating models from 1 regular callable model queries...
+2026-04-01 15:30:03,745 [PID 4034164] INFO  Generated 6 models from regular callable model queries.
+2026-04-01 15:30:03,745 [PID 4034164] INFO  Building cache for 0 callable model queries...
+2026-04-01 15:30:03,746 [PID 4034164] INFO  Generating models from 0 cached callable model queries...
+2026-04-01 15:30:03,746 [PID 4034164] INFO  Generated 0 models from cached callable model queries.
+2026-04-01 15:30:03,746 [PID 4034164] INFO  Model Query `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint/core_privacy_security/model_query.pysa/find_all_input_functions` generated 6 models.
+2026-04-01 15:30:03,746 [PID 4034164] INFO  Generated models from model queries: 0.169s
+2026-04-01 15:30:03,746 [PID 4034164] PERFORMANCE  Generated models from model queries (models: 6): 0.169s
+2026-04-01 15:30:03,746 [PID 4034164] INFO  Computing inferred models...
+2026-04-01 15:30:03,888 [PID 4034164] INFO  Computed inferred models: 0.136s
+2026-04-01 15:30:03,889 [PID 4034164] PERFORMANCE  Computed inferred models (models: 83): 0.136s
+2026-04-01 15:30:03,991 [PID 4034164] INFO  Computing overrides...
+2026-04-01 15:30:04,308 [PID 4034164] WARNING  `object.__eq__` has 106 overrides, this might slow down the analysis considerably.
+2026-04-01 15:30:04,308 [PID 4034164] WARNING  `object.__hash__` has 58 overrides, this might slow down the analysis considerably.
+2026-04-01 15:30:04,309 [PID 4034164] WARNING  `object.__init__` has 457 overrides, this might slow down the analysis considerably.
+2026-04-01 15:30:04,309 [PID 4034164] WARNING  `type.__call__` has 87 overrides, this might slow down the analysis considerably.
+2026-04-01 15:30:04,309 [PID 4034164] WARNING  `type.__init__` has 347 overrides, this might slow down the analysis considerably.
+2026-04-01 15:30:04,309 [PID 4034164] WARNING  `type.__new__` has 77 overrides, this might slow down the analysis considerably.
+2026-04-01 15:30:04,309 [PID 4034164] INFO  Writing the override graph to `./pysa_results/override-graph.json`
+2026-04-01 15:30:04,320 [PID 4034164] INFO  Overrides computed: 0.328s
+2026-04-01 15:30:04,320 [PID 4034164] PERFORMANCE  Overrides computed: 0.328s
+2026-04-01 15:30:04,320 [PID 4034164] INFO  Indexing global constants...
+2026-04-01 15:30:04,443 [PID 4034164] INFO  Finished constant propagation analysis: 0.122s
+2026-04-01 15:30:04,443 [PID 4034164] PERFORMANCE  Finished constant propagation analysis: 0.123s
+2026-04-01 15:30:04,444 [PID 4034164] INFO  Building map from callables to decorators...
+2026-04-01 15:30:04,485 [PID 4034164] INFO  Map from callables to decorators built: 0.037s
+2026-04-01 15:30:04,485 [PID 4034164] PERFORMANCE  Map from callables to decorators built: 0.037s
+2026-04-01 15:30:04,485 [PID 4034164] INFO  Writing the decorator counts to `./pysa_results`
+2026-04-01 15:30:04,485 [PID 4034164] INFO  Building defines and call graphs of decorated targets...
+2026-04-01 15:30:04,619 [PID 4034164] INFO  Defines and call graphs of decorated targets built: 0.138s
+2026-04-01 15:30:04,619 [PID 4034164] PERFORMANCE  Defines and call graphs of decorated targets built: 0.138s
+2026-04-01 15:30:04,619 [PID 4034164] INFO  Building call graph...
+2026-04-01 15:30:04,772 [PID 4034164] INFO  Writing the call graphs to `./pysa_results`
+2026-04-01 15:30:04,773 [PID 4034164] INFO  Call graph built: 0.148s
+2026-04-01 15:30:04,773 [PID 4034164] PERFORMANCE  Call graph built: 0.148s
+2026-04-01 15:30:04,773 [PID 4034164] INFO  Computing dependencies...
+2026-04-01 15:30:04,794 [PID 4034164] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:30:04,794 [PID 4034164] INFO  Computed dependencies: 0.019s
+2026-04-01 15:30:04,794 [PID 4034164] PERFORMANCE  Computed dependencies: 0.019s
+2026-04-01 15:30:04,795 [PID 4034164] INFO  Computing higher order call graphs...
+2026-04-01 15:30:05,029 [PID 4034164] PERFORMANCE  Recorded initial models: 0.118s
+2026-04-01 15:30:05,029 [PID 4034164] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:30:05,070 [PID 4034164] INFO  Processed 14 of 14 callables
+2026-04-01 15:30:05,071 [PID 4034164] INFO  Iteration #0, 14 callables, heap size 0.029GB took 0.04s
+2026-04-01 15:30:05,163 [PID 4034164] INFO  Dropping decorated targets in models took 0.10s
+2026-04-01 15:30:05,163 [PID 4034164] INFO  Writing the higher order call graphs to `./pysa_results`
+2026-04-01 15:30:05,244 [PID 4034164] INFO  Computed higher order call graphs: 0.451s
+2026-04-01 15:30:05,245 [PID 4034164] PERFORMANCE  Computed higher order call graphs: 0.451s
+2026-04-01 15:30:05,245 [PID 4034164] INFO  Computing dependencies from higher order call graphs...
+2026-04-01 15:30:05,266 [PID 4034164] INFO  Writing the dependency graph to `./pysa_results/dependency-graph.json`
+2026-04-01 15:30:05,266 [PID 4034164] INFO  Computed dependencies from higher order call graphs: 0.020s
+2026-04-01 15:30:05,266 [PID 4034164] PERFORMANCE  Computed dependencies from higher order call graphs: 0.020s
+2026-04-01 15:30:05,266 [PID 4034164] INFO  Saved Handle of overriding types to cache.
+2026-04-01 15:30:05,266 [PID 4034164] INFO  Saved Handle of call graphs of defines to cache.
+2026-04-01 15:30:05,267 [PID 4034164] INFO  Saved Handle of Mapping from fully qualified global name to expression to cache.
+2026-04-01 15:30:05,277 [PID 4034164] INFO  Saved previous analysis setup to cache.
+2026-04-01 15:30:05,277 [PID 4034164] INFO  Saving shared memory state to cache file...
+2026-04-01 15:30:05,786 [PID 4034164] INFO [2026-04-01 15:30:05] Dumping a saved state deptable.
+2026-04-01 15:30:05,797 [PID 4034164] INFO Finished SQL Transaction took 0.00s
+2026-04-01 15:30:05,797 [PID 4034164] INFO Lookup of existing rows took 0 us
+2026-04-01 15:30:05,797 [PID 4034164] INFO Wrote 0 new rows
+2026-04-01 15:30:05,798 [PID 4034164] INFO Updated 0 existing rows
+2026-04-01 15:30:05,798 [PID 4034164] INFO Finished closing SQL connection took 0.00s
+2026-04-01 15:30:05,798 [PID 4034164] INFO Writing dependency file with sqlite took 0.01s
+2026-04-01 15:30:05,819 [PID 4034164] INFO  Saved shared memory state to cache file: `/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre/.pysa_cache/sharedmem`
+2026-04-01 15:30:05,860 [PID 4034164] INFO  Purging shared memory...
+2026-04-01 15:30:05,870 [PID 4034164] PERFORMANCE  Purged shared memory: 0.002s
+2026-04-01 15:30:05,870 [PID 4034164] INFO  Purging shared memory...
+2026-04-01 15:30:05,871 [PID 4034164] PERFORMANCE  Purged shared memory: 0.001s
+2026-04-01 15:30:05,871 [PID 4034164] INFO  Initializing taint models for parameterized callables...
+2026-04-01 15:30:05,871 [PID 4034164] INFO  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:30:05,871 [PID 4034164] PERFORMANCE  Initialized taint models for parameterized callables: 0.000s
+2026-04-01 15:30:05,871 [PID 4034164] INFO  Analysis fixpoint started for 4197 overrides and 28 functions......
+2026-04-01 15:30:06,135 [PID 4034164] PERFORMANCE  Recorded initial models: 0.271s
+2026-04-01 15:30:06,136 [PID 4034164] INFO  Iteration #0. 14 callables [...]
+2026-04-01 15:30:06,197 [PID 4034164] INFO  Processed 14 of 14 callables
+2026-04-01 15:30:06,197 [PID 4034164] INFO  Iteration #0, 14 callables, heap size 0.032GB took 0.05s
+2026-04-01 15:30:06,198 [PID 4034164] INFO  Iteration #1. 9 callables [...]
+2026-04-01 15:30:06,259 [PID 4034164] INFO  Processed 9 of 9 callables
+2026-04-01 15:30:06,259 [PID 4034164] INFO  Iteration #1, 9 callables, heap size 0.032GB took 0.06s
+2026-04-01 15:30:06,310 [PID 4034164] INFO  Found 5 issues
+2026-04-01 15:30:06,311 [PID 4034164] INFO  Analysis fixpoint complete: 0.445s
+2026-04-01 15:30:06,311 [PID 4034164] PERFORMANCE  Analysis fixpoint complete (iterations: 2, heap size: 31720896, issues: 5): 0.445s
+2026-04-01 15:30:06,311 [PID 4034164] INFO  Writing analysis results to `./pysa_results`...
+2026-04-01 15:30:06,322 [PID 4034164] INFO  Wrote analysis results: 0.010s
+2026-04-01 15:30:06,322 [PID 4034164] PERFORMANCE  Wrote analysis results: 0.010s
+2026-04-01 15:30:06,322 [PID 4034164] PERFORMANCE  Analyze: 4.874s
+2026-04-01 15:30:27,389 [PID 4035709] INFO No binary specified, looking for `pyre.bin` in PATH
+2026-04-01 15:30:27,389 [PID 4035709] INFO Pyre binary is located at `/home/nyn/Desktop/Projects/Agents/playground/.venv/bin/pyre.bin`
+2026-04-01 15:30:27,389 [PID 4035709] INFO Could not determine the number of Pyre workers from configuration. Auto-set the value to 31.
+2026-04-01 15:30:27,390 [PID 4035709] INFO No typeshed specified, looking for it...
+2026-04-01 15:30:27,390 [PID 4035709] INFO Found: `/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed`
+2026-04-01 15:30:27,390 [PID 4035709] INFO Writing arguments into /tmp/pyre_arguments_k3n1czg1.json...
+2026-04-01 15:30:27,390 [PID 4035709] DEBUG Arguments:
+{
+  "source_paths": {
+    "kind": "simple",
+    "paths": [
+      "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+    ]
+  },
+  "search_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stdlib",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ExifRead",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyMySQL",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/PyYAML",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/aiofiles",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/chevron",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/colorama",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ldap3",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/mysqlclient",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/paramiko",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/psycopg2",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pycurl",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/python-dateutil",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/pytz",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/regex",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/requests",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/retry",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/tqdm",
+    "/home/nyn/Desktop/Projects/Agents/playground/.venv/lib/pyre_check/typeshed/stubs/ujson"
+  ],
+  "excludes": [],
+  "checked_directory_allowlist": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground"
+  ],
+  "checked_directory_blocklist": [],
+  "extensions": [],
+  "log_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/.pyre",
+  "global_root": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground",
+  "debug": false,
+  "python_version": {
+    "major": 3,
+    "minor": 12,
+    "micro": 11
+  },
+  "shared_memory": {},
+  "parallel": true,
+  "number_of_workers": 31,
+  "infer_self_tito": true,
+  "infer_argument_tito": false,
+  "no_verify": false,
+  "verify_dsl": false,
+  "verify_taint_config_only": true,
+  "strict": false,
+  "taint_model_paths": [
+    "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/pysa-learning/playground/stubs/taint"
+  ],
+  "use_cache": false,
+  "build_cache_only": false,
+  "check_invariants": false,
+  "limit_entrypoints": false,
+  "compact_ocaml_heap": false,
+  "saved_state": {
+    "watchman_root": null,
+    "project_name": null,
+    "preset": null,
+    "cache_critical_files": []
+  },
+  "compute_coverage": false
+}
+2026-04-01 15:30:27,432 [PID 4035709] PERFORMANCE  Initialized shared memory (heap size: 8589934592, dep table pow: 1, hash table pow: 26): 0.002s
+2026-04-01 15:30:27,453 [PID 4035709] PERFORMANCE  Initialized multiprocessing workers (workers: 31): 0.020s
+2026-04-01 15:30:27,453 [PID 4035709] INFO  Initializing and verifying taint configuration...
+2026-04-01 15:30:27,453 [PID 4035709] INFO  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:30:27,454 [PID 4035709] PERFORMANCE  Initialized and verified taint configuration: 0.002s
+2026-04-01 15:30:27,454 [PID 4035709] PERFORMANCE  Analyze: 0.002s

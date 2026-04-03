@@ -1,0 +1,1 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-java-74\",\"values\":[\"6\",\"5\",\"source.customSourceFunc\"],\"default_template\":\"Line {}, Column {}: custom define config: {} can only be string value\",\"type\":\"error\"}]","execution_time_ms":630}}

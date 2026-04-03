@@ -1,0 +1,6 @@
+Rule MatchTest30 extends AbstractTaintRule {
+    type = "Test"; subType = "MatchTest";
+    exclude += { value = "com.example.TestController"; };
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getParameter"; };
+    sink.methodArg += { precise = true; value = "java.lang.Runtime.exec"; };
+}

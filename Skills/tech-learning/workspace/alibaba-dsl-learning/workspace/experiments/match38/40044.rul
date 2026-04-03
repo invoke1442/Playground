@@ -1,0 +1,5 @@
+Rule MatchTest38 extends AbstractTaintRule {
+    type = "Test"; subType = "MatchTest";
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getParameter"; };
+    sink.xpath = "//PrimaryExpression[PrimaryPrefix/Name[contains(@Image,'exec')]]";
+}

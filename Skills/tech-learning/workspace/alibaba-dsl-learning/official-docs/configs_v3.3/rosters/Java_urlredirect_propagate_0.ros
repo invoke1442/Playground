@@ -1,0 +1,41 @@
+Roster Java_urlredirect_propagate {
+	propagate.bUnkownAsSafe += {
+		value = false;
+	};
+	propagate.methodArgToObjectAndReturn += {
+		value = "\\bsetServerURI\\b|\\bsetContextPath\\b|\\bsetHost\\b|\\bsetBaseURI\\b|\\burl\\b";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|com.alibaba.citrus.service.template.TemplateContext.put|com.alibaba.service.template.TemplateContext.put";
+	};
+	propagate.bTaintedStart += {
+		value = true;
+	};
+	propagate.bOnlyTaintedByObject += {
+		value = true;
+	};
+	propagate.methodObjectToReturn += {
+		value = "composeUrl|setParameter";
+	};
+	propagate.methodObjectToReturn += {
+		value = "addQueryData|URIBroker[^.]*.|addParameter|setQueryData|URIBuilder[^.]*.";
+	};
+	propagate.methodArgOrObjectToObjectAndReturn += {
+		value = "URIBroker[^.]*.setServerURI|URIBroker[^.]*.setBaseURI|URIBroker[^.]*.setContextPath|URIBuilder[^.]*.setHost";
+	};
+	propagate.methodObjectToReturn += {
+		value = "append|concat";
+	};
+	sanitizer.methodArg += {
+		precise = true;
+		value = "com.alibaba.havana.passport.support.WhiteUrlChecker.isLegalAssetsURL|com.taobao.security.url.CheckUrlService.getCustomerInstance.inWhiteList|com.alibaba.fasttext.sec.url.CheckSafeUrl.inWhiteListDropBlock|com.taobao.security.util.URLFilter.isAllowed|com.taobao.security.url.CheckRedirectUrlService.inWhiteList|com.taobao.common.security.RedirectUrlCheck.check|com.alibaba.fasttext.sec.url.CheckSafeUrl.getDefaultInstance.inWhiteListDropBlock|com.alibaba.fasttext.sec.url.CheckSafeUrl.getDefaultInstance.inWhiteList|com.alibaba.china.fasttext.security.url.CheckSafeUrl.getDefaultInstance.inWhiteList|com.taobao.security.url.CheckRedirectUrlService.getCustomerInstance.inWhiteList|com.taobao.security.url.CheckUrlService.getDefaultInstance.inWhiteList|com.taobao.security.url.CheckUrlService.inWhiteList|com.taobao.security.url.CheckRedirectUrlService.getDefaultInstance.inWhiteList|com.alibaba.havana.passport.support.WhiteUrlChecker.isLegalURL|com.taobao.common.security.SecurityHelper.isAliDomainURL|com.taobao.security.util.RedirectURLFilter.isAllowed|com.alibaba.china.fasttext.security.url.CheckSafeUrl.inWhiteList|com.alibaba.fasttext.sec.url.CheckSafeUrl.inWhiteList|com.alibaba.havana.passport.support.WhiteUrlChecker.assertURL";
+	};
+	sanitizer.methodArg += {
+		value = "com.alibaba.fasttext.sec.url.CheckSafeUrl.getDefaultInstance|com.alibaba.china.fasttext.security.url.CheckSafeUrl.getDefaultInstance|com.alibaba.buc.biz.utils.SecurityUtilWrapper.isSafeUrl";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.alibaba.icbu.security.ICBUSecurityUtil.getSafeUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.security.SecurityUtil.getSafeUrl|com.alibaba.security.SecurityUtil.parseURL|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.taobao.security.util.SecurityUtil.parseRedirectUrl|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.taobao.security.util.RedirectURLFilter.paserURL|java.sql.PreparedStatement.setString|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.taobao.security.util.SecurityUtil.parseURL|com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|java.sql.PreparedStatement.setNString";
+	};
+}

@@ -1,0 +1,10 @@
+Rule NewGroovyShell extends AbstractTaintRule {
+	import roster Java_stream_io_sanitizer;
+	import roster Java_common_propagate;
+	import roster Java_network_io_sanitizer;
+	import roster Java_common_source;
+	import roster Java_Param_new_groovyShell_sink;
+	type = "CommandInjection";
+	subType = "groovyShell";
+	general.customSubject = "Groovy表达式注入";
+}

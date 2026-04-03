@@ -1,0 +1,47 @@
+[2026-02-28 15:53:09] This is codeql execute queries -J-Xmx12892M --off-heap-ram=16038 --verbosity=progress --logdir=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/log --evaluator-log-level=5 --warnings=show --search-path=/home/nyn/Desktop/dev_tools/codeql --qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml --dynamic-join-order-mode=none --no-rerun --interpret-passthrough=null,--format=sarif-latest,-o=/home/nyn/Desktop/Projects/Java/Java-learning/ql/result/helloworld.sarif,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--search-path=/home/nyn/Desktop/dev_tools/codeql,--qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml,--,/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db,/home/nyn/Desktop/Projects/Java/Java-learning/ql/packs/addexpr-pack/find-addexpr.ql --output=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/results -- /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/db-java /home/nyn/Desktop/Projects/Java/Java-learning/ql/packs/addexpr-pack/find-addexpr.ql
+[2026-02-28 15:53:09] Calling plumbing command: codeql resolve queries --search-path=/home/nyn/Desktop/dev_tools/codeql --qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml --format=json -- /home/nyn/Desktop/Projects/Java/Java-learning/ql/packs/addexpr-pack/find-addexpr.ql
+[2026-02-28 15:53:09] [PROGRESS] resolve queries> Recording pack reference java-learning/addexpr-pack at /home/nyn/Desktop/Projects/Java/Java-learning/ql/packs/addexpr-pack.
+[2026-02-28 15:53:09] Plumbing command codeql resolve queries completed:
+                      [
+                        "/home/nyn/Desktop/Projects/Java/Java-learning/ql/packs/addexpr-pack/find-addexpr.ql"
+                      ]
+[2026-02-28 15:53:09] Creating executor with 1 threads.
+[2026-02-28 15:53:09] Exception caught at top level: Error initializing the IMB disk cache: the cache directory is already locked by another running process. Only one instance of the IMB can access a cache directory at a time. The lock file is located at /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/db-java/default/cache/.lock
+                      (eventual cause: OverlappingFileLockException)
+                      com.semmle.inmemory.caching.RelationCacheImpl.takeFilesystemLock(RelationCacheImpl.java:362)
+                      com.semmle.inmemory.caching.RelationCacheImpl.create(RelationCacheImpl.java:114)
+                      com.semmle.inmemory.scheduler.EvaluationSchedule.<init>(EvaluationSchedule.java:105)
+                      com.semmle.inmemory.caching.RelationManager.<init>(RelationManager.java:64)
+                      com.semmle.inmemory.MemoryBackend.<init>(MemoryBackend.java:127)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:99)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:66)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:467)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$5(SubcommandCommon.java:892)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:444)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:890)
+                      com.semmle.cli2.picocli.SubcommandCommon.toplevelMain(SubcommandCommon.java:777)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:757)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:238)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:259)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:113)
+                      
+                       ... caused by:
+                      
+                      java.nio.channels.OverlappingFileLockException
+                      com.semmle.util.files.FileSystemLock.<init>(FileSystemLock.java:74)
+                      com.semmle.inmemory.caching.RelationCacheImpl.takeFilesystemLock(RelationCacheImpl.java:358)
+                      com.semmle.inmemory.caching.RelationCacheImpl.create(RelationCacheImpl.java:114)
+                      com.semmle.inmemory.scheduler.EvaluationSchedule.<init>(EvaluationSchedule.java:105)
+                      com.semmle.inmemory.caching.RelationManager.<init>(RelationManager.java:64)
+                      com.semmle.inmemory.MemoryBackend.<init>(MemoryBackend.java:127)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:99)
+                      com.semmle.cli2.ql.EvaluationCommon.<init>(EvaluationCommon.java:66)
+                      com.semmle.cli2.execute.ExecuteQueriesCommand.executeSubcommand(ExecuteQueriesCommand.java:467)
+                      com.semmle.cli2.picocli.SubcommandCommon.lambda$executeSubcommandWithMessages$5(SubcommandCommon.java:892)
+                      com.semmle.cli2.picocli.SubcommandCommon.withCompilationMessages(SubcommandCommon.java:444)
+                      com.semmle.cli2.picocli.SubcommandCommon.executeSubcommandWithMessages(SubcommandCommon.java:890)
+                      com.semmle.cli2.picocli.SubcommandCommon.toplevelMain(SubcommandCommon.java:777)
+                      com.semmle.cli2.picocli.SubcommandCommon.call(SubcommandCommon.java:757)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:238)
+                      com.semmle.cli2.picocli.SubcommandMaker.runMain(SubcommandMaker.java:259)
+                      com.semmle.cli2.CodeQL.main(CodeQL.java:113)

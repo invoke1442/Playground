@@ -1,0 +1,15 @@
+Roster Java_Param_new_sqlInjectionAnnotation_sink {
+	sink.methodArg += {
+		value = "\\b(AND|DELETE_FROM|FROM|GROUP_BY|HAVING|INNER_JOIN|INSERT_INTO|JOIN|LEFT_OUTER_JOIN|OR|ORDER_BY|OUTER_JOIN|RIGHT_OUTER_JOIN|SELECT|SELECT_DISTINCT|SET|UPDATE|VALUES|WHERE)$";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute";
+	};
+	propagate.vmContext += {
+		value = "\\bTemplateContext.put\\b";
+	};
+	sink.mybatisProvider += {
+		value = "\\bSelectProvider\\b|\\bInsertProvider\\b|\\bDeleteProvider\\b|\\bUpdateProvider\\b";
+	};
+}

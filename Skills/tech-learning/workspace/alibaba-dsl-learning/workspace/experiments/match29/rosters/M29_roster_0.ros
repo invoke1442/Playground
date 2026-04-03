@@ -1,0 +1,3 @@
+Roster M29_roster {
+    general.entranceFileXpath = "//CompilationUnit[.//Literal[@Image='password']]";
+}

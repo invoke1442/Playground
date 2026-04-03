@@ -1,0 +1,7 @@
+{
+  "tool": "bandit",
+  "rule_kind": "plugin",
+  "rule_ids": ["B950"],
+  "plugin_package": "canonical-bandit-target-rule",
+  "config_file": "bandit.yaml"
+}

@@ -1,0 +1,4 @@
+Roster Java_sqli_sink {
+    sink.methodArg += { precise = true; value = "java.sql.Statement.executeQuery"; };
+    sink.methodArg += { precise = true; value = "java.sql.PreparedStatement.executeQuery"; };
+}

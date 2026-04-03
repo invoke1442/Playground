@@ -1,0 +1,5 @@
+Rule ModBadField extends AbstractTaintRule {
+    type = "Test";
+    subType = "TestRule";
+    modifiable sink.functionArg;
+}

@@ -1,0 +1,6 @@
+Rule MatchTest37 extends AbstractTaintRule {
+    type = "Test"; subType = "MatchTest";
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getParameter"; };
+    sink.methodArg += { precise = true; value = "java.lang.Runtime.exec"; };
+    propagate.methodArgToReturn = "java.net.URLEncoder.encode|java.net.URLDecoder.decode";
+}

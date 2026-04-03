@@ -1,0 +1,6 @@
+Roster M35_roster {
+    source.methodParam += {
+        xpath = "//FormalParameter[./VariableDeclaratorId[matches(@Image,'(?i)name|user|input|query|cmd|path|url|file|data')]]";
+        tag = "paramNameMatch";
+    };
+}

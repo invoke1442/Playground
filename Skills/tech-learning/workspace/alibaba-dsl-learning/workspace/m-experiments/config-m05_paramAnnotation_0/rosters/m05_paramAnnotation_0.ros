@@ -1,0 +1,11 @@
+Roster m05_paramAnnotation {
+    source.paramAnnotation += {
+        precise = true;
+        value = "org.springframework.web.bind.annotation.RequestParam|org.springframework.web.bind.annotation.PathVariable";
+    };
+    source.paramAnnotation += {
+        precise = true;
+        value = "javax.ws.rs.QueryParam";
+        excludeTag = "jaxrs";
+    };
+}

@@ -1,0 +1,15 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-java-74\",\"values\":[\"7\",\"5\",\"propagate.methodArgToReturn\"],\"default_template\":\"Line {}, Column {}: custom define config: {} can only be string value\",\"type\":\"error\"}]","execution_time_ms":622}}
+
+❌ Verification FAILED — errors found in output
+[
+    {
+        "template_key": "stae-java-74",
+        "values": [
+            "7",
+            "5",
+            "propagate.methodArgToReturn"
+        ],
+        "default_template": "Line {}, Column {}: custom define config: {} can only be string value",
+        "type": "error"
+    }
+]

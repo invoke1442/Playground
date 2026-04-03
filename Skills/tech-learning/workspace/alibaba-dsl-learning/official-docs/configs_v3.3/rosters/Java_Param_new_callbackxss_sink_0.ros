@@ -1,0 +1,69 @@
+Roster Java_Param_new_callbackxss_sink {
+	sink.methodArgJws += {
+		value = "\\brenderHtml\\b|\\brenderJSON\\b";
+	};
+	sink.contextJws += {
+		value = "\\brender\\b|\\brenderTemplate\\b|\\brenderArgs.put\\b";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "javax.servlet.jsp.JspWriter.write|javax.servlet.jsp.JspWriter.print|javax.servlet.jsp.JspWriter.println|javax.servlet.ServletOutputStream.write|javax.servlet.ServletOutputStream.print|javax.servlet.ServletOutputStream.println|javax.servlet.http.HttpServletResponse.getWriter.write|javax.servlet.http.HttpServletResponse.getWriter.print|javax.servlet.http.HttpServletResponse.getWriter.printf|javax.servlet.http.HttpServletResponse.getWriter.format|javax.servlet.http.HttpServletResponse.getWriter.println|javax.servlet.http.HttpServletResponse.getOutputStream.write|javax.servlet.http.HttpServletResponse.getOutputStream.print|javax.servlet.http.HttpServletResponse.getOutputStream.println|org.springframework.http.ResponseEntity.body";
+	};
+	sink.methodArg += {
+		value = "\\bgetResponse.getWriter.write$|\\bgetResponse.getWriter.print$|\\bgetResponse.getWriter.println$";
+	};
+	propagate.methodReturnUpcast += {
+		precise = true;
+		value = "javax.servlet.http.HttpServletResponse.getWriter|javax.servlet.http.HttpServletResponse.getOutputStream|javax.servlet.ServletResponse.getWriter|javax.servlet.ServletResponse.getOutputStream";
+	};
+	propagate.methodReturnUpcast += {
+		value = "\\bgetResponse.getWriter$";
+	};
+	sink.methoArgUpcast += {
+		precise = true;
+		value = "java.io.Writer.write|java.io.PrintWriter.print|java.io.PrintWriter.println|java.io.PrintWriter.write|java.io.PrintWriter.format|java.io.PrintWriter.append|java.io.PrintWriter.write";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute";
+	};
+	propagate.vmContext += {
+		value = "\\bTemplateContext.put\\b";
+	};
+	sink.applicationJsonProduces += {
+		value = "^application\\/json\\b";
+	};
+	sink.applicationJsonAnnotation += {
+		value = "\\b(RequestMapping|ResourceMapping|GetMapping|PostMapping|PutMapping|DeleteMapping|PatchMapping|GET|POST|PUT|DELETE|PATH)\\b";
+	};
+	sink.responseBody += {
+		value = "annotation.ResponseBody";
+	};
+	sink.responseClass += {
+		value = "annotation.RestController";
+	};
+	sink.methodArg += { // #modify 30007 CRLF Injection
+		value = ".*Logger.(debug|error|fatal|info|trace|warn|log)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30003
+		value = "org.jboss.seam.log.Log.(debug|error|fatal|info|trace|warn)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30011
+		value = "javax.servlet.http.Cookie.<init>";
+		param = "[{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30011
+		value = "javax.servlet.http.HttpServletResponse.(addHeader|setHeader|addCookie)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // Generic fallback
+		value = "javax.servlet.http.HttpServletResponse.sendError";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30028
+		value = "javax.servlet.http.HttpServletResponse.(setHeader|addHeader)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+}

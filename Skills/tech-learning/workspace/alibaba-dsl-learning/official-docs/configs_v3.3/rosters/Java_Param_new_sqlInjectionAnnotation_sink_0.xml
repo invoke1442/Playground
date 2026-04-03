@@ -1,0 +1,63 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_sqlInjectionAnnotation_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\b(AND|DELETE_FROM|FROM|GROUP_BY|HAVING|INNER_JOIN|INSERT_INTO|JOIN|LEFT_OUTER_JOIN|OR|ORDER_BY|OUTER_JOIN|RIGHT_OUTER_JOIN|SELECT|SELECT_DISTINCT|SET|UPDATE|VALUES|WHERE)$</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bTemplateContext\.put\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>mybatis annotation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bSelectProvider\b|\bInsertProvider\b|\bDeleteProvider\b|\bUpdateProvider\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

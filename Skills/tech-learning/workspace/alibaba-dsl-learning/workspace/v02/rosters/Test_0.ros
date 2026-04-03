@@ -1,0 +1,5 @@
+Roster Test {
+    source.methodReturn += {
+        pattern += "/\\breq\\.query\\b/";
+    };
+}

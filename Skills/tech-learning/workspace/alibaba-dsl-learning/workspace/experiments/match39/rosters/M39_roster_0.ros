@@ -1,0 +1,11 @@
+Roster M39_roster {
+    propagate.methodArgToReturnCritical += {
+        value = "java.net.URLEncoder.encode|java.net.URLDecoder.decode";
+    };
+    propagate.methodArgToObjectAndReturn += {
+        value = "java.lang.StringBuilder.append|java.util.List.add";
+    };
+    propagate.methodArgOrObjectToObjectAndReturn += {
+        value = "java.util.Map.put";
+    };
+}

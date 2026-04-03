@@ -1,0 +1,10 @@
+Rule NewCommandInjection extends AbstractTaintRule {
+	import roster Java_common_source;
+	import roster Java_common_propagate;
+	import roster Java_cmdi_propagate;
+	import roster Java_network_io_sanitizer;
+	import roster Java_stream_io_sanitizer;
+	import roster Java_Param_new_commandInjectionJava_sink;
+	type = "CommandInjection";
+	subType = "commandInjectionJava";
+}

@@ -1,0 +1,14 @@
+[2026-02-28 13:45:40] This is codeql database analyze ./ql/db/HelloWorld-db/ ./ql/packs/addexpr-pack/find-addexpr.ql --format=csv --output ql/result/helloworld.bqrs
+[2026-02-28 13:45:40] Log file was started late.
+[2026-02-28 13:45:40] [PROGRESS] database analyze> Running queries.
+[2026-02-28 13:45:40] Running plumbing command: codeql database run-queries --evaluator-log-level=5 --warnings=show --search-path=/home/nyn/Desktop/dev_tools/codeql --qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml --dynamic-join-order-mode=none --no-rerun --interpret-passthrough=null,--format=csv,-o=/home/nyn/Desktop/Projects/Java/Java-learning/ql/result/helloworld.bqrs,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--search-path=/home/nyn/Desktop/dev_tools/codeql,--qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml,--,/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db,./ql/packs/addexpr-pack/find-addexpr.ql -- /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db ./ql/packs/addexpr-pack/find-addexpr.ql
+[2026-02-28 13:45:40] Calling plumbing command: codeql resolve ram --dataset=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/db-java --format=json
+[2026-02-28 13:45:40] [PROGRESS] resolve ram> Stringpool size measured as 2523546
+[2026-02-28 13:45:40] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx12892M",
+                        "--off-heap-ram=16038"
+                      ]
+[2026-02-28 13:45:40] Chaining via /tmp/codeql.SEC4OUqd to plumbing: execute queries -J-Xmx12892M --off-heap-ram=16038 --verbosity=progress --logdir=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/log --evaluator-log-level=5 --warnings=show --search-path=/home/nyn/Desktop/dev_tools/codeql --qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml --dynamic-join-order-mode=none --no-rerun --interpret-passthrough=null,--format=csv,-o=/home/nyn/Desktop/Projects/Java/Java-learning/ql/result/helloworld.bqrs,--max-paths=4,--csv-location-format=line-column,--print-diagnostics-summary,--print-metrics-summary,--search-path=/home/nyn/Desktop/dev_tools/codeql,--qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml,--,/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db,./ql/packs/addexpr-pack/find-addexpr.ql --output=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/results -- /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/db-java ./ql/packs/addexpr-pack/find-addexpr.ql
+[2026-02-28 13:45:40] Plumbing command codeql database run-queries completed with status 70.
+[2026-02-28 13:45:40] Exiting with code 70

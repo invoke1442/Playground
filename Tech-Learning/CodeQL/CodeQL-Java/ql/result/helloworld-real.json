@@ -1,0 +1,6 @@
+{"#select":{"columns":[
+   {"name":"expr","kind":"Entity"}
+  ,{"kind":"String"}]
+ ,"tuples":[
+   [{"label":"... + ..."},"Found AddExpr: ... + ..."]]
+ }}

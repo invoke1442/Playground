@@ -1,0 +1,6 @@
+Rule MatchTest30b extends AbstractTaintRule {
+    import roster M30_roster;
+    type = "Test"; subType = "MatchTest";
+    source.methodReturn += { precise = true; value = "javax.servlet.http.HttpServletRequest.getParameter"; };
+    sink.methodArg += { precise = true; value = "java.lang.Runtime.exec"; };
+}

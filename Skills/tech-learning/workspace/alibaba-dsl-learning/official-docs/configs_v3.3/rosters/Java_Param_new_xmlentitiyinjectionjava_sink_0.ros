@@ -1,0 +1,23 @@
+Roster Java_Param_new_xmlentitiyinjectionjava_sink {
+	sink.methodArg += {
+		value = "com.taobao.api.internal.parser.xml.ObjectXmlParser.parse|com.taobao.api.TaobaoParser.parse|org.dom4j.DocumentHelper.parseText|org.jdom.input.SAXBuilder.build|org.apache.commons.digester3.Digester.parse|javax.xml.stream.XMLInputFactory.createXMLStreamReader|org.xml.sax.XMLReader.parse|javax.xml.parsers.DocumentBuilderFactory..*parse|nu.xom.Builder.build|groovy.util.XmlSlurper.parse.*|javax.xml.transform.Transformer.transform|javax.xml.validation.SchemaFactory.newSchema|javax.xml.transform.sax.SAXTransformerFactory.newTransformerHandler|javax.xml.xpath.XPathExpression.evaluate|javax.xml.stream.XMLInputFactory.createXMLEventReader|javax.xml.stream.XMLInputFactory.createFilteredReader|javax.xml.validation.Validator.validate|javax.xml.bind.Unmarshaller.unmarshal|java.beans.XMLDecoder.readObject";
+	};
+	sink.methodArg += { // #modify 30033
+		value = "javax.xml.parsers.DocumentBuilder.parse|javax.xml.parsers.SAXParser.parse|org.dom4j.io.SAXReader.read|org.jdom2.input.SAXBuilder.build";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.bUseSinkFilter += {
+		value = true;
+	};
+	sink.filter += {
+		value = "getInputStream|getBytes|toString";
+	};
+	sink.methodArg += {
+		value = "com.aliyuncs.fc.utils.XmlUtils.getRootElementFromString|com.aliyuncs.fc.utils.XmlUtils.validateXml|com.aliyuncs.fc.utils.XmlUtils.getDocument";
+		param = "[{'position':0,'tainted':true,'type':''}]";
+	};
+	sink.methodArg += { // #modify XPath
+		value = "javax.xml.xpath.XPath.evaluate";
+		param = "[{'position':0,'tainted':true}]";
+	};
+}

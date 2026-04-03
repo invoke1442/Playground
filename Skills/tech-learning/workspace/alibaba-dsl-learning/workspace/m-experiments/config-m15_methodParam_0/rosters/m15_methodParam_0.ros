@@ -1,0 +1,9 @@
+Roster m15_methodParam {
+    source.methodParam += {
+        xpath = "//FormalParameter[.//Type/ReferenceType/ClassOrInterfaceType[@Image='HttpServletRequest']]";
+        tag = "httpRequest";
+    };
+    source.methodParam += {
+        xpath = "//FormalParameter[.//Type/ReferenceType/ClassOrInterfaceType[@Image='String']]";
+    };
+}

@@ -1,0 +1,19 @@
+Roster m14_xxePropagate {
+    propagate.bUseXXEFlags += {
+        value = true;
+    };
+    propagate.xxeType += {
+        value = "org.dom4j.io.SAXReader|javax.xml.parsers.SAXParser|javax.xml.stream.XMLInputFactory";
+    };
+    propagate.xxeMethod += {
+        precise = true;
+        value = "setFeature|setProperty";
+    };
+    propagate.bUseStreamReader += {
+        value = true;
+    };
+    propagate.methodStreamReader += {
+        precise = true;
+        value = "java.io.BufferedInputStream.read|java.io.InputStream.read";
+    };
+}

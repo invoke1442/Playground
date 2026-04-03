@@ -1,0 +1,11 @@
+[2026-02-28 13:50:20] This is codeql query run ql/packs/addexpr-pack/find-addexpr.ql --database ql/db/HelloWorld-db --output ql/result/helloworld-real.bqrs
+[2026-02-28 13:50:20] Log file was started late.
+[2026-02-28 13:50:20] Calling plumbing command: codeql resolve ram --dataset=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/db-java --format=json
+[2026-02-28 13:50:20] [PROGRESS] resolve ram> Stringpool size measured as 2523546
+[2026-02-28 13:50:20] Plumbing command codeql resolve ram completed:
+                      [
+                        "-J-Xmx12892M",
+                        "--off-heap-ram=16038"
+                      ]
+[2026-02-28 13:50:20] Chaining via /tmp/codeql.ABjlsBX1 to plumbing: execute queries -J-Xmx12892M --off-heap-ram=16038 --verbosity=progress --logdir=/home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/log --evaluator-log-level=5 --warnings=show --search-path=/home/nyn/Desktop/dev_tools/codeql --qlconfig-file=/home/nyn/Desktop/Projects/Java/Java-learning/qlconfig.yml --dynamic-join-order-mode=none --output=/home/nyn/Desktop/Projects/Java/Java-learning/ql/result/helloworld-real.bqrs -- /home/nyn/Desktop/Projects/Java/Java-learning/ql/db/HelloWorld-db/db-java path:/home/nyn/Desktop/Projects/Java/Java-learning/ql/packs/addexpr-pack/find-addexpr.ql
+[2026-02-28 13:50:20] Exiting with code 70

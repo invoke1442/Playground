@@ -1,0 +1,58 @@
+// Java Roster — Core semantics (source/sink/sanitizer)
+// File: rosters/{RosterName}_0.ros (internal name without _0)
+Roster {RosterName} {
+    // === Source: where tainted data enters ===
+    // Block syntax (precise + value)
+    source.methodReturn += {
+        precise = true;    // true=exact FQN match, false=prefix match
+        value = "javax.servlet.http.HttpServletRequest.getParameter";
+    };
+    source.methodReturn += {
+        precise = true;
+        value = "javax.servlet.http.HttpServletRequest.getHeader";
+    };
+    // String syntax (Roster only)
+    // source.param_annotation = "org.springframework.web.bind.annotation.RequestParam";
+    // source.method_annotation += "org.springframework.web.bind.annotation.GetMapping";
+    // source.method_param = "com.example.Controller.handleRequest[0]";
+    // source.expression = "com.example.Config.getProperty";
+
+    // === Sink: dangerous method receiving tainted data ===
+    // Block syntax (only methodArg)
+    sink.methodArg += {
+        precise = true;
+        value = "java.net.URL.<init>";
+    };
+    // String syntax (Roster only) — all use = "str" or += "str"
+    // sink.expression = "com.example.Sink.evaluate";
+    // sink.param_annotation = "javax.inject.Inject";
+    // sink.method_annotation = "org.springframework.web.bind.annotation.PostMapping";
+    // sink.method_param = "com.example.Sink.process[0]";
+    // sink.methodReturn = "com.example.Sink.getResult";  // ⚠️ string only, block fails!
+    // sink.customSinkFunc = "com.example.Sink.custom";   // ⚠️ 仅 string, Java 不支持 loadclass!
+
+    // === Sanitizer: neutralizes taint ===
+    // Block syntax (methodReturn + methodArg)
+    sanitizer.methodReturn += {
+        value = "org.apache.commons.text.StringEscapeUtils.escapeHtml4";
+    };
+    sanitizer.methodArg += {
+        precise = true;
+        value = "com.example.Validator.validate";
+    };
+    // String syntax (Roster only)
+    // sanitizer.expression = "com.example.Validator.check";
+    // sanitizer.param_annotation = "javax.validation.Valid";
+    // sanitizer.method_annotation = "org.springframework.validation.annotation.Validated";
+    // sanitizer.method_param = "com.example.Cleaner.clean[0]";
+    // sanitizer.customSanitizerFunc = "com.example.Sanitizer.sanitize";  // ⚠️ 仅 string, Java 不支持 loadclass!
+
+    // === Platform Group (optional): platform-specific overrides ===
+    group SpringBoot {
+        includePlatforms = "*";
+        excludePlatforms = "legacy";
+        sanitizer.methodReturn += {
+            value = "org.springframework.web.util.HtmlUtils.htmlEscape";
+        };
+    };
+}

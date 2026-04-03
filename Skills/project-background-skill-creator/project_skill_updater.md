@@ -1,0 +1,1 @@
+本prompt用于向codex skill creator提供项目当前进展的更新情况，从而更新项目背景skill

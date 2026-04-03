@@ -1,0 +1,27 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_cmdi_propagate</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.securitysdk.SecurityUtil.getSafeCommandLine|com.alibaba.security.SecurityUtil.getSafeCommandLine|com.alibaba.security.SecurityUtil.escapeShellArg|org.springframework.web.util.HtmlUtils.htmlEscapeDecimal|com.alibaba.security.SecurityUtil.escapeShellCmd</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

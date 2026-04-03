@@ -1,0 +1,9 @@
+Roster Java_pathtraversal_propagate {
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.aliyun.securitysdk.SecurityUtil.pathFilter|com.alibaba.citrus.service.requestcontext.parser.ParameterParser.getFileItem|com.taobao.security.url.FilePath.pathFilter|com.alibaba.security.SecurityUtil.pathFilter|com.alibaba.fasttext.sec.url.FilePath.pathFilter|com.taobao.security.url.FilePath.pathFilter";
+	};
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.pathTraversalCustomFix");
+	};
+}

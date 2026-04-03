@@ -1,0 +1,4 @@
+name: local/struts-cve-2018-11776-learning
+version: 0.0.1
+dependencies:
+  codeql/java-all: "*"

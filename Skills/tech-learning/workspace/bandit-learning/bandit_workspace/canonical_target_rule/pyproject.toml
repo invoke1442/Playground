@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canonical-bandit-target-rule"
+version = "0.0.1"
+description = "Validation bundle for canonical Bandit target_rule format"
+requires-python = ">=3.10"
+
+[project.entry-points."bandit.plugins"]
+canonical_assert_rule = "canonical_bandit_target_rule.plugin:canonical_assert_rule"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

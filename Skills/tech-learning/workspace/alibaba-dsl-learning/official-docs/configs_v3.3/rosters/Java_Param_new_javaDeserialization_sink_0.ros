@@ -1,0 +1,18 @@
+Roster Java_Param_new_javaDeserialization_sink {
+	sink.methodObject += {
+		precise = true;
+		value = "java.io.ObjectInputStream.readObject|java.io.ObjectInputStream.read|java.io.ObjectInputStream.readFully|java.io.ObjectInputStream.resolveClass|java.io.ObjectInputStream.resolveObject|java.io.ObjectInput.readObject|java.io.ObjectInput.read|java.io.Serializable.readObjectNoData|java.io.Serializable.readResolve|java.io.ObjectInputValidation.validateObject|java.io.Externalizable.readExternal|org.apache.commons.fileupload.disk.DiskFileItem.readObject|org.apache.commons.lang.SerializationUtils.deserialize|java.beans.XMLDecoder.readObject";
+	};
+	sink.methodArg += { // #modify 30029
+		value = "org.yaml.snakeyaml.Yaml.(load|loadAll|loadAs)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30030
+		value = "java.io.ObjectInputStream.(readObject|readUnshared)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "javax.naming.InitialContext.lookup";
+	};
+}

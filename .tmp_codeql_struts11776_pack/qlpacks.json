@@ -1,0 +1,248 @@
+{
+  "codeql-csharp-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/consistency-queries"
+  ],
+  "codeql-csharp-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/test"
+  ],
+  "codeql-go-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/go/ql/consistency-queries"
+  ],
+  "codeql-java-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/consistency-queries"
+  ],
+  "codeql-swift-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/swift/ql/test"
+  ],
+  "codeql/actions-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/actions/ql/lib"
+  ],
+  "codeql/actions-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/actions/ql/src"
+  ],
+  "codeql/actions-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/actions/ql/test"
+  ],
+  "codeql/concepts" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/concepts"
+  ],
+  "codeql/controlflow" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/controlflow"
+  ],
+  "codeql/cpp-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/cpp/ql/lib"
+  ],
+  "codeql/cpp-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/cpp/ql/examples"
+  ],
+  "codeql/cpp-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/cpp/ql/src"
+  ],
+  "codeql/cpp-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/cpp/ql/test"
+  ],
+  "codeql/cpp-tests-cwe-190-tainted" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/cpp/ql/test/query-tests/Security/CWE/CWE-190/semmle/tainted"
+  ],
+  "codeql/csharp-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/lib"
+  ],
+  "codeql/csharp-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/examples"
+  ],
+  "codeql/csharp-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/src"
+  ],
+  "codeql/csharp-solorigate-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/campaigns/Solorigate/lib"
+  ],
+  "codeql/csharp-solorigate-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/campaigns/Solorigate/src"
+  ],
+  "codeql/dataflow" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/dataflow"
+  ],
+  "codeql/go-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/go/ql/lib"
+  ],
+  "codeql/go-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/go/ql/examples"
+  ],
+  "codeql/go-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/go/ql/src"
+  ],
+  "codeql/go-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/go/ql/test"
+  ],
+  "codeql/immutable-actions-list" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/actions/ql/extensions/immutable-actions-list"
+  ],
+  "codeql/java-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/lib"
+  ],
+  "codeql/java-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/examples"
+  ],
+  "codeql/java-kotlin1-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/test-kotlin1"
+  ],
+  "codeql/java-kotlin2-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/test-kotlin2"
+  ],
+  "codeql/java-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/src"
+  ],
+  "codeql/java-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/java/ql/test"
+  ],
+  "codeql/javascript-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/javascript/ql/lib"
+  ],
+  "codeql/javascript-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/javascript/ql/examples"
+  ],
+  "codeql/javascript-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/javascript/ql/src"
+  ],
+  "codeql/javascript-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/javascript/ql/test"
+  ],
+  "codeql/mad" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/mad"
+  ],
+  "codeql/python-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/python/ql/lib"
+  ],
+  "codeql/python-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/python/ql/consistency-queries"
+  ],
+  "codeql/python-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/python/ql/examples"
+  ],
+  "codeql/python-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/python/ql/src"
+  ],
+  "codeql/python-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/python/ql/test"
+  ],
+  "codeql/ql" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ql/ql/src"
+  ],
+  "codeql/ql-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ql/ql/consistency-queries"
+  ],
+  "codeql/ql-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ql/ql/examples"
+  ],
+  "codeql/ql-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ql/ql/test"
+  ],
+  "codeql/quantum" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/quantum"
+  ],
+  "codeql/rangeanalysis" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/rangeanalysis"
+  ],
+  "codeql/regex" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/regex"
+  ],
+  "codeql/ruby-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ruby/ql/lib"
+  ],
+  "codeql/ruby-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ruby/ql/consistency-queries"
+  ],
+  "codeql/ruby-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ruby/ql/examples"
+  ],
+  "codeql/ruby-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ruby/ql/src"
+  ],
+  "codeql/ruby-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/ruby/ql/test"
+  ],
+  "codeql/rust-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/rust/ql/lib"
+  ],
+  "codeql/rust-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/rust/ql/consistency-queries"
+  ],
+  "codeql/rust-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/rust/ql/src"
+  ],
+  "codeql/rust-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/rust/ql/test"
+  ],
+  "codeql/ssa" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/ssa"
+  ],
+  "codeql/suite-helpers" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/misc/suite-helpers"
+  ],
+  "codeql/swift-all" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/swift/ql/lib"
+  ],
+  "codeql/swift-consistency-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/swift/ql/consistency-queries"
+  ],
+  "codeql/swift-examples" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/swift/ql/examples"
+  ],
+  "codeql/swift-queries" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/swift/ql/src"
+  ],
+  "codeql/threat-models" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/threat-models"
+  ],
+  "codeql/tutorial" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/tutorial"
+  ],
+  "codeql/typeflow" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/typeflow"
+  ],
+  "codeql/typeinference" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/typeinference"
+  ],
+  "codeql/typetracking" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/typetracking"
+  ],
+  "codeql/typos" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/typos"
+  ],
+  "codeql/util" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/util"
+  ],
+  "codeql/xml" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/xml"
+  ],
+  "codeql/yaml" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/shared/yaml"
+  ],
+  "csharp-solorigate-tests" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/csharp/ql/campaigns/Solorigate/test"
+  ],
+  "extractor-python" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/python/extractor"
+  ],
+  "legacy-libraries-cpp" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/misc/legacy-support/cpp"
+  ],
+  "legacy-libraries-csharp" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/misc/legacy-support/csharp"
+  ],
+  "legacy-libraries-go" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/go/ql/config/legacy-support"
+  ],
+  "legacy-libraries-java" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/misc/legacy-support/java"
+  ],
+  "legacy-libraries-javascript" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/misc/legacy-support/javascript"
+  ],
+  "legacy-libraries-python" : [
+    "/home/nyn/Desktop/dev_tools/codeql-cli-v2.23.3/misc/legacy-support/python"
+  ],
+  "legacy-upgrades" : [
+    "/home/nyn/Desktop/dev_tools/codeql/legacy-upgrades"
+  ]
+}

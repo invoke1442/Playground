@@ -1,0 +1,1 @@
+请以sonarqube的仓库/home/nyn/Desktop/Projects/SAST/sast_tools/sonarqube、本地的sonarqube二进制为入口展开探索，对 sonarqube  的是否开源、cli用法（参数及其详细作用）、规则仓库、静态分析原理与工作流、常用规则语法、典型漏洞扫描工程最佳实践等方面展开递归、全面地详解，直到非科班人也能看懂。以上所有方面，每个方面各输出一个文档到/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/sonarqube-learning 目录

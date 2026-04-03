@@ -1,0 +1,8 @@
+Rule LoadclassTest extends AbstractTaintRule {
+    import roster m06_loadclass;
+    type = "Test";
+    subType = "TestRule";
+    general.userDefinePatternClass += {
+        userDefineClass = loadclass("com.example.CustomDetector");
+    };
+}

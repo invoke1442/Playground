@@ -1,0 +1,9 @@
+Rule ModTest extends AbstractTaintRule {
+    type = "Test";
+    subType = "TestRule";
+    modifiable source.methodReturn;
+    source.methodReturn += {
+        precise = true;
+        value = "com.example.OriginalSource.get";
+    };
+}

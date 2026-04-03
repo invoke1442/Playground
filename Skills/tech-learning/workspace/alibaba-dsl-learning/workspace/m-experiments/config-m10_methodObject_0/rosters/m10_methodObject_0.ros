@@ -1,0 +1,9 @@
+Roster m10_methodObject {
+    sanitizer.methodObject += {
+        value = "PreparedStatement.set.*";
+    };
+    sanitizer.methodObject += {
+        value = "java.sql.PreparedStatement.setString";
+        excludeTag = "sqlSafe";
+    };
+}

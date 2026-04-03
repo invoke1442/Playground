@@ -1,0 +1,5 @@
+name: java-learning/addexpr-pack
+version: 0.0.1
+dependencies:
+  codeql/java-all: "*"
+  codeql/tutorial: ">=0.0.3"

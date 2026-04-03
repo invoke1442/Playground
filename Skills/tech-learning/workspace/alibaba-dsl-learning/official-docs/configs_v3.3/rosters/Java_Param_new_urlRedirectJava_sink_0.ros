@@ -1,0 +1,24 @@
+Roster Java_Param_new_urlRedirectJava_sink {
+	sink.methodArg += { // #modify 30032
+		value = "javax.servlet.http.HttpServletResponse.sendRedirect";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Navigator.redirectToLocation";
+	};
+	sink.methodArg += {
+		value = ".sendRedirect\\b|.setRedirectLocation\\b";
+	};
+	sink.methodArg += {
+		value = "javax.servlet.http.HttpServletResponse.setHeader|javax.servlet.http.HttpServletResponse.addHeader";
+		param = "[{'position': 0, value: '^(?i)Location$'}, {'position':1,'tainted':true, 'type': 'String'}]";
+	};
+	sink.methodArgJws += {
+		value = "\\bredirect\\b|\\bredirectToStatic\\b";
+	};
+	sink.allocArg += {
+		precise = true;
+		value = "jws.mvc.results.Redirect|jws.mvc.results.RedirectToStatic";
+	};
+}

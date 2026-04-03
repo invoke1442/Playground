@@ -1,0 +1,3 @@
+Roster M30_roster {
+    exclude += { value = "com.example.TestController"; };
+}

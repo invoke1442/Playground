@@ -1,0 +1,9 @@
+Roster m13_allocArg {
+    sink.allocArg += {
+        precise = true;
+        value = "java.io.File|java.net.URL|java.net.URI";
+    };
+    sink.allocArg += {
+        value = "ProcessBuilder";
+    };
+}

@@ -1,0 +1,6 @@
+Roster Extra_source2 {
+    source.methodReturn += {
+        precise = true;
+        value = "com.example.AddedByRoster.get";
+    };
+}

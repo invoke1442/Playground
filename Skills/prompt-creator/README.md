@@ -1,0 +1,1 @@
+prompt creator也不需要动态披露与调用。目前以静态prompt形式提供

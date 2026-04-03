@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' /home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/bandit-learning/bandit_workspace/canonical_target_rule/.bandit-target-venv/bin/python "$0" "$@"
+' '''
+import sys
+from bandit.cli.config_generator import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
