@@ -1,0 +1,5 @@
+Roster NodeJS_jsgap08 {
+    sink.functionArg += {
+        pattern += "/\\bexec\\b/";
+    };
+}

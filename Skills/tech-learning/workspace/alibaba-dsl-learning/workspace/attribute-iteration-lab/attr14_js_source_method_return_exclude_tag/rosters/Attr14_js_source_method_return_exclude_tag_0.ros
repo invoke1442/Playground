@@ -1,0 +1,6 @@
+Roster Attr14_js_source_method_return_exclude_tag {
+    source.methodReturn += {
+        value += "/\\breq\\.query\\b/";
+        excludeTag = "FrontendExcludeMe";
+    };
+}

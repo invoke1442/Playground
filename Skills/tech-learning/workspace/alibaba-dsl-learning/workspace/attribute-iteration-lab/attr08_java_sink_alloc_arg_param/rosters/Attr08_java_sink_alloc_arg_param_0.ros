@@ -1,0 +1,7 @@
+Roster Attr08_java_sink_alloc_arg_param {
+    sink.allocArg += {
+        precise = true;
+        value = "java.net.URL";
+        param = "[{'position':0,'tainted':true}]";
+    };
+}

@@ -1,0 +1,7 @@
+Roster Attr12_java_source_method_return_flag {
+    source.methodReturn += {
+        precise = true;
+        value = "javax.servlet.http.HttpServletRequest.getParameter";
+        flag = "not generic";
+    };
+}

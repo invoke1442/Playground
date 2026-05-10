@@ -1,0 +1,8 @@
+Roster XP15_java_source_mvc_mapping_xpath {
+    source.mvcMapping += {
+        precise = true;
+        value = "org.springframework.web.bind.annotation.RequestMapping";
+        flag = "m";
+        xpath = "./self::Annotation";
+    };
+}

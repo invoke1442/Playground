@@ -1,0 +1,7 @@
+Roster XP06_java_sink_method_arg_xpath {
+    sink.methodArg += {
+        precise = true;
+        value = "java.lang.Runtime.exec";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

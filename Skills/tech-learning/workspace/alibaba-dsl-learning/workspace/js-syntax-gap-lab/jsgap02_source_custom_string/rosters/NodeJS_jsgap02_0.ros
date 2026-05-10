@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap02 {
+    source.customSourceFunc = "NodeJS_jsgap02.customSourceFunc_0";
+}

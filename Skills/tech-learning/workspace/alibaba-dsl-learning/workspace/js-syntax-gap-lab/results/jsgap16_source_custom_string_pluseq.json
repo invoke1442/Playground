@@ -1,0 +1,1 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-ts-24\",\"default_template\":\"Line {}, Column {}: the value should be class type\",\"type\":\"error\",\"values\":[\"2\",\"4\"]}]","execution_time_ms":292}}

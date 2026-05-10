@@ -1,0 +1,3 @@
+Roster Attr01_java_propagate_bool_direct {
+    propagate.bAllPublicMethod = true;
+}

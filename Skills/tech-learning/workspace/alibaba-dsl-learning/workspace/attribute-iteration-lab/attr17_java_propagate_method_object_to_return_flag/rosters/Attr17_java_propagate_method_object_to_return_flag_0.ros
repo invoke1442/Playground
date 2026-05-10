@@ -1,0 +1,6 @@
+Roster Attr17_java_propagate_method_object_to_return_flag {
+    propagate.methodObjectToReturn += {
+        value = "append|concat";
+        flag = "propagate flag";
+    };
+}

@@ -1,0 +1,5 @@
+Rule case03_flag_withoutEntry extends AbstractTaintRule {
+    import roster Runtime_flag_without;
+    type = "Test";
+    subType = "case03_flag_without";
+}

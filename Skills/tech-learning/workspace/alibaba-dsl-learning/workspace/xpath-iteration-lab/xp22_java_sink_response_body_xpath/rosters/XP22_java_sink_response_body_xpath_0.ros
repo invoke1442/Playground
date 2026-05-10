@@ -1,0 +1,6 @@
+Roster XP22_java_sink_response_body_xpath {
+    sink.responseBody += {
+        value = "javax.servlet.http.HttpServletResponse";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

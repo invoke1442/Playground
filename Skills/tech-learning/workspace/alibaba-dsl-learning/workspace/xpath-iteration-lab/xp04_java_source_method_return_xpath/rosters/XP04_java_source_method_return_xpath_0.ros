@@ -1,0 +1,7 @@
+Roster XP04_java_source_method_return_xpath {
+    source.methodReturn += {
+        precise = true;
+        value = "javax.servlet.http.HttpServletRequest.getParameter";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

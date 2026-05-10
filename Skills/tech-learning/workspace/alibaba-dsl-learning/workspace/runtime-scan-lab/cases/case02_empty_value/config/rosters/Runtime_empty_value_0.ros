@@ -1,0 +1,9 @@
+Roster Runtime_empty_value {
+    source.methodReturn += {
+        precise = true;
+        value = "lab.runtime.SourceApi.getTainted";
+    };
+    sink.allocArg += {
+        value = "";
+    };
+}

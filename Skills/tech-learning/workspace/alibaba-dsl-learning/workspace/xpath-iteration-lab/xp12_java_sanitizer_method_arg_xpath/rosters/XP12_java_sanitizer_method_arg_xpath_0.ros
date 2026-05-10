@@ -1,0 +1,7 @@
+Roster XP12_java_sanitizer_method_arg_xpath {
+    sanitizer.methodArg += {
+        precise = true;
+        value = "java.net.URL.<init>";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

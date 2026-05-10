@@ -1,0 +1,7 @@
+Roster Attr11_java_sink_method_object_flag {
+    sink.methodObject += {
+        precise = true;
+        value = "java.io.ObjectInputStream.readObject";
+        flag = "object sink";
+    };
+}

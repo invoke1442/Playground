@@ -1,0 +1,5 @@
+Roster Attr02_java_propagate_bool_block_false {
+    propagate.bAllPublicMethod += {
+        value = false;
+    };
+}

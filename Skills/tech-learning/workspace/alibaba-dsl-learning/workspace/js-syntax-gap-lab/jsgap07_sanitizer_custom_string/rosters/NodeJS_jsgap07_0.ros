@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap07 {
+    sanitizer.customSanitizerFunc = "NodeJS_jsgap07.customSanitizer_0";
+}

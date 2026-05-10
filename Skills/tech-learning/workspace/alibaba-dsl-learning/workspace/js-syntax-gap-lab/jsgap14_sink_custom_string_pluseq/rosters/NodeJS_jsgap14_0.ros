@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap14 {
+    sink.customSinkFunc += "NodeJS_jsgap14.customSink_0";
+}

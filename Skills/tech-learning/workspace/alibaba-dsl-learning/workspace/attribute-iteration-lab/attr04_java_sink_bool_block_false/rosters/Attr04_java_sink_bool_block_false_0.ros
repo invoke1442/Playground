@@ -1,0 +1,5 @@
+Roster Attr04_java_sink_bool_block_false {
+    sink.bUseSinkFilter += {
+        value = false;
+    };
+}

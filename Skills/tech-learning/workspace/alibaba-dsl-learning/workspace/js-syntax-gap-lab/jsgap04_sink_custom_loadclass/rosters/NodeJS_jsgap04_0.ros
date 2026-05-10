@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap04 {
+    sink.customSinkFunc = loadclass("NodeJS_jsgap04.customSink_0");
+}

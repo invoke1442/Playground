@@ -1,0 +1,6 @@
+Roster Attr15_js_sink_method_arg_param {
+    sink.methodArg += {
+        pattern += "/\\beval\\b/";
+        param = "[{'position':0,'tainted':true}]";
+    };
+}

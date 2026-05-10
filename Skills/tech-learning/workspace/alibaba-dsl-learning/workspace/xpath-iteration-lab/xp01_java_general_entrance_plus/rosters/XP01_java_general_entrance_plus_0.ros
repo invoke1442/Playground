@@ -1,0 +1,3 @@
+Roster XP01_java_general_entrance_plus {
+    general.entranceFileXpath += "./self::CompilationUnit/ImportDeclaration/Name[matches(@Image,\"java.util.List|java.util.Map\")]";
+}

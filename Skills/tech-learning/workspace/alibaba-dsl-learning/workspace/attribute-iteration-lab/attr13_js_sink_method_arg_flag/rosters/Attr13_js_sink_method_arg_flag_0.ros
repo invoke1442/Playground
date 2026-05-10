@@ -1,0 +1,6 @@
+Roster Attr13_js_sink_method_arg_flag {
+    sink.methodArg += {
+        pattern += "/\\beval\\b/";
+        flag = "sdk sink";
+    };
+}

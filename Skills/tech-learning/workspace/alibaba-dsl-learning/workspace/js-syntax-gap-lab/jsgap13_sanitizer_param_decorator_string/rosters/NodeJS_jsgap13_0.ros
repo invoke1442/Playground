@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap13 {
+    sanitizer.paramDecorator = "/@Sanitized\\b/";
+}

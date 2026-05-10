@@ -1,0 +1,3 @@
+Roster Attr03_java_sink_bool_direct {
+    sink.bUseSinkFilter = true;
+}

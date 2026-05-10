@@ -1,0 +1,5 @@
+Rule case01_param_valueEntry extends AbstractTaintRule {
+    import roster Runtime_param_value;
+    type = "Test";
+    subType = "case01_param_value";
+}

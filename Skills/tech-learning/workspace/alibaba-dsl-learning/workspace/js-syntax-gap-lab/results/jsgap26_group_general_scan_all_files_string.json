@@ -1,0 +1,1 @@
+{"code":0,"message":"success","data":{"output":"[{\"template_key\":\"stae-ts-41\",\"default_template\":\"Line {}, Column {}: cannot find config by name or cannot define custom config in group ,config name:{}\",\"type\":\"error\",\"values\":[\"4\",\"8\",\"general.scanAllFiles\"]}]","execution_time_ms":299}}

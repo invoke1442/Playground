@@ -1,0 +1,11 @@
+Roster Runtime_flag_with {
+    source.methodReturn += {
+        precise = true;
+        value = "lab.runtime.SourceApi.getTainted";
+    };
+    sink.methodArg += {
+        precise = true;
+        value = "lab.runtime.SinkApi.consume";
+        flag = "sdk sink";
+    };
+}

@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap18 {
+    general.scanAllFiles = "true";
+}

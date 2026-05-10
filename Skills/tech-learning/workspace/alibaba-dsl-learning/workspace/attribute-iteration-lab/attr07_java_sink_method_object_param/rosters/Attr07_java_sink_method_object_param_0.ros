@@ -1,0 +1,7 @@
+Roster Attr07_java_sink_method_object_param {
+    sink.methodObject += {
+        precise = true;
+        value = "java.io.ObjectInputStream.readObject";
+        param = "[{'position':0,'tainted':true}]";
+    };
+}

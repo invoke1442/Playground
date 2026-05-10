@@ -1,0 +1,7 @@
+Roster XP11_java_sink_method_arg_bogus {
+    sink.methodArg += {
+        precise = true;
+        value = "java.lang.Runtime.exec";
+        bogus = "x";
+    };
+}

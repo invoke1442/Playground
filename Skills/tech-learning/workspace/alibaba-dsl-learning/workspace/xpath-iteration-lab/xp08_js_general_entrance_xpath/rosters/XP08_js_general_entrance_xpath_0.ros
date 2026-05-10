@@ -1,0 +1,3 @@
+Roster XP08_js_general_entrance_xpath {
+    general.entranceFileXpath += "//Program";
+}

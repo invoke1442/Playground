@@ -1,0 +1,9 @@
+Roster Attr09_java_propagate_custom_accurate {
+    propagate.customMethodPropagate += {
+        precise = true;
+        value = "java.lang.String.join";
+        from = "1";
+        to = "return";
+        accurate = true;
+    };
+}

@@ -1,0 +1,6 @@
+Roster Attr10_java_propagate_object_to_return_accurate {
+    propagate.methodObjectToReturn += {
+        value = "append";
+        accurate = true;
+    };
+}

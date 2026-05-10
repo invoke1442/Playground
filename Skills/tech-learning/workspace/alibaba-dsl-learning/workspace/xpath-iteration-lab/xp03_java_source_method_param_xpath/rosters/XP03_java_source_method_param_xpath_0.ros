@@ -1,0 +1,6 @@
+Roster XP03_java_source_method_param_xpath {
+    source.methodParam += {
+        xpath = "./self::FormalParameter[../../..[@Public=\"true\" and @Static=\"false\" and @MethodName=\"handle\"] and ancestor::ClassOrInterfaceDeclaration[isExtends(@ClassName,\"java.lang.Object\")] and not(ancestor::ClassOrInterfaceBodyDeclaration//Annotation/MarkerAnnotation/Name[@Image=\"Skip\"])]";
+        tag = "methodParamXPath";
+    };
+}

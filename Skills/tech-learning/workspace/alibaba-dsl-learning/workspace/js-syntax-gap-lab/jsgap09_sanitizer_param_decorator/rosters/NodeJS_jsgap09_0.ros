@@ -1,0 +1,5 @@
+Roster NodeJS_jsgap09 {
+    sanitizer.paramDecorator += {
+        pattern += "/@Sanitized\\b/";
+    };
+}

@@ -1,0 +1,7 @@
+Roster XP02_java_general_method_redirect {
+    general.methodRedirect += {
+        precise = true;
+        value = "com.example.Redirected";
+        xpath = "./self::Annotation/NormalAnnotation/MemberValuePairs/MemberValuePair[@Image=\"to\"]/MemberValue/PrimaryExpression/PrimaryPrefix/ResultType";
+    };
+}

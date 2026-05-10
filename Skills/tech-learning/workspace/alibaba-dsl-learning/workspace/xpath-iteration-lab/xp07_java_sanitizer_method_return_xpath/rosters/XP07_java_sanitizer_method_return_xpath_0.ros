@@ -1,0 +1,6 @@
+Roster XP07_java_sanitizer_method_return_xpath {
+    sanitizer.methodReturn += {
+        value = "org.springframework.web.util.HtmlUtils.htmlEscape";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

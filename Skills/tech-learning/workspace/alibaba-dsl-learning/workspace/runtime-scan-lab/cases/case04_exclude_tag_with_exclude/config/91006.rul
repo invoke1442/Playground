@@ -1,0 +1,5 @@
+Rule case04_exclude_tag_with_excludeEntry extends AbstractTaintRule {
+    import roster Runtime_exclude_tag exclude SkipTagged;
+    type = "Test";
+    subType = "case04_exclude_tag_with_exclude";
+}

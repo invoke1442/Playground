@@ -1,0 +1,5 @@
+Rule case02_empty_valueEntry extends AbstractTaintRule {
+    import roster Runtime_empty_value;
+    type = "Test";
+    subType = "case02_empty_value";
+}

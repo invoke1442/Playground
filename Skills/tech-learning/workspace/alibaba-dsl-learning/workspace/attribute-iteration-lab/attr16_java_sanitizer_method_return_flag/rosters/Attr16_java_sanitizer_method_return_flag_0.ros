@@ -1,0 +1,7 @@
+Roster Attr16_java_sanitizer_method_return_flag {
+    sanitizer.methodReturn += {
+        precise = true;
+        value = "org.springframework.web.util.HtmlUtils.htmlEscape";
+        flag = "sanitizer flag";
+    };
+}

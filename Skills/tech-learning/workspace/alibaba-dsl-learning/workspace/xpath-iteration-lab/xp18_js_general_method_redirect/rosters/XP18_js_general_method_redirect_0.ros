@@ -1,0 +1,6 @@
+Roster XP18_js_general_method_redirect {
+    general.methodRedirect += {
+        value = "my.decorator";
+        xpath = "//Decorator";
+    };
+}

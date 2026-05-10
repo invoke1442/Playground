@@ -1,0 +1,11 @@
+Roster Runtime_param_value {
+    source.methodReturn += {
+        precise = true;
+        value = "lab.runtime.SourceApi.getTainted";
+    };
+    sink.methodArg += {
+        precise = true;
+        value = "lab.runtime.HeaderSink.setHeader";
+        param = "[{position:0, value: ^(?i)Location$}, {position:1,tainted:true, type: String}]";
+    };
+}

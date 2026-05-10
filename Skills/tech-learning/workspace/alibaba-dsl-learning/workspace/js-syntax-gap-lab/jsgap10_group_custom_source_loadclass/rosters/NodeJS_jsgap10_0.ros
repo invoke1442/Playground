@@ -1,0 +1,6 @@
+Roster NodeJS_jsgap10 {
+    group express_handler {
+        includePlatforms = "express";
+        source.customSourceFunc = loadclass("NodeJS_jsgap10.customSourceFunc_0");
+    };
+}

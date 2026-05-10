@@ -1,0 +1,6 @@
+Roster XP09_js_source_method_return_xpath {
+    source.methodReturn += {
+        value += "/\\breq\\.query\\b/";
+        xpath = "//CallExpression";
+    };
+}

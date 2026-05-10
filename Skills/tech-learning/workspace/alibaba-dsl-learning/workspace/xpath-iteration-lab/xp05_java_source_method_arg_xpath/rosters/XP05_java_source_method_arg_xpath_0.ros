@@ -1,0 +1,7 @@
+Roster XP05_java_source_method_arg_xpath {
+    source.methodArg += {
+        precise = true;
+        value = "javax.servlet.http.HttpServletRequest.getInputStream";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

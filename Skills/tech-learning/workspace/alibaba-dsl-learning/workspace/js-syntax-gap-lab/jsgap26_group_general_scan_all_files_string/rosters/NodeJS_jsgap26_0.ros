@@ -1,0 +1,6 @@
+Roster NodeJS_jsgap26 {
+    group express_handler {
+        includePlatforms = "express";
+        general.scanAllFiles = "true";
+    };
+}

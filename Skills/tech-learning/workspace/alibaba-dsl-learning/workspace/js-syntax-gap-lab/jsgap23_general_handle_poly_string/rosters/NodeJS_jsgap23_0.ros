@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap23 {
+    general.handlePolymorphism = "true";
+}

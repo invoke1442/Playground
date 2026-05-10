@@ -1,0 +1,6 @@
+Roster XP17_js_sink_method_arg_bogus {
+    sink.methodArg += {
+        pattern += "/\\beval\\b/";
+        bogus = "x";
+    };
+}

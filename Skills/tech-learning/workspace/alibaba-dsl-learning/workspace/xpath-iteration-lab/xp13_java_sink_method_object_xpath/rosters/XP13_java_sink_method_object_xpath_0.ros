@@ -1,0 +1,7 @@
+Roster XP13_java_sink_method_object_xpath {
+    sink.methodObject += {
+        precise = true;
+        value = "java.io.ObjectInputStream.readObject";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

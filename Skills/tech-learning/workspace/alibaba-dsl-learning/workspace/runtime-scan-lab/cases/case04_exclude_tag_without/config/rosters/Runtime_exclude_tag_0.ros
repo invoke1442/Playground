@@ -1,0 +1,18 @@
+Roster Runtime_exclude_tag {
+    group SkipTagged {
+        includePlatforms = "*";
+        sink.methodArg += {
+            precise = true;
+            value = "lab.runtime.TaggedSink.consume";
+            excludeTag = "SkipTagged";
+        };
+    };
+    source.methodReturn += {
+        precise = true;
+        value = "lab.runtime.SourceApi.getTainted";
+    };
+    sink.methodArg += {
+        precise = true;
+        value = "lab.runtime.AlwaysSink.consume";
+    };
+}

@@ -1,0 +1,6 @@
+Roster XP21_java_sink_metho_arg_upcast_xpath {
+    sink.methoArgUpcast += {
+        value = "java.lang.Object.toString";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

@@ -1,0 +1,7 @@
+Roster XP14_java_source_param_annotation_xpath {
+    source.paramAnnotation += {
+        precise = true;
+        value = "org.springframework.web.bind.annotation.RequestParam";
+        xpath = "./self::FormalParameter[@ChildIndex=0]";
+    };
+}

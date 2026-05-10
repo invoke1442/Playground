@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap27 {
+    sink.functionArg += "/\\bexec\\b/";
+}

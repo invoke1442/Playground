@@ -1,0 +1,8 @@
+Roster Attr05_java_sink_method_arg_flag_param {
+    sink.methodArg += {
+        precise = true;
+        value = "java.sql.PreparedStatement.executeQuery";
+        param = "[{'position':0,'tainted':true,'type':'String'}]";
+        flag = "sdk sink";
+    };
+}

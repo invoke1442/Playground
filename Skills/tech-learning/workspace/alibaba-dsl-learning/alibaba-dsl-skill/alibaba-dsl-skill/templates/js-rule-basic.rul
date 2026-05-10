@@ -1,7 +1,0 @@
-// JS Rule — Entry point + import Roster (运行时链接)
-// Pair with: rosters/{RosterName}_0.ros + relation/config_roster_relation.json
-Rule {RuleName}_{ruleId} extends AbstractTaintRule {
-    import roster {RosterName};  // 必须在最前面，运行时引入 Roster
-    type = "{VulnType}";
-    subType = "{SubType}";
-}

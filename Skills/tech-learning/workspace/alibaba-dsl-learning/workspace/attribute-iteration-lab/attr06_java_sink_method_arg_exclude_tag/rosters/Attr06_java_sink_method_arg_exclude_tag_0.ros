@@ -1,0 +1,8 @@
+Roster Attr06_java_sink_method_arg_exclude_tag {
+    sink.methodArg += {
+        precise = true;
+        value = "java.lang.Runtime.exec";
+        param = "[{'position':0,'tainted':true}]";
+        excludeTag = "SkipRuntimeExec";
+    };
+}

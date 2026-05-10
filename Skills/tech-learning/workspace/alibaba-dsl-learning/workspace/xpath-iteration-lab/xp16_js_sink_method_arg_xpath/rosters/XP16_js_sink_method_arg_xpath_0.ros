@@ -1,0 +1,6 @@
+Roster XP16_js_sink_method_arg_xpath {
+    sink.methodArg += {
+        pattern += "/\\beval\\b/";
+        xpath = "//CallExpression";
+    };
+}

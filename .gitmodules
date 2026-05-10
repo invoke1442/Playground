@@ -1,0 +1,3 @@
+[submodule "Tech-Learning/SAST"]
+	path = Tech-Learning/SAST
+	url = https://github.com/ASTTeam/SAST.git

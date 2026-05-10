@@ -1,0 +1,3 @@
+Roster XP19_js_general_nonexistent {
+    general.notARealField = true;
+}

@@ -1,0 +1,6 @@
+Roster XP20_java_sink_method_arg_jws_xpath {
+    sink.methodArgJws += {
+        value = "jws.response.write";
+        xpath = "./self::MethodDeclaration[@MethodName=\"handle\"]";
+    };
+}

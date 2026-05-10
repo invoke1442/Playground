@@ -18,6 +18,11 @@ Required environment variables:
   nodejsscan_BIN   Path to the local nodejsscan wrapper binary
   nodejsscan_REPO  Path to the local njsscan source repository
 
+Optional environment variables:
+  nodejsscan_PYTHON_BIN   Python interpreter that can import njsscan/libsast
+  nodejsscan_PYTHONPATH   Extra import paths for njsscan/libsast, separated by ':'
+  nodejsscan_SEMGREP_BIN  Explicit semgrep executable to use
+
 Notes:
   - This script is for custom target_rule execution. It does not install dependencies.
   - target_rule contract:
@@ -39,7 +44,9 @@ sanitize_name() {
 
 nodejsscan_BIN="${nodejsscan_BIN:-}"
 nodejsscan_REPO="${nodejsscan_REPO:-}"
-PYTHON_BIN="${PYTHON_BIN:-python3}"
+nodejsscan_PYTHONPATH="${nodejsscan_PYTHONPATH:-}"
+nodejsscan_SEMGREP_BIN="${nodejsscan_SEMGREP_BIN:-}"
+PYTHON_BIN="${nodejsscan_PYTHON_BIN:-${PYTHON_BIN:-python3}}"
 
 [[ -n "$nodejsscan_BIN" ]] || die 'nodejsscan_BIN is required'
 [[ -n "$nodejsscan_REPO" ]] || die 'nodejsscan_REPO is required'
@@ -119,8 +126,19 @@ case "$FORMAT" in
 esac
 
 TOOLS_DIR="$(cd "$(dirname "$nodejsscan_BIN")" && pwd)"
-SITE_PACKAGES="$TOOLS_DIR/nodejsscan-py"
-[[ -d "$SITE_PACKAGES" ]] || die "expected local site-packages at $SITE_PACKAGES"
+DEFAULT_SITE_PACKAGES="$TOOLS_DIR/nodejsscan-py"
+if [[ -z "$nodejsscan_PYTHONPATH" && -d "$DEFAULT_SITE_PACKAGES" ]]; then
+  nodejsscan_PYTHONPATH="$DEFAULT_SITE_PACKAGES"
+fi
+if [[ -z "$nodejsscan_SEMGREP_BIN" ]]; then
+  if [[ -x "$DEFAULT_SITE_PACKAGES/bin/semgrep" ]]; then
+    nodejsscan_SEMGREP_BIN="$DEFAULT_SITE_PACKAGES/bin/semgrep"
+  elif command -v semgrep >/dev/null 2>&1; then
+    nodejsscan_SEMGREP_BIN="$(command -v semgrep)"
+  fi
+fi
+[[ -n "$nodejsscan_SEMGREP_BIN" ]] || die 'could not locate semgrep; set nodejsscan_SEMGREP_BIN explicitly'
+[[ -x "$nodejsscan_SEMGREP_BIN" ]] || die "nodejsscan_SEMGREP_BIN is not executable: $nodejsscan_SEMGREP_BIN"
 
 mkdir -p "$OUTPUT_DIR"
 SUMMARY_JSON="${SUMMARY_JSON:-$OUTPUT_DIR/run-summary.json}"
@@ -148,8 +166,8 @@ for scan_path in "${SCAN_PATHS[@]}"; do
 #!/usr/bin/env bash
 set -euo pipefail
 export HOME="$runtime_home"
-export PYTHONPATH="$SITE_PACKAGES\${PYTHONPATH:+:\$PYTHONPATH}"
-exec "$PYTHON_BIN" "$SITE_PACKAGES/bin/semgrep" "\$@"
+export PYTHONPATH="$nodejsscan_PYTHONPATH\${PYTHONPATH:+:\$PYTHONPATH}"
+exec "$nodejsscan_SEMGREP_BIN" "\$@"
 EOF
   chmod +x "$shim_dir/semgrep"
 
@@ -162,8 +180,7 @@ EOF
   MISSING_CONTROLS="$MISSING_CONTROLS" \
   EXIT_WARNING="$EXIT_WARNING" \
   NODEJSSCAN_REPO="$nodejsscan_REPO" \
-  NODEJSSCAN_SITE_PACKAGES="$SITE_PACKAGES" \
-  NODEJSSCAN_TOOLS_DIR="$TOOLS_DIR" \
+  NODEJSSCAN_PYTHONPATH="$nodejsscan_PYTHONPATH" \
   NODEJSSCAN_SHIM_DIR="$shim_dir" \
   NODEJSSCAN_HOME="$runtime_home" \
   "$PYTHON_BIN" - <<'PY'
@@ -172,8 +189,7 @@ import sys
 from pathlib import Path
 
 repo = os.environ['NODEJSSCAN_REPO']
-site_packages = os.environ['NODEJSSCAN_SITE_PACKAGES']
-tools_dir = os.environ['NODEJSSCAN_TOOLS_DIR']
+pythonpath = os.environ.get('NODEJSSCAN_PYTHONPATH', '')
 shim_dir = os.environ['NODEJSSCAN_SHIM_DIR']
 home = os.environ['NODEJSSCAN_HOME']
 target_rule_dir = Path(os.environ['TARGET_RULE_DIR'])
@@ -185,26 +201,40 @@ missing_controls_flag = os.environ.get('MISSING_CONTROLS') == '1'
 exit_warning = os.environ.get('EXIT_WARNING') == '1'
 
 os.environ['HOME'] = home
-os.environ['PATH'] = shim_dir + os.pathsep + tools_dir + os.pathsep + os.environ.get('PATH', '')
+os.environ['PATH'] = shim_dir + os.pathsep + os.environ.get('PATH', '')
 
-for path in [site_packages, repo]:
-    if path not in sys.path:
+extra_paths = [p for p in pythonpath.split(os.pathsep) if p]
+for path in extra_paths + [repo]:
+    if path and path not in sys.path:
         sys.path.insert(0, path)
 
 import yaml
-import njsscan
-import njsscan.settings as settings
-from njsscan.njsscan import NJSScan
-from njsscan.formatters import json_out, sarif, sonarqube
-from libsast import Scanner
+try:
+    import njsscan
+    import njsscan.settings as settings
+    from njsscan.njsscan import NJSScan
+    from njsscan.formatters import json_out, sarif, sonarqube
+    from libsast import Scanner
+except ModuleNotFoundError as exc:
+    print(
+        'failed to import njsscan/libsast; set nodejsscan_PYTHONPATH or nodejsscan_PYTHON_BIN so the selected Python can import them',
+        file=sys.stderr,
+    )
+    print(f'original import error: {exc}', file=sys.stderr)
+    sys.exit(2)
 
 semantic_dir = target_rule_dir / 'semantic_grep'
 pattern_dir = target_rule_dir / 'pattern_matcher'
 missing_controls_file = target_rule_dir / 'missing_controls.yaml'
 
-has_semantic = semantic_dir.is_dir() and any(semantic_dir.rglob('*.yml')) or any(semantic_dir.rglob('*.yaml'))
-has_pattern = pattern_dir.is_dir() and any(pattern_dir.rglob('*.yml')) or any(pattern_dir.rglob('*.yaml'))
+has_semantic = semantic_dir.is_dir() and (
+    any(semantic_dir.rglob('*.yml')) or any(semantic_dir.rglob('*.yaml'))
+)
+has_pattern = pattern_dir.is_dir() and (
+    any(pattern_dir.rglob('*.yml')) or any(pattern_dir.rglob('*.yaml'))
+)
 has_controls = missing_controls_file.is_file()
+missing_controls_flag = missing_controls_flag or has_controls
 
 if not (has_semantic or has_pattern or has_controls):
     print('target_rule does not contain semantic_grep/, pattern_matcher/, or missing_controls.yaml', file=sys.stderr)
@@ -223,6 +253,7 @@ if has_controls:
 scanner = NJSScan([scan_path], True, missing_controls_flag, config_file)
 scanner.options['sgrep_rules'] = semantic_dir.as_posix() if has_semantic else None
 scanner.options['match_rules'] = pattern_dir.as_posix() if has_pattern else None
+scanner.options['multiprocessing'] = 'thread'
 
 raw_results = Scanner(scanner.options, scanner.paths).scan()
 raw_results.setdefault('semantic_grep', {'matches': {}, 'errors': []})

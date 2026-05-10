@@ -1,0 +1,3 @@
+Roster NodeJS_jsgap01 {
+    source.customSourceFunc = loadclass("NodeJS_jsgap01.customSourceFunc_0");
+}

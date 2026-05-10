@@ -1,0 +1,6 @@
+Roster XP10_js_source_param_decorator_xpath {
+    source.paramDecorator += {
+        value += "/@Query\\b/";
+        xpath = "//Decorator";
+    };
+}
