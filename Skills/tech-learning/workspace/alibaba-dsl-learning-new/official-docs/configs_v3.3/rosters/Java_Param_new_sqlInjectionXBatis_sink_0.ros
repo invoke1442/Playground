@@ -1,0 +1,15 @@
+Roster Java_Param_new_sqlInjectionXBatis_sink {
+	sink.methodXbatis += {
+		value = "\\b(select[a-zA-Z]*|query[a-zA-Z]*|insert|update|delete|executeQuery[a-zA-Z]*|executeInsert[a-zA-Z]*|executeUpdate[a-zA-Z]*)\\b";
+	};
+	sink.methodXbatisExclude += {
+		value = "trimSql|criterion.condition|:METADATA|:SQLKEYWORD|distinctSql|escapeSql";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute";
+	};
+	propagate.vmContext += {
+		value = "\\bTemplateContext.put\\b";
+	};
+}

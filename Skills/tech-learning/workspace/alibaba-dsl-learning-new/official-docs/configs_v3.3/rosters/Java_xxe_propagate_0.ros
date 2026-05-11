@@ -1,0 +1,25 @@
+Roster Java_xxe_propagate {
+	propagate.bUseXXEFlags += {
+		value = true;
+	};
+	propagate.xxeType += {
+		value = "groovy.util.XmlSlurper|org.dom4j.io.SAXReader|javax.xml.parsers.SAXParser|javax.xml.stream.XMLInputFactory|org.jdom2.input.SAXBuilder|org.jdom.input.SAXBuilder|org.dom4j.DocumentHelper|com.taobao.api.internal.parser.xml.ObjectXmlParser|com.taobao.api.TaobaoParser|javax.xml.bind.Unmarshaller|javax.xml.parsers.DocumentBuilder|javax.xml.parsers.DocumentBuilderFactory|org.xml.sax.XMLReader";
+	};
+	propagate.xxeMethod += {
+		precise = true;
+		value = "setFeature|setProperty";
+	};
+	propagate.bUseStreamReader += {
+		value = true;
+	};
+	propagate.bUseSafeState += {
+		value = true;
+	};
+	sanitizer.methodSafeState += {
+		value = "com.aliyun.securitysdk.SecurityUtil.withXxeProtection";
+	};
+	propagate.methodStreamReader += {
+		precise = true;
+		value = "java.io.BufferedInputStream.read|java.io.BufferedReader.read|java.io.ByteArrayInputStream.read|java.io.DataInputStream.read|java.io.FileInputStream.read|java.io.InputStream.read|java.io.FileReader.read|java.io.PrintStream.read|java.io.BufferedReader.readLine";
+	};
+}

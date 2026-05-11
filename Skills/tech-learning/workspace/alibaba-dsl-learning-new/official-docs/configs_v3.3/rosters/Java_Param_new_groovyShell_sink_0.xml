@@ -1,0 +1,103 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_groovyShell_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.lang.GroovyShell.evaluate|executeGroovyScript|com.taobao.pamirs.bulukul.api.executor.BulukulExecutor.executeScript|groovy.lang.GroovyClassLoader.parseClass|groovy.util.GroovyScriptEngine.run</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.util.Eval.me|javax.script.ScriptEngine.eval</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:1,&apos;tainted&apos;:true,&apos;type&apos;:&apos;&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.util.Eval.x</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:2,&apos;tainted&apos;:true,&apos;type&apos;:&apos;&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.util.Eval.xy|groovy.util.Eval.me</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:3,&apos;tainted&apos;:true,&apos;type&apos;:&apos;&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.util.Eval.xyz</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.lang.Script.run</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

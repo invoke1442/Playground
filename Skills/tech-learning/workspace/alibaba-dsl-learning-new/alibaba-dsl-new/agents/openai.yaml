@@ -1,0 +1,6 @@
+interface:
+  display_name: "Alibaba DSL"
+  short_description: "Author and verify Alibaba DSL taint rules"
+  default_prompt: "Use $alibaba-dsl-new to create or debug an Alibaba DSL web taint rule."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,10 @@
+Rule NewSSRF extends AbstractTaintRule {
+	import roster Java_stream_io_sanitizer;
+	import roster Java_ssrf_propagate;
+	import roster Java_common_source;
+	import roster Java_Param_new_ssrfJava_sink;
+	import roster Java_common_propagate exclude StringConcatMethod;
+	type = "SSRF";
+	subType = "ssrfJava";
+	general.customSubject = "SSRF";
+}

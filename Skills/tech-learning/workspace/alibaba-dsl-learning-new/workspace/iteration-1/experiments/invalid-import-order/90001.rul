@@ -1,0 +1,5 @@
+Rule BrokenImportOrder extends AbstractTaintRule {
+    type = "SSRF";
+    import roster Java_web_taint;
+    subType = "ssrfJava";
+}

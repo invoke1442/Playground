@@ -1,0 +1,23 @@
+Roster Java_ssrf_taint {
+    source.methodReturn += {
+        precise = true;
+        value = "javax.servlet.http.HttpServletRequest.getParameter";
+    };
+
+    sink.methodArg += {
+        precise = true;
+        value = "java.net.URL.<init>";
+        param = "[{'position':0,'tainted':true}]";
+    };
+
+    sink.methodArg += {
+        precise = true;
+        value = "org.springframework.web.client.RestTemplate.getForObject";
+        param = "[{'position':0,'tainted':true}]";
+    };
+
+    sanitizer.methodArg += {
+        precise = true;
+        value = "com.alibaba.security.SecurityUtil.checkSSRF";
+    };
+}

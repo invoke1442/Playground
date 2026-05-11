@@ -1,0 +1,43 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_network_io_sanitizer</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.net.ssl.HttpsURLConnection.openConnection|java.net.HttpURLConnection.openConnection|org.apache.curator.framework.CuratorFramework.getData.forPath|java.net.URL.openConnection|java.net.HttpURLConnection.getInputStream|org.apache.http.client.methods.HttpGet|org.apache.http.client.methods.HttpPost|com.aliyun.oss.OSSClient</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>excludetag</string>
+          <string>networkType</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>safe types set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.servlet.http.HttpSession|org.apache.commons.httpclient.methods.GetMethod|org.apache.commons.httpclient.methods.PostMethod|java.net.URL</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

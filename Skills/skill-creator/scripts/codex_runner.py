@@ -63,7 +63,9 @@ def build_codex_exec_command(
 
 
 def default_codex_env(base_env: dict[str, str] | None = None, work_root: Path | None = None) -> dict[str, str]:
-    env = dict(base_env or os.environ)
+    env = dict(os.environ)
+    if base_env:
+        env.update(base_env)
     if work_root is None:
         work_root = Path(tempfile.mkdtemp(prefix="skill-creator-codex-"))
     work_root.mkdir(parents=True, exist_ok=True)
@@ -107,6 +109,12 @@ def _collect_text(value: Any) -> list[str]:
 def extract_final_text(events: list[dict[str, Any]], stdout: str = "") -> str:
     for event in reversed(events):
         event_type = str(event.get("type", ""))
+        if event_type == "item.completed":
+            item = event.get("item", {})
+            if isinstance(item, dict) and item.get("type") == "agent_message":
+                text = "\n".join(part for part in _collect_text(item) if part.strip()).strip()
+                if text:
+                    return text
         if event_type in {"agent_message", "assistant_message", "message", "result"}:
             text = "\n".join(part for part in _collect_text(event) if part.strip()).strip()
             if text:

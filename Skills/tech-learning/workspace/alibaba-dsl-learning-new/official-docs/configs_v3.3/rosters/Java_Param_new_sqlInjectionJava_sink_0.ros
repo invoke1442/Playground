@@ -1,0 +1,134 @@
+Roster Java_Param_new_sqlInjectionJava_sink {
+	sink.methodArg += {
+		value = "java.sql.PreparedStatement.executeQuery|java.sql.PreparedStatement.executeUpdate|java.sql.PreparedStatement.execute|java.sql.PreparedStatement.addBatch|java.sql.Connection.prepareCall|org.hibernate.Session.createFilter|org.hibernate.Session.createQuery|org.hibernate.Session.createSQLQuery|org.hibernate.criterion.Restrictions.sqlRestriction|org.apache.ibatis.jdbc.SqlBuilder.WHERE|org.apache.ibatis.jdbc.SqlBuilder.ORDER_BY|java.sql.Connection.nativeSQL|javax.persistence.EntityManager.createNativeQuery|javax.persistence.EntityManager.createQuery|jws.dal.Dal.getConnection|jws.dal.Dal.execute|org.hibernate.SessionFactory.getCurrentSession.createQuery|org.hibernate.SessionFactory.getCurrentSession.createFilter|org.hibernate.SessionFactory.getCurrentSession.createSQLQuery|org.springframework.jdbc.core.JdbcTemplate.(query|queryFor.*|update|execute|batchUpdate)";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "org.apache.commons.dbutils.QueryRunner.query|org.apache.commons.dbutils.QueryRunner.batch|org.apache.commons.dbutils.QueryRunner.execute|org.apache.commons.dbutils.QueryRunner.insert|org.apache.commons.dbutils.QueryRunner.update|org.apache.commons.dbutils.QueryRunner.insertBatch";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "org.apache.commons.dbutils.QueryRunner.query|org.apache.commons.dbutils.QueryRunner.batch|org.apache.commons.dbutils.QueryRunner.execute|org.apache.commons.dbutils.QueryRunner.insert|org.apache.commons.dbutils.QueryRunner.update|org.apache.commons.dbutils.QueryRunner.insertBatch";
+		param = "[{'position':1,'tainted':true,'type':'String'}]";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute";
+	};
+	propagate.vmContext += {
+		value = "\\bTemplateContext.put\\b";
+	};
+	propagate.bUseSqlSpecial += {
+		value = true;
+	};
+	sink.methodSqlSpecial += {
+		precise = true;
+		value = "org.springframework.jdbc.core.JdbcTemplate|org.apache.commons.dbutils.QueryRunner|org.springframework.jdbc.core.JdbcOperations|org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate";
+	};
+	sink.methodArg += {
+		value = "\\baddCriterion\\b|Example.Criteria.andCondition";
+		param = "[{'position':0,'tainted':true}]";
+	};
+  	sink.methodArg += {
+		value = "jakarta.persistence.EntityManager.createNativeQuery|jakarta.persistence.EntityManager.createQuery|liquibase.database.jvm.JdbcConnection.prepareStatement|liquibase.statement.core.RawSqlStatement.RawSqlStatement|org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations.batchUpdate|javax.persistence.EntityManager.createQuery";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+    sink.methodArg += {//ha3
+		precise = true;
+		value = "com.alibaba.search.ha3.domain.Ha3SqlRequest.setStatement";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+        flag = "sdk sink";
+	};
+  	sink.methodArg += {//ots
+		precise = true;
+		value = "com.alicloud.openservices.tablestore.model.sql.SQLQueryRequest._init_";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+        flag = "sdk sink";
+	};
+  	sink.methodArg += {//aliyun opensearch
+		precise = true;
+		value = "com.aliyun.opensearch.SearcherClient.execute";
+        flag = "sdk sink";     
+	};
+	sink.methodArg += { // #modify
+		value = "org.apache.turbine.util.db.Criteria.(add|addIn|addNotIn)";
+		param = "[{'position':1,'tainted':true},{'position':2,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify
+		value = "javax.jdo.Query.(setFilter|setGrouping)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify
+		value = "javax.jdo.PersistenceManager.newQuery";
+		param = "[{'position':1,'tainted':true},{'position':2,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify
+		value = "io.vertx.sqlclient.SqlClient.(query|preparedQuery)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify
+		value = "org.springframework.jdbc.core.namedparam.NamedParameterBatchUpdateUtils.executeBatchUpdateWithNamedParameters|org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify NoSQL MongoDB
+		value = "com.mongodb.BasicDBObject.put";
+		param = "[{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify NoSQL MongoDB Filters
+		value = "com.mongodb.client.model.Filters.(eq|ne|gt|lt|gte|lte|in|nin|and|or|not|nor|exists|type|mod|regex|text|where)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30002
+		value = "java.lang.String.concat";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30002
+		value = "java.lang.StringBuilder.append";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30002
+		value = "java.lang.String.format";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30020
+		value = "javax.xml.xpath.XPath.evaluate|javax.xml.xpath.XPathExpression.evaluate";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30001, 30010
+		value = "java.sql.Statement.(executeQuery|executeUpdate|execute|addBatch)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30001, 30010
+		value = "java.sql.Connection.prepareStatement";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30001
+		value = "org.springframework.jdbc.core.JdbcOperations.(query|queryFor.*|update|execute|batchUpdate)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30004
+		value = "org.hibernate.Session.(createQuery|createSQLQuery)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30004
+		value = "java.sql.Connection.prepareStatement";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30034
+		value = "java.sql.PreparedStatement.(executeQuery|executeUpdate|execute|addBatch)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30035
+		value = "com.mongodb.client.MongoCollection.(find|aggregate)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30037
+		value = "java.sql.Connection.prepareStatement";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30038
+		value = "java.sql.Connection.prepareCall";
+		param = "[{'position':0,'tainted':true}]";
+	};
+}

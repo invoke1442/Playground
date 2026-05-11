@@ -1,0 +1,216 @@
+Roster Java_common_propagate {
+	general.taintOnlyBySummary = true;
+	general.blackFieldMatch = true;
+	general.handlePolymorphism = true;
+	general.polyHandleNum = 1;
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.ThreadPoolUserDefineInvoke");
+	};
+	propagate.methodObjectToFirstArg += {
+		value = "\\b.*Stream.read\\b|\\b.*Reader.read\\b";
+	};
+	propagate.definiteNoSourceFile += {
+		value = ".toString|^com.alibaba.citrus.*|^com.alibaba.common.*|^com.alibaba.fasttext.*|^com.alibaba.turbine.*|^com.google.*|^java.*|^javax.*";
+	};
+	propagate.methodArgOrObjectToObjectAndReturn += {
+		value = "StringBuilder.append|StringBuffer.append|String.concat";
+		excludeTag = "StringConcatMethod";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "(?i)org.springframework.orm.ibatis.SqlMapClientOperations.|org.apache.ibatis.session.SqlSession.select|org.apache.ibatis.session.SqlSession.selectList|org.apache.ibatis.session.SqlSession.selectMap|org.apache.ibatis.session.SqlSession.selectOne|org.hibernate.Query.list|org.springframework.jdbc.core.JdbcTemplate.execute|org.springframework.jdbc.core.JdbcTemplate.query|org.springframework.jdbc.core.JdbcTemplate.queryForList|org.springframework.jdbc.core.JdbcTemplate.queryForMap|org.springframework.jdbc.core.JdbcTemplate.queryForObject|org.springframework.jdbc.core.JdbcTemplate.queryForRowSet|java.sql.ResultSet|java.sql.Statement.|org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query|objRedisTemplate.opsForValue.get|redisTemplate.opsForValue.get|objRedisTemplate.opsForValue.get|redisTemplate.opsForValue.get|redis.clients.jedis.Jedis.get";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "JdbcTemplate.|\\bqueryForList\\b|\\bqueryForObject\\b|\\bquery\\b|getSqlMapClientTemplate";
+		excludeTag = "JdbcTemplate";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "(?i)\\w*?hsf\\w*?.";
+		excludeTag = "HSFSanitizers";
+	};
+	propagate.definiteNoSourceFile += {
+		value = "^com.taobao.hsf.*";
+		excludeTag = "HSFSanitizers";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "(?i)(OSSService|ossclient)|(?i)md5|JSONObject.getString|(?i).\\w*?search\\w*?$|(?i)\\w*?uic\\w+.getUser|(?i)dao.(get|find)|(?i)dao.*|(?i)dao.get|(?i)query|(?i)select|(?i)service.get|(?i)service.load|\\bexecute|\\bfind|\\binsert|\\bquery|\\bselect|\\bupdate|\\w*?TfsManager.\\w+|getHibernateTemplate";
+		excludeTag = "StoredSanitizers";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "(?i)(\\benum|enum\\b)";
+	};
+	propagate.customMethodPropagate += {
+		value = "Velocity.evaluate";
+		from = "0";
+		to = "1";
+	};
+	propagate.customMethodPropagate += {
+		value = "\\bStringBuilder.getChars\\b";
+		from = "object";
+		to = "2";
+	};
+	propagate.customMethodPropagate += {
+		precise = true;
+		value = "org.apache.commons.beanutils.PropertyUtils.copyProperties|org.apache.commons.beanutils.BeanUtilsBean.getInstance.copyProperties|org.apache.commons.beanutils.BeanUtilsBean.copyProperties|org.springframework.cglib.beans.BeanCopier.copy|net.sf.cglib.beans.BeanCopier.create.copy|net.sf.cglib.beans.BeanCopier.copy";
+		from = "1";
+		to = "0";
+		accurate = true;
+	};
+	propagate.customMethodPropagate += {
+		precise = true;
+		value = "cn.hutool.core.bean.BeanUtil.copyProperties";
+		from = "0";
+		to = "1";
+		accurate = true;
+	};
+	propagate.customMethodPropagate += {
+		precise = true;
+		value = "com.alibaba.data.security.client.DataSecurity.protectFile|ma.glasnost.orika.MapperFacade";
+		from = "0";
+		to = "return";
+		accurate = true;
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "int";
+		excludeTag = "streamRelatedType";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "Double|double|java.lang.Double|Float|float|java.lang.Float|Integer|java.lang.Integer|Long|long|java.lang.Long|Short|short|java.lang.Short|bool|boolean|java.lang.Boolean|char|java.lang.Character|byte|java.lang.Byte";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "java.math.BigDecimal|java.math.BigInteger";
+		excludeTag = "BigDecimal";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "ch.ethz.ssh2.log.Logger|ch.qos.logback.classic.Logger|com.alibaba.common.logging.Logger|com.esotericsoftware.minlog.Log.Logger|com.jcraft.jsch.Logger|com.taobao.common.logs.LoggerUtil|com.taobao.top.link.Logger|com.trilead.ssh2.log.Logger|java.util.logging.Logger|org.apache.commons.logging.Log|org.apache.log4j.Logger|org.slf4j.Logger";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "java.io.IOException|java.lang.Exception";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "java.lang.System|java.lang.Class|java.lang.reflect.Field|java.lang.reflect.Method";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "java.lang.reflect.Method.invoke";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "java.sql.Date|java.text.DateFormat|java.util.Calendar|java.util.Date|cn.hutool.core.date.DateTime";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "org.apache.poi.hssf.usermodel.HSSFWorkbook|org.apache.poi.xssf.usermodel.XSSFWorkbook|org.apache.zookeeper.ZooKeeper|groovy.lang.Binding";
+	};
+	sanitizer.safeTypes += {
+		value = ".CriteriaQuery$|java.time.*";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "java.lang.Double.parseDouble|java.lang.Boolean.valueOf|java.lang.Float.valueOf|java.lang.Integer.parseInt|java.lang.Integer.valueOf|java.lang.Long.parseLong|java.lang.Long.valueOf|java.lang.System.out.println";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.alibaba.service.rundata.parser.ParameterParser.getBoolean|com.alibaba.service.rundata.parser.ParameterParser.getDate|com.alibaba.service.rundata.parser.ParameterParser.getDouble|com.alibaba.service.rundata.parser.ParameterParser.getFloat|com.alibaba.service.rundata.parser.ParameterParser.getInt|com.alibaba.service.rundata.parser.ParameterParser.getLong|com.alibaba.service.rundata.parser.ParameterParser.getShort";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "java.text.DateFormat.format|java.text.DateFormat.parse|java.text.SimpleDateFormat.format|java.text.SimpleDateFormat.parse";
+	};
+	sanitizer.methodReturn += {
+		value = "org.springframework.orm.ibatis.SqlMapClientOperations|org.apache.ibatis.session.SqlSession.select|org.apache.ibatis.session.SqlSession.selectList|org.apache.ibatis.session.SqlSession.selectMap|org.apache.ibatis.session.SqlSession.selectOne|org.hibernate.Query.list|org.springframework.jdbc.core.JdbcTemplate.execute|org.springframework.jdbc.core.JdbcTemplate.query|org.springframework.jdbc.core.JdbcTemplate.queryForList|org.springframework.jdbc.core.JdbcTemplate.queryForMap|org.springframework.jdbc.core.JdbcTemplate.queryForObject|org.springframework.jdbc.core.JdbcTemplate.queryForRowSet|java.sql.ResultSet|java.sql.Statement|org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate.query";
+		excludeTag = "sql";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "javax.crypto.Cipher.doFinal|javax.crypto.Mac.doFinal|javax.validation.Validator.validate|java.security.Signature.update|com.hichina.bc.utils.StringUtils.encodeString";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.alibaba.intl.commons.security.DESEncryptUtils.encrypt|com.alipay.common.lang.signature.DSASignature.check";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.aliyun.oss.OSS.getObject|com.aliyun.oss.OSSClient.getObject|com.aliyun.oss.OSSClient.generatePresignedUrl|com.aliyun.oss.OSS.generatePresignedUrl";
+		excludeTag = "oss";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.alibaba.buc.api.AccessControlService.checkPermissions|com.alibaba.ascp.tools.gei.processor.api.service.TaskFacade.getGeiTask|com.aliyun.dataworks.dac.app.instance.query.AssetInstanceDomainQueryService.getPluginObjectByUuid";
+	};
+	sanitizer.methodReturn += {
+		value = ".getBean|.getBoolean\\b|.getDouble\\b|.getFloat\\b|.getInt\\b|.getInts\\b|.getLong\\b|.getLongs\\b|.getShort\\b|.length\\b|.size\\b|org.apache.commons.lang.math.NumberUtils.*";
+	};
+	sanitizer.methodReturn += {
+		value = ".toDate|LocalDate.parse";
+	};
+	sanitizer.methodReturn += {
+		value = "\\bselectNodes\\b|com.taobao.common.tfs.\\w*?TfsManager.\\w+|com.taobao.tair.*.get|com.taobao.diamond.client.Diamond.getConfig|com.taobao.diamond.client.Diamond.getConfigFromSnapShot|com.taobao.metaq.client.MetaProducer.send|com.taobao.metaq.client.MetaPullConsumer.pull";
+	};
+	sanitizer.methodReturn += {
+		value = "GetMethod.get|PostMethod.get|HttpMethod.get|TripKvStore.get|\\bgetAcsResponse\\b";
+	};
+	sanitizer.methodReturn += {
+		value = "org.apache.hadoop.hbase.client.Connection.getTable|org.apache.hadoop.hbase.client.HTablePool.getTable|com.taobao.rdb2.smart.RdbSmartApi.init|com.taobao.tlog.hbase.client.TLogHBaseClient.getData|RedisSyncApi.get|Jedis.get|.*cache[A-Za-z_$].get|JedisCluster.get|com.google.common.cache";
+	};
+	sanitizer.methodReturn += {
+		value = "Base64.encode|org.apache.commons.codec.digest.DigestUtils.\\w+Hex";
+		excludeTag = "encode";
+	};
+	sanitizer.methodReturn += {
+		value = "JobClient.|com.alibaba.schedulerx.worker.SchedulerxWorker.init|com.alibaba.buc.[\\w.]*?.find|com.alibaba.buc.[\\w.]*?.get|com.taobao.clouddrive.api.*|com.taobao.notify.remotingclient.NotifyManager.sendMessage|com.taobao.vipserver.client.core.VIPClient.getAllHosts|.taobao.vipserver.client.core.VIPClient.getHosts";
+	};
+	sanitizer.methodArg += {
+		precise = true;
+		value = "";
+	};
+	sanitizer.methodArg += {
+		value = ".isDigits|.isNumber|.isNumeric";
+	};
+	sanitizer.safeVarNames += {
+		value = "(?i)(service|manager|dao)$|(?i)(service|manager|dao)Impl|response$";
+		excludeTag = "SafeVarnames";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "javax.servlet.ServletRequest|javax.servlet.http.HttpServletRequest|javax.servlet.http.HttpSession";
+		excludeTag = "SafeServletType";
+	};
+	sanitizer.methodObject += {
+		value = "Select.execute";
+		excludeTag = "sql";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "org.apache.hadoop.hbase.client.Get";
+		excludeTag = "sql";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "com.aliyun.oss.OSS|com.aliyun.oss.OSSClient";
+		excludeTag = "oss";
+	};
+  	propagate.customMethodPropagate += {
+        value = "\\bSystem.arraycopy\\b";
+        from = "0";
+        to = "2";
+    };
+    propagate.customMethodPropagate += {
+        value = "java.lang.String.getChars";
+        from = "object";
+        to = "2";
+    };
+	sink.methodArg += { // #modify ReDoS
+		value = "java.util.regex.Pattern.(compile|matches)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify ReDoS String
+		value = "java.lang.String.(matches|replaceAll|replaceFirst|split)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+}

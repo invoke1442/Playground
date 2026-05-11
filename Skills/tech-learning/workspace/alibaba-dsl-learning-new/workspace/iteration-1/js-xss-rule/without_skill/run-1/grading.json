@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "The JavaScript source blocks use value/value +=, not precise.",
+      "passed": false,
+      "evidence": "No matching evidence in outputs/transcript."
+    },
+    {
+      "text": "The JavaScript sink and sanitizer call blocks use pattern/pattern +=.",
+      "passed": false,
+      "evidence": "No matching evidence in outputs/transcript."
+    },
+    {
+      "text": "The Rule imports a roster before type/subType.",
+      "passed": false,
+      "evidence": "No matching evidence in outputs/transcript."
+    },
+    {
+      "text": "The output explains JS loadclass as fileName.property.path into a CommonJS module.",
+      "passed": false,
+      "evidence": "No matching evidence in outputs/transcript."
+    },
+    {
+      "text": "The output states userDefineFunc should return false unless replacing default analysis.",
+      "passed": false,
+      "evidence": "No matching evidence in outputs/transcript."
+    }
+  ],
+  "summary": {
+    "passed": 0,
+    "failed": 5,
+    "total": 5,
+    "pass_rate": 0.0
+  }
+}

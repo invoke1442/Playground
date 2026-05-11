@@ -1,0 +1,21 @@
+{
+  "returncode": 28,
+  "stdout": "",
+  "stderr": "curl: (28) Failed to connect to 43.106.136.189 port 8081 after 133264 ms: Connection timed out\n",
+  "command": [
+    "curl",
+    "--silent",
+    "--show-error",
+    "--noproxy",
+    "*",
+    "--http1.0",
+    "-H",
+    "Content-Type: multipart/form-data; boundary=bound",
+    "--data-binary",
+    "@/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-1/java-ssrf-rule/with_skill/run-3/outputs/verify-rule/payload.bin",
+    "http://43.106.136.189:8081/api/v1/verify"
+  ],
+  "response": null,
+  "tar_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-1/java-ssrf-rule/with_skill/run-3/outputs/verify-rule/config.tar",
+  "payload_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-1/java-ssrf-rule/with_skill/run-3/outputs/verify-rule/payload.bin"
+}

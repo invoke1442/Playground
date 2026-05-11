@@ -1,0 +1,41 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_second_package_source</name>
+  <groups>
+    <net.sourceforge.pmd.ParamGroup>
+      <name>jar_sourcecode_sources</name>
+      <includePlatforms>AONE_SECOND_PARTY,SAR</includePlatforms>
+      <excludePlatforms></excludePlatforms>
+      <attributes>
+        <net.sourceforge.pmd.ParamAttribute>
+          <name>scanAllFiles</name>
+          <value>true</value>
+        </net.sourceforge.pmd.ParamAttribute>
+      </attributes>
+      <properties>
+        <net.sourceforge.pmd.ParamProperty>
+          <atts class="tree-map">
+            <entry>
+              <string>name</string>
+              <string>all public method as entrance</string>
+            </entry>
+            <entry>
+              <string>value</string>
+              <string>true</string>
+            </entry>
+          </atts>
+        </net.sourceforge.pmd.ParamProperty>
+      </properties>
+    </net.sourceforge.pmd.ParamGroup>
+  </groups>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

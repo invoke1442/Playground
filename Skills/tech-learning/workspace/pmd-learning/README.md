@@ -14,6 +14,7 @@
 整理原则：
 
 - 以 PMD 7.22.0 的 latest 文档为主轴。
+- `05-pmd-rule-syntax.md` 已于 `2026-05-10` 对照 PMD latest 页面补充 XPath / Java 规则语法细节；补充时官方导航显示版本为 `7.24.0`。
 - GitHub 仓库用于确认开源状态、仓库定位、README 描述和许可证。
 - 每篇文档都包含记忆卡片、Mermaid 思维导图、正文、练习复习、来源映射。
 - CLI 示例、规则示例和漏洞扫描流程主要依据官方资料解释；当前环境未安装 PMD 二进制分发包，因此命令示例未做本地运行验证。
@@ -26,5 +27,5 @@
 - 支持语言：Language overview、Language configuration、Rule Reference、README
 - CLI 用法：Installation and basic CLI usage、CLI reference、Incremental analysis、Report formats
 - 静态分析原理：How PMD Works、Writing a custom rule、Your first rule、AST dump
-- 规则语法：Making rulesets、Your first rule、Writing XPath rules、Writing a custom rule
+- 规则语法：Making rulesets、Your first rule、Writing XPath rules、Writing a custom rule、Defining rule properties、Configuring rules、Java support、Testing your rules
 - 漏洞扫描最佳实践：Best Practices、Making rulesets、CLI reference、Incremental analysis、Security rules pages

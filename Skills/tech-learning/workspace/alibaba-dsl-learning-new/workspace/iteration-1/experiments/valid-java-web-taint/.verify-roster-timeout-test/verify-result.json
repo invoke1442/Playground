@@ -1,0 +1,23 @@
+{
+  "returncode": 124,
+  "stdout": "",
+  "stderr": "verify API request timed out after 10 seconds",
+  "command": [
+    "curl",
+    "--silent",
+    "--show-error",
+    "--noproxy",
+    "*",
+    "--http1.0",
+    "-H",
+    "Content-Type: multipart/form-data; boundary=bound",
+    "--data-binary",
+    "@/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-1/experiments/valid-java-web-taint/.verify-roster-timeout-test/payload.bin",
+    "http://43.106.136.189:8081/api/v1/verify"
+  ],
+  "response": null,
+  "verify_output": null,
+  "error": "TIMEOUT",
+  "tar_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-1/experiments/valid-java-web-taint/.verify-roster-timeout-test/config.tar",
+  "payload_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-1/experiments/valid-java-web-taint/.verify-roster-timeout-test/payload.bin"
+}

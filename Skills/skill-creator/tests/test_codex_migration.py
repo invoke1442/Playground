@@ -90,6 +90,20 @@ class CodexMigrationTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0)
             self.assertIn("ok", result.final_text)
 
+    def test_codex_runner_env_overrides_preserve_path(self):
+        env = codex_runner.default_codex_env({"CODEX_HOME": "/tmp/codex-home-test"})
+
+        self.assertEqual(env["CODEX_HOME"], "/tmp/codex-home-test")
+        self.assertIn("PATH", env)
+
+    def test_codex_runner_extracts_item_completed_agent_message(self):
+        events = [
+            {"type": "thread.started", "thread_id": "t"},
+            {"type": "item.completed", "item": {"type": "agent_message", "text": "ok"}},
+        ]
+
+        self.assertEqual(codex_runner.extract_final_text(events), "ok")
+
 
 if __name__ == "__main__":
     unittest.main()

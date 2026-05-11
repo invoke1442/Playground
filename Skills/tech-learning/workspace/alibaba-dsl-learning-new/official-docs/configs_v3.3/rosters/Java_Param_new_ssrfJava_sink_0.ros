@@ -1,0 +1,99 @@
+Roster Java_Param_new_ssrfJava_sink {
+	sink.methodArg += { // #modify 30031
+		value = "java.net.URL.<init>|java.net.URI.(create|parse)|org.apache.http.client.methods.HttpGet.<init>|org.apache.http.client.methods.HttpPost.<init>";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "org.apache.commons.httpclient.methods.GetMethod.setPath|org.apache.commons.httpclient.methods.PostMethod.setPath|org.apache.commons.httpclient.HttpMethodBase.setPath|org.apache.http.client.methods.RequestBuilder.setUri|org.apache.http.client.methods.RequestBuilder.get.setUri|org.apache.http.client.methods.HttpRequestBase.setURI|org.apache.http.client.methods.HttpGet.setURI|org.apache.http.client.methods.HttpPost.setURI|org.apache.http.client.methods.HttpDelete.setURI|org.apache.http.client.methods.HttpPut.setURI|org.apache.http.client.methods.HttpHead.setURI|org.apache.http.client.methods.HttpOptions.setURI|org.apache.http.client.methods.HttpTrace.setURI|org.apache.http.client.methods.HttpPatch.setURI|com.aliyun.api.console.common.service.AliyunApiRequest.execCommandByParams|com.aliyun.api.console.common.service.AliyunApiRequest.execCommandByParamsNoUpper|com.aliyun.api.console.common.service.AliyunApiRequest.setBaseServiceHost|jws.lib.WS.url|jws.http.SimpleHttpClient.doGet|jws.http.SimpleHttpClient.doGetBatch|jws.http.SimpleHttpClient.doPost|jws.http.SimpleHttpClient.doPostAll|okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "javax.imageio.ImageIO.read|org.apache.commons.io.IOUtils.toByteArray|org.apache.commons.io.IOUtils.toString|org.apache.commons.io.FileUtils.copyURLToFile|org.apache.commons.io.file.PathUtils.copyFile|org.apache.commons.io.file.PathUtils.copyFileToDirectory";
+		param = "[{'position':0,'tainted':true,'type':'URL'}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "javax.imageio.ImageIO.read|org.apache.commons.io.IOUtils.toByteArray|org.apache.commons.io.IOUtils.toString|org.apache.commons.io.FileUtils.copyURLToFile|org.apache.commons.io.file.PathUtils.copyFile|org.apache.commons.io.file.PathUtils.copyFileToDirectory";
+		param = "[{'position':0,'tainted':true,'type':'URI'}]";
+	};
+	sink.methodArg += {
+		value = "okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall|ExecutableClient.newGetClient|ExecutableClient.newPostClient";
+	};
+	sink.allocArg += {
+		value = "org.apache.commons.io.input.XmlStreamReader";
+	};
+	sink.methodArg += {
+		value = "org.springframework.web.client.RestTemplate.(getFor.*|headForHeaders|postFor.*|patchFor.*|optionsFor.*|put|delete|exchange|execute)|org.apache.http.client.fluent.Request.Get\\b|org.apache.http.client.fluent.Request.Post\\b|com.taobao.pandora.boot.utils.DownloadUtils.download|org.jsoup.Jsoup.connect";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodObject += {
+		value = "java.net.URL.openConnection|java.net.URL.getContent|java.net.URL.openStream";
+	};
+	sink.allocArg += {
+		precise = true;
+		value = "org.apache.commons.httpclient.methods.GetMethod|org.apache.commons.httpclient.methods.PostMethod|org.apache.commons.httpclient.HttpMethodBase|org.apache.http.client.methods.HttpGet|org.apache.http.client.methods.HttpPost|org.apache.http.client.methods.HttpDelete|org.apache.http.client.methods.HttpPut|org.apache.http.client.methods.HttpHead|org.apache.http.client.methods.HttpOptions|org.apache.http.client.methods.HttpTrace|org.apache.http.client.methods.HttpPatch|com.aliyun.market.core.openapi.OpenApiClient|jws.http.Request|okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall";
+	};
+	sink.allocArg += {
+		value = "";
+	};
+	sink.methodObject += {
+		precise = true;
+		value = "org.springframework.http.client.ClientHttpRequest.execute|java.net.URL.openConnection|java.net.URL.getContent|java.net.URL.openStream|com.aliyuncs.fc.client.FunctionComputeClient.deleteService";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "com.aliyuncs.fc.http.HttpRequest.getHttpConnection|com.aliyuncs.fc.http.HttpResponse.getResponse";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		value = "kong.unirest.UnirestInstance.get";
+	};
+	sink.methodArg += {
+		value = "org.apache.http.HttpHost._init_.";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		value = "ws.schild.jave.MultimediaObject._init_.";
+		param = "[{'position':0,'tainted':true,'type':'URL'}]";
+	};
+  	sink.methodArg += {
+		value = "java.net.http.HttpRequest.newBuilder|java.net.http.HttpRequest.newBuilder.uri";
+		param = "[{'position':0,'tainted':true,'type':'URI'}]";
+	};
+  	//from codeql
+ 	sink.methodArg += {
+		value = "org.eclipse.jetty.client.HttpClient.newRequest";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+ 	sink.methodArg += {
+		value = "org.springframework.web.reactive.function.client.WebClient.create";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		value = "org.springframework.web.reactive.function.client.WebClient.Builder.baseUrl";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		value = "play.libs.ws.WSClient.url";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		value = "play.libs.ws.StandaloneWSClient.url";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+	sink.methodArg += {
+		value = "retrofit2.Retrofit.Builder.baseUrl";
+		param = "[{'position':0,'tainted':true,'type':'String'}]";
+	};
+  //
+ 
+	sink.methodArg += { // #modify 30036
+		value = "org.apache.http.impl.client.CloseableHttpClient.execute|org.apache.http.client.HttpClient.execute";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30039
+		value = "okhttp3.Request\\$Builder.url";
+		param = "[{'position':0,'tainted':true}]";
+	};
+}

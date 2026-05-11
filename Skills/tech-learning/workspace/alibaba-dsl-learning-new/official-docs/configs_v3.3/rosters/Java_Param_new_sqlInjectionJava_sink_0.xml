@@ -1,0 +1,195 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_sqlInjectionJava_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.sql.PreparedStatement.executeQuery|java.sql.PreparedStatement.executeUpdate|java.sql.PreparedStatement.execute|java.sql.PreparedStatement.addBatch|java.sql.Statement.executeQuery|java.sql.Statement.executeUpdate|java.sql.Statement.executeLargeUpdate|java.sql.Statement.execute|java.sql.Statement.addBatch|java.sql.Connection.prepareStatement|java.sql.Connection.prepareCall|org.hibernate.Session.createFilter|org.hibernate.Session.createQuery|org.hibernate.Session.createSQLQuery|org.apache.ibatis.jdbc.SqlBuilder.WHERE|org.apache.ibatis.jdbc.SqlBuilder.ORDER_BY|java.sql.Connection.nativeSQL|javax.persistence.EntityManager.createNativeQuery|jws.dal.Dal.getConnection|jws.dal.Dal.execute|org.hibernate.SessionFactory.getCurrentSession.createQuery|org.hibernate.SessionFactory.getCurrentSession.createFilter|org.hibernate.SessionFactory.getCurrentSession.createSQLQuery</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.dbutils.QueryRunner.query|org.apache.commons.dbutils.QueryRunner.batch|org.apache.commons.dbutils.QueryRunner.execute|org.apache.commons.dbutils.QueryRunner.insert|org.apache.commons.dbutils.QueryRunner.update|org.apache.commons.dbutils.QueryRunner.insertBatch</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:1,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.dbutils.QueryRunner.query|org.apache.commons.dbutils.QueryRunner.batch|org.apache.commons.dbutils.QueryRunner.execute|org.apache.commons.dbutils.QueryRunner.insert|org.apache.commons.dbutils.QueryRunner.update|org.apache.commons.dbutils.QueryRunner.insertBatch</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bTemplateContext\.put\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use sql special type sink</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink - sql special type set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.jdbc.core.JdbcTemplate|org.apache.commons.dbutils.QueryRunner|org.springframework.jdbc.core.JdbcOperations|org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\baddCriterion\b|Example\.Criteria\.andCondition</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>jakarta.persistence.EntityManager.createNativeQuery|jakarta.persistence.EntityManager.createQuery|liquibase.database.jvm.JdbcConnection.prepareStatement|liquibase.statement.core.RawSqlStatement.RawSqlStatement|org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations.batchUpdate|javax.persistence.EntityManager.createQuery</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>sdk sink</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.search.ha3.domain.Ha3SqlRequest.setStatement</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>sdk sink</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alicloud.openservices.tablestore.model.sql.SQLQueryRequest._init_</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>sdk sink</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.opensearch.SearcherClient.execute</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

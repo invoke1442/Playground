@@ -1,0 +1,11 @@
+Rule NewSQLInjectionXBatis extends AbstractTaintRule {
+	import roster Java_stream_io_sanitizer;
+	import roster Java_Param_new_sqlInjectionXBatis_sink;
+	import roster Java_network_io_sanitizer;
+	import roster Java_common_source;
+	import roster Java_sqli_propagate;
+	import roster Java_common_propagate exclude JdbcTemplate,sql;
+	type = "SQLInjection";
+	subType = "sqlInjectionXBatis";
+	general.customSubject = "SQL注入";
+}

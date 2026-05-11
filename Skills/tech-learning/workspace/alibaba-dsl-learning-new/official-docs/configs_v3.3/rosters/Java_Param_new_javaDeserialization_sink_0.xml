@@ -1,0 +1,39 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_javaDeserialization_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink object set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.ObjectInputStream.readObject|java.io.ObjectInputStream.read|java.io.ObjectInputStream.readFully|java.io.ObjectInputStream.resolveClass|java.io.ObjectInputStream.resolveObject|java.io.ObjectInput.readObject|java.io.ObjectInput.read|java.io.Serializable.readObjectNoData|java.io.Serializable.readResolve|java.io.ObjectInputValidation.validateObject|java.io.Externalizable.readExternal|org.apache.commons.fileupload.disk.DiskFileItem.readObject|org.apache.commons.lang.SerializationUtils.deserialize|java.beans.XMLDecoder.readObject</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.naming.InitialContext.lookup</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

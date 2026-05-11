@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "skill_name": "alibaba-dsl-new",
+    "skill_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/alibaba-dsl-new",
+    "executor_model": "codex configured model",
+    "timestamp": "2026-05-10T14:31:28Z",
+    "evals_run": [
+      "java-ssrf-rule",
+      "js-xss-rule"
+    ],
+    "runs_per_configuration": 1,
+    "selected_run": "run-4"
+  },
+  "runs": [
+    {
+      "eval_id": "java-ssrf-rule",
+      "configuration": "with_skill",
+      "run_number": 4,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 215.917,
+        "tokens": 416410,
+        "returncode": 0,
+        "timed_out": false,
+        "errors": 0,
+        "output_chars": 4264
+      },
+      "expectations": [
+        {
+          "text": "The Rule imports a roster before type/subType fields.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The roster filename uses _0 while the Rule import omits _0.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The relation config maps the numeric rule id to the _0 roster name.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The Java SSRF roster includes source.methodReturn, sink.methodArg, and checkSSRF as sanitizer.methodArg.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The answer includes local lint and official verify commands.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": "java-ssrf-rule",
+      "configuration": "without_skill",
+      "run_number": 4,
+      "result": {
+        "pass_rate": 0.8,
+        "passed": 4,
+        "failed": 1,
+        "total": 5,
+        "time_seconds": 240.02,
+        "tokens": 0,
+        "returncode": 124,
+        "timed_out": true,
+        "errors": 1,
+        "output_chars": 3117
+      },
+      "expectations": [
+        {
+          "text": "The Rule imports a roster before type/subType fields.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The roster filename uses _0 while the Rule import omits _0.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The relation config maps the numeric rule id to the _0 roster name.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The Java SSRF roster includes source.methodReturn, sink.methodArg, and checkSSRF as sanitizer.methodArg.",
+          "passed": false,
+          "evidence": "No matching evidence in outputs/transcript."
+        },
+        {
+          "text": "The answer includes local lint and official verify commands.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": "js-xss-rule",
+      "configuration": "with_skill",
+      "run_number": 4,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 210.461,
+        "tokens": 397752,
+        "returncode": 0,
+        "timed_out": false,
+        "errors": 0,
+        "output_chars": 28160
+      },
+      "expectations": [
+        {
+          "text": "The JavaScript source blocks use value/value +=, not precise.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The JavaScript sink and sanitizer call blocks use pattern/pattern +=.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The Rule imports a roster before type/subType.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The output explains JS loadclass as fileName.property.path into a CommonJS module.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The output states userDefineFunc should return false unless replacing default analysis.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "eval_id": "js-xss-rule",
+      "configuration": "without_skill",
+      "run_number": 4,
+      "result": {
+        "pass_rate": 1.0,
+        "passed": 5,
+        "failed": 0,
+        "total": 5,
+        "time_seconds": 205.813,
+        "tokens": 872048,
+        "returncode": 0,
+        "timed_out": false,
+        "errors": 0,
+        "output_chars": 27304
+      },
+      "expectations": [
+        {
+          "text": "The JavaScript source blocks use value/value +=, not precise.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The JavaScript sink and sanitizer call blocks use pattern/pattern +=.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The Rule imports a roster before type/subType.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The output explains JS loadclass as fileName.property.path into a CommonJS module.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        },
+        {
+          "text": "The output states userDefineFunc should return false unless replacing default analysis.",
+          "passed": true,
+          "evidence": "Matched expected content in outputs/transcript."
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "run_summary": {
+    "with_skill": {
+      "pass_rate": {
+        "mean": 1.0,
+        "min": 1.0,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 213.189,
+        "min": 210.461,
+        "max": 215.917
+      },
+      "tokens": {
+        "mean": 407081.0,
+        "min": 397752,
+        "max": 416410
+      },
+      "timeouts": 0,
+      "errors": 0
+    },
+    "without_skill": {
+      "pass_rate": {
+        "mean": 0.9,
+        "min": 0.8,
+        "max": 1.0
+      },
+      "time_seconds": {
+        "mean": 222.9165,
+        "min": 205.813,
+        "max": 240.02
+      },
+      "tokens": {
+        "mean": 436024.0,
+        "min": 0,
+        "max": 872048
+      },
+      "timeouts": 1,
+      "errors": 1
+    },
+    "delta": {
+      "pass_rate": 0.1,
+      "time_seconds": -9.7275,
+      "tokens": -28943.0,
+      "timeouts": -1
+    }
+  },
+  "notes": [
+    "run-4 is the first fully harness-fixed with-skill/baseline pair; earlier runs are retained as harness debugging artifacts.",
+    "Remote verify was intentionally not called during subprocess evals; local lint and verify commands were required outputs."
+  ]
+}

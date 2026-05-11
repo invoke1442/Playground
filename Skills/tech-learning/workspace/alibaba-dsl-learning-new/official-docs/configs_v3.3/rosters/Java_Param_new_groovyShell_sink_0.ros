@@ -1,0 +1,56 @@
+Roster Java_Param_new_groovyShell_sink {
+	sink.methodArg += { // #modify 30008
+		value = "groovy.lang.GroovyShell.(parse|evaluate|parseClass)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30008
+		value = "groovy.lang.GroovyClassLoader.parseClass";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // Generic fallback
+		value = "groovy.lang.GroovyShell.evaluate|groovy.lang.GroovyShell.parse|groovy.lang.GroovyShell.parseClass|executeGroovyScript|com.taobao.pamirs.bulukul.api.executor.BulukulExecutor.executeScript|groovy.lang.GroovyClassLoader.parseClass|groovy.util.GroovyScriptEngine.run|javax.script.ScriptEngine.eval|org.springframework.web.servlet.tags.EvalTag.setExpression|groovy.util.Eval.me";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "groovy.util.Eval.me|javax.script.ScriptEngine.eval";
+		param = "[{'position':0,'tainted':true,'type':''}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "groovy.util.Eval.x";
+		param = "[{'position':1,'tainted':true,'type':''}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "groovy.util.Eval.xy|groovy.util.Eval.me";
+		param = "[{'position':2,'tainted':true,'type':''}]";
+	};
+	sink.methodArg += {
+		precise = true;
+		value = "groovy.util.Eval.xyz";
+		param = "[{'position':3,'tainted':true,'type':''}]";
+	};
+	sink.methodObject += {
+		value = "groovy.lang.Script.run";
+	};
+	sink.methodArg += { // #modify 30016
+		value = "com.opensymphony.xwork2.ognl.OgnlReflectionProvider.(getGetMethod|getSetMethod|getField|setProperties|setProperty|getValue|setValue)|com.opensymphony.xwork2.ognl.OgnlUtil.(setProperties|setProperty|getValue|setValue|callMethod|compile)|com.opensymphony.xwork2.util.ValueStack.(findString|findValue|setValue|setParameter)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30017
+		value = "javax.script.ScriptEngine.eval";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30009
+		value = "javax.el.ExpressionFactory.(createValueExpression|createMethodExpression)";
+		param = "[{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30009
+		value = ".*.buildConstraintViolationWithTemplate";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30042
+		value = "org.apache.velocity.app.Velocity.(evaluate|mergeTemplate)|org.apache.velocity.app.VelocityEngine.(evaluate|mergeTemplate)";
+		param = "[{'position':1,'tainted':true}]";
+	};
+}

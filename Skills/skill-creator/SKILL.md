@@ -1,11 +1,11 @@
 ---
-name: skill-creator
-description: Create, update, evaluate, benchmark, optimize, and package Codex skills. Use when users want to create a skill from scratch, improve an existing skill, add scripts/references/assets, generate agents/openai.yaml metadata, run Codex-based evals against with-skill and baseline outputs, grade skill performance, optimize a skill description for better Codex triggering, or package a .skill file.
+name: anthropic-style-skill-creator
+description: Use when users want an Anthropic-style iterative workflow for creating, updating, evaluating, benchmarking, optimizing, or packaging Codex skills, especially when they need with-skill versus baseline evals, human review UI, grading, benchmark analysis, or description trigger optimization.
 ---
 
-# Skill Creator
+# Anthropic-Style Skill Creator
 
-Use this skill to create Codex skills and iteratively improve them with evidence.
+Use this skill to create Codex skills with an Anthropic-style eval and feedback loop.
 
 ## Core Workflow
 

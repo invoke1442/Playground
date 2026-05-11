@@ -1,0 +1,7 @@
+Rule NodeJSWebTaintRule extends AbstractTaintRule {
+    import roster NodeJS_web_taint;
+    type = "Xss";
+    subType = "XssTs";
+
+    general.userDefinePatternClass = loadclass("XssTs_90002.rule.userDefineFunc");
+}

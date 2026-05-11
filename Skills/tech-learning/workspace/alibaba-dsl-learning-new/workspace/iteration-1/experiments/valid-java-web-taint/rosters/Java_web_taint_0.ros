@@ -1,0 +1,23 @@
+Roster Java_web_taint {
+    source.methodReturn += {
+        precise = true;
+        value = "javax.servlet.http.HttpServletRequest.getParameter|javax.servlet.http.HttpServletRequest.getHeader";
+    };
+
+    sink.methodArg += {
+        precise = true;
+        value = "java.net.URL.<init>|org.springframework.web.client.RestTemplate.getForObject";
+        param = "[{'position':0,'tainted':true}]";
+    };
+
+    sanitizer.methodReturn += {
+        precise = true;
+        value = "com.alibaba.security.SecurityUtil.checkSSRF|com.alibaba.security.SecurityUtil.getSafeUrl";
+    };
+
+    propagate.customMethodPropagate += {
+        value = "java.lang.StringBuilder.append|java.lang.String.concat";
+        from = "0";
+        to = "return";
+    };
+}

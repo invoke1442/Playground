@@ -1,0 +1,86 @@
+Roster Java_ssrf_propagate {
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.SSRFCustomPropagate");
+	};
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.SSRFPkgHandler");
+	};
+	propagate.bPreSanitizerParam += {
+		value = true;
+	};
+	propagate.bUseSafeState += {
+		value = true;
+	};
+	propagate.bUnkownAsSafe += {
+		value = false;
+	};
+	propagate.bTaintedStart += {
+		value = true;
+	};
+	propagate.methodArgOrObjectToObjectAndReturn += {
+		value = "\\burl\\b|URIBroker[^.]*.setServerURI|URIBroker[^.]*.setBaseURI|URIBroker[^.]*.setContextPath|URIBuilder[^.]*.setHost|UriComponentsBuilder[^.]*.(fromUriString|fromHttpUrl|fromPath|fromUri|host|uri)\\b";
+	};
+	propagate.bOnlyTaintedByObject += {
+		value = true;
+	};
+	propagate.methodObjectToReturn += {
+		value = "composeUrl|setParameter";
+	};
+	propagate.methodObjectToReturn += {
+		value = "URIBroker[^.]*.|URIBuilder[^.]*.|UriComponentsBuilder[^.]*.|UriTemplate[^.]*.";
+	};
+	propagate.methodObjectToReturn += {
+		value = "\\bBuilder\\b|\\baddHeader\\b|.setHeader|.setEntity";
+	};
+	propagate.methodObjectToReturn += {
+		value = "append|concat";
+	};
+	propagate.methodArgToObjectAndReturn += {
+		value = "\\bsetServerURI\\b|\\bsetBaseURI\\b|\\bsetContextPath\\b|\\bsetHost\\b|\\burl\\b";
+	};
+	propagate.customMethodPropagate += {
+		value = "java.lang.String.join";
+		from = "1";
+		to = "return";
+	};
+	propagate.bSanitizerParamTransmit += {
+		value = true;
+	};
+	sanitizer.methodRedirectCheck += {
+		precise = true;
+		value = "org.apache.commons.httpclient.HttpMethod.setFollowRedirects|org.apache.commons.httpclient.methods.GetMethod.setFollowRedirects|org.apache.commons.httpclient.methods.PostMethod.setFollowRedirects|java.net.HttpURLConnection.setInstanceFollowRedirects|java.net.HttpURLConnection.setFollowRedirects|org.apache.http.client.config.RequestConfig.Builder.setRedirectsEnabled|sun.net.www.protocol.http.HttpURLConnection.setInstanceFollowRedirects|sun.net.www.protocol.http.HttpURLConnection.setFollowRedirects";
+	};
+	sanitizer.methodRedirectCheck += {
+		value = ".setRedirectStrategy\\b|.setRedirectsEnabled\\b|.setFollowRedirects\\b|.setInstanceFollowRedirects\\b|.disableRedirectHandling\\b|\\bfollowRedirects\\b";
+	};
+	sanitizer.methodSafeState += {
+		precise = true;
+		value = "com.alibaba.security.SecurityUtil.startSSRFNetHookChecking";
+	};
+	sanitizer.methodSafeState += {
+		value = "com.aliyun.securitysdk.SecurityUtil.withSSRFChecking|com.aliyun.securitysdk.SecurityUtil.startSSRFNetHookChecking";
+	};
+	sanitizer.methodUnSafeState += {
+		precise = true;
+		value = "com.alibaba.security.SecurityUtil.stopSSRFNetHookChecking|com.aliyun.securitysdk.SecurityUtil.stopSSRFNetHookChecking";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "okhttp3.RequestBody.create|com.aliyun.oss.OSSClient.generatePresignedUrl|com.aliyun.oss.OSS.generatePresignedUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|java.sql.PreparedStatement.setString|java.sql.PreparedStatement.setNString";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.youku.recommend.bigdata.util.RouteUtil.getVipServerDomain";
+	};
+	sanitizer.methodArg += {
+		precise = true;
+		value = "com.alibaba.security.SecurityUtil.checkSSRF";
+	};
+	sanitizer.methodArgWithRedirectCheck += {
+		precise = true;
+		value = "com.alibaba.fasttext.sec.url.SSRFChecker.checkUrlWithoutConnection|com.alibaba.fasttext.sec.url.SSRFChecker.instance.checkUrlWithoutConnection|com.alibaba.security.SecurityUtil.checkUrlWithoutConnection|com.alibaba.security.SecurityUtil.checkSSRFWithoutConnection|com.alibaba.security.SecurityUtil.startSSRFNetHookCheckingWithExpirationCache";
+	};
+	sanitizer.methodReturn += {
+		value = "addQueryParameter";
+	};
+}

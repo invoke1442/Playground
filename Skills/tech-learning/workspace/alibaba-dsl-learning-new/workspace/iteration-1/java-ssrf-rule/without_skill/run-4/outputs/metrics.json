@@ -1,0 +1,21 @@
+{
+  "returncode": 124,
+  "total_steps": 88,
+  "usage": {
+    "input_tokens": 0,
+    "cached_input_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_output_tokens": 0
+  },
+  "files_created": [
+    "transcript.md",
+    "user_notes.md",
+    "config/90001.rul",
+    "config/rosters/Java_ssrf_taint_0.ros",
+    "config/relation/config_roster_relation.json"
+  ],
+  "errors_encountered": 1,
+  "timed_out": true,
+  "output_chars": 3117,
+  "transcript_chars": 629
+}

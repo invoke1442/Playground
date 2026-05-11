@@ -1,5 +1,5 @@
 interface:
-  display_name: "Skill Creator"
-  short_description: "Create or update a skill"
-  icon_small: "./assets/skill-creator-small.svg"
-  icon_large: "./assets/skill-creator.png"
+  display_name: "Anthropic-Style Skill Creator"
+  short_description: "Evaluate and improve Codex skills"
+  icon_small: "./assets/anthropic-style-skill-creator-small.svg"
+  icon_large: "./assets/anthropic-style-skill-creator.png"

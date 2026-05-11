@@ -1,0 +1,71 @@
+Roster Java_Param_new_commandInjectionJava_sink {
+	sink.methodArg += { // #modify 30005
+		value = "java.lang.Runtime.exec";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30005
+		value = "java.lang.Runtime.loadLibrary";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30006
+		value = "java.lang.ProcessBuilder.<init>";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30006
+		value = "java.lang.ProcessBuilder.command";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // Generic fallback
+		value = "java.lang.Runtime.*.exec|java.lang.ProcessBuilder.(command|<init>|start)";
+	};
+	sink.methodObject += {
+		value = "java.lang.ProcessBuilder.start";
+	};
+  	sink.methodArg += {
+		value = "hudson.Launcher.ProcStarter.cmds|hudson.Launcher.ProcStarter.cmdAsSingleString|hudson.Launcher.launch|hudson.Launcher.launchChannel|org.apache.commons.exec.CommandLine.parse|org.apache.tools.ant.taskdefs.Execute.runCommand|com.jcraft.jsch.ChannelExec.setCommand";
+	};
+	sink.methodArg += {
+		value = "java.lang.System.(setProperty|clearProperty)";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += {
+		value = "java.lang.Runtime.loadLibrary";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30015
+		value = "javax.naming.directory.DirContext.search";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30014
+		value = "javax.naming.directory.SearchControls.setReturningObjFlag";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30012
+		value = "java.net.Socket.<init>";
+		param = "[{'position':0,'tainted':true},{'position':1,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30019
+		value = "javax.naming.Context.(lookup|rename|list|listBindings|lookupLink)|javax.naming.directory.DirContext.(lookup|rename|list|listBindings|lookupLink)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30022
+		value = "java.lang.String.(matches|replaceAll|replaceFirst|split)|java.util.regex.Pattern.(compile|matches)";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30023
+		value = "java.lang.Runtime.load";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30018
+		value = "java.lang.Class.forName|java.lang.reflect.Method.invoke";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30026
+		value = "java.lang.Runtime.exit|java.lang.System.exit";
+		param = "[{'position':0,'tainted':true}]";
+	};
+	sink.methodArg += { // #modify 30027
+		value = "java.lang.ProcessBuilder.environment";
+		param = "[{'position':0,'tainted':true}]";
+	};
+}

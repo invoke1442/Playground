@@ -1,0 +1,42 @@
+Roster Java_xss_propagate {
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "";
+	};
+	sanitizer.safeTypes += {
+		value = "";
+	};
+	sanitizer.methodArg += {
+		value = "me.ele.napos.arena.api.melody.processor.util.SessionIdUtilV2.verify|SessionIdUtil.verify|com.alibaba.havana.passport.support.WhiteUrlChecker.isLegalURL";
+	};
+	sanitizer.methodReturn += {
+		precise = true;
+		value = "com.alibaba.security.SecurityUtil.filterJsonpFunction|com.alibaba.fasttext.utils.asapi.impl.KeyFilter.chkFilter|com.alibaba.security.SecurityUtil.escapeHtml|com.alibaba.security.SecurityUtil.escapeJsonp|com.taobao.security.util.RichTextXssFilter.filter|com.alibaba.fasttext.sec.xss.XssUtil.inputXssFilter|com.alibaba.security.SecurityUtil.escapeJsonWithoutAmpersand|com.alibaba.aliyunid.client.AliyunidClient.callApi|com.taobao.velocity.citrus.pull.SecurityUtil.escapeJson|com.taobao.velocity.citrus.pull.SecurityUtil.escapeHtml|com.alibaba.security.SecurityUtil.fastRichtext|com.taobao.util.TBStringUtil.escapeHTML|com.alibaba.fasttext.sec.json.JSONTextJSFilter.jsonTextFilter|com.taobao.metaq.client.MetaProducer.send|com.taobao.security.util.SecurityUtil.escapeJson|com.alibaba.intl.commons.web.util.HtmlEscapeUtil.escape|com.alibaba.common.lang.StringEscapeUtil.escapeHtml|com.alibaba.security.SecurityUtil.escapeHtmlWithoutAmpersand|com.alibaba.fasttext.sec.json.JSONTextHTMLFilter.jsonTextFilter|com.alibaba.security.SecurityUtil.escapeXml|com.taobao.velocity.citrus.pull.SecurityUtil.richtext|com.taobao.security.util.JsonTextXssFilter.jsonTextFilter|com.alibaba.fasttext.sec.codec.HtmlFastEntities.HTML40.escape|org.apache.commons.lang.StringEscapeUtils.escapeHtml|com.alibaba.security.SecurityUtil.richtext|com.alibaba.security.SecurityUtil.escapeUri|org.springframework.web.util.HtmlUtils.htmlEscape|org.springframework.web.util.HtmlUtils.htmlEscapeDecimal|org.springframework.web.util.HtmlUtils.htmlEscapeHex|com.taobao.security.util.SecurityUtil.richtext|com.alibaba.security.SecurityUtil.escapeJson|com.taobao.security.util.SecurityUtil.escapeHtml|com.alibaba.citrus.util.StringEscapeUtil.escapeHtml|com.alibaba.china.fasttext.codec.HtmlFastEntities.HTML40.escape|me.ele.napos.arena.api.melody.processor.actor.ArenaCache.get|me.ele.napos.arena.api.melody.processor.util.NumberConvertUtil.maskMobile|java.net.URLEncoder.encode|org.springframework.context.MessageSource.getMessage|com.alibaba.study.common.cache.EasyCache.get|com.taobao.cms.client.CMSTool.importRgn|com.alibaba.havana.mlogin.service.AppConfigService.getAppConfig|com.alitrip.traveltrade.client.WifiNonDepositClient.getWifiReturnInfoForHSF|com.alibaba.intl.sourcing.biz.multilang.i18nresources.open.I18nresourcesInvoker.getI18nresourcesValueByLocale|org.springframework.core.env.Environment.getProperty|com.alibaba.security.SecurityUtil.urlFilter|com.alibaba.security.SecurityUtil.escapeJavaScript";
+	};
+	sanitizer.methodReturn += {
+		value = "SecurityUtil.escapeHtml|SecurityUtil.jsEncode|SecurityUtil.escapeJson|SecurityUtil.escapeJsonForUnicode|SecurityUtil.escapeJsonForJsVar|SecurityUtil.richtext|LocaleUtils.toLocale|XssUtils.stripJsonFieldValueXss|securityJsReplace|escapeHtml|escapeJavaScript";
+	};
+	sanitizer.methodReturn += {
+		value = "com.taobao.vipserver.client.core.VIPClient.getHosts|UriComponentsBuilder.|UcSecurityUtil.escapeJson";
+	};
+	propagate.vmContext += {
+		precise = true;
+		value = "com.alibaba.citrus.turbine.Context.put|com.alibaba.citrus.service.template.TemplateContext.put|com.alibaba.service.template.TemplateContext.put";
+	};
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "org.springframework.ui.Model|org.springframework.validation.BindingResult|org.springframework.validation.Validator|org.springframework.web.servlet.ModelAndView|org.springframework.web.util.UriComponentsBuilder|com.taobao.tair.Result|com.taobao.tair.ResultCode";
+		excludeTag = "safeXssType";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "(?i)select|(?i)query|(?i)dao.*|(?i)^(?!helloService.*)\\w*?(service|manager)\\w*?.*|\\binsert|\\bfind|\\bupdate|\\bexecute|(?i)md5|getHibernateTemplate|(?i)(OSSService|ossclient)|\\w*?TfsManager.\\w+|(?i).\\w*?search|(?i)\\w*?hsf\\w*?.|(?i)\\w*?uic\\w+.getUser|JSONObject.getString|(?i)^(?!helloService.*)\\w*?(service|manager)\\w*?.*";
+	};
+	propagate.noTaintNoSourceFile += {
+		value = "JSONObject.getString";
+		excludeTag = "templateXSSIgnoreMe";
+	};
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.XSSEntryDetector");
+		excludeTag = "templateXSSIgnoreMe";
+	};
+}

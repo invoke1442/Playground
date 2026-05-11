@@ -1,0 +1,239 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_pathTraversalJava_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink jws</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\brender\b|\brenderTemplate\b|\brenderHtml\b|\brenderArgs.put\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.servlet.jsp.JspWriter.write|javax.servlet.jsp.JspWriter.print|javax.servlet.jsp.JspWriter.println|javax.servlet.ServletOutputStream.write|javax.servlet.ServletOutputStream.print|javax.servlet.ServletOutputStream.println|javax.servlet.http.HttpServletResponse.getWriter.write|javax.servlet.http.HttpServletResponse.getWriter.print|javax.servlet.http.HttpServletResponse.getWriter.println|javax.servlet.http.HttpServletResponse.getOutputStream.write|javax.servlet.http.HttpServletResponse.getOutputStream.print|javax.servlet.http.HttpServletResponse.getOutputStream.println</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bgetResponse\.getWriter\.write$|\bgetResponse\.getWriter\.print$|\bgetResponse\.getWriter\.println$</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>upcast set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.servlet.http.HttpServletResponse.getWriter|javax.servlet.http.HttpServletResponse.getOutputStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>upcast</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bgetResponse\.getWriter$|\bgetResponse\.getOutputStream$</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>upcast sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.Writer.write|java.io.PrintWriter.print|java.io.PrintWriter.println|java.io.PrintWriter.write|java.io.OutputStream.write</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.citrus.turbine.Context.put|javax.servlet.http.HttpServletRequest.setAttribute</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>context containers</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bTemplateContext\.put\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>mvc responsebody</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>annotation.ResponseBody</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>spring response class</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>annotation.RestController</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use critical</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>critical type set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.File|java.io.FileInputStream|java.io.FileReader|java.io.RandomAccessFile|File|FileInputStream|FileReader|RandomAccessFile|java.io.InputStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>tainted to critical return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.intl.commons.file.client.FileClient.readFileToByteArray|org.apache.commons.io.FileUtils.readFileToByteArray|java.nio.file.Paths.get|java.nio.file.Files.newInputStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>critical to critical param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.BufferedInputStream.read|java.io.BufferedReader.read|java.io.ByteArrayInputStream.read|java.io.DataInputStream.read|java.io.FileInputStream.read|java.io.InputStream.read|java.io.FileReader.read|java.io.PrintStream.read|java.io.InputStream.read</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>critical to critical return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.BufferedInputStream.read|java.io.BufferedReader.read|java.io.ByteArrayInputStream.read|java.io.DataInputStream.read|java.io.FileInputStream.read|java.io.InputStream.read|java.io.FileReader.read|java.io.PrintStream.read</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>new sink</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sink object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.File.delete</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>flag</string>
+          <string>new sink</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>sink object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.io.FileUtils.(forceDelete|deleteDirectory|deleteQuietly)</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>critical sink set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.io.IOUtils.copy|org.apache.commons.io.IOUtils.copyLarge|org.apache.commons.io.FileUtils.copyFile</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

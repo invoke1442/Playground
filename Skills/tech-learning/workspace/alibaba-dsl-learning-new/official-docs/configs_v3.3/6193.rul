@@ -1,0 +1,15 @@
+Rule NewPathTraversal extends AbstractTaintRule {
+	import roster Java_network_io_sanitizer;
+	import roster Java_common_source;
+	import roster Java_pathtraversal_propagate;
+	import roster Java_Param_new_pathTraversalJava_sink;
+	import roster Java_common_propagate exclude encode,streamRelatedType;
+	type = "PathTraversal";
+	subType = "pathTraversalJava";
+	general.customSubject = "路径穿越";
+	sanitizer.safeTypes += {
+		precise = true;
+		value = "org.springframework.web.multipart.MultipartHttpServletRequest";
+		excludeTag = "SafeServletType";
+	};
+}

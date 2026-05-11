@@ -1,0 +1,99 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_xxe_propagate</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use xxe flags</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>xxe types</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>groovy.util.XmlSlurper|org.dom4j.io.SAXReader|javax.xml.parsers.SAXParser|javax.xml.stream.XMLInputFactory|org.jdom2.input.SAXBuilder|org.jdom.input.SAXBuilder|org.dom4j.DocumentHelper|com.taobao.api.internal.parser.xml.ObjectXmlParser|com.taobao.api.TaobaoParser|javax.xml.bind.Unmarshaller|javax.xml.parsers.DocumentBuilder|javax.xml.parsers.DocumentBuilderFactory|org.xml.sax.XMLReader</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>xxe method set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>setFeature|setProperty</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use stream readers</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use safe state</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe state</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.securitysdk.SecurityUtil.withXxeProtection</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>stream readers set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.io.BufferedInputStream.read|java.io.BufferedReader.read|java.io.ByteArrayInputStream.read|java.io.DataInputStream.read|java.io.FileInputStream.read|java.io.InputStream.read|java.io.FileReader.read|java.io.PrintStream.read|java.io.BufferedReader.readLine</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

@@ -1,0 +1,6 @@
+Rule JavaSsrfTaintRule extends AbstractTaintRule {
+    import roster Java_ssrf_taint;
+    type = "SSRF";
+    subType = "ssrfJava";
+    general.customSubject = "SSRF";
+}

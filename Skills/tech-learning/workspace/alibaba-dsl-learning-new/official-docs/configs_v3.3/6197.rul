@@ -1,0 +1,12 @@
+Rule NewURLRedirect extends AbstractTaintRule {
+	import roster Java_common_source;
+	import roster Java_urlredirect_propagate;
+	import roster Java_stream_io_sanitizer;
+	import roster Java_Param_new_urlRedirectJava_sink;
+	import roster Java_common_propagate exclude StringConcatMethod;
+	type = "URLRedirect";
+	subType = "urlRedirectJava";
+	general.userDefinePatternClass += {
+		userDefineClass = loadclass("com.taobao.customrule.FilterSource");
+	};
+}

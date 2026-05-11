@@ -1,0 +1,41 @@
+Roster NodeJS_web_taint {
+    group ExpressKoaSources {
+        includePlatforms = "nodejs,express,koa";
+
+        source.methodReturn += {
+            taintTag = "xss_tag";
+            value += "/\\breq\\.query\\b|\\breq\\.body\\b|\\bctx\\.request\\.body\\b/";
+        };
+
+        source.expression += {
+            taintTag = "xss_tag";
+            value += "/\\breq\\.query\\.[A-Za-z_$][\\w$]*$|\\breq\\.body\\.[A-Za-z_$][\\w$]*$|\\bctx\\.request\\.body\\.[A-Za-z_$][\\w$]*$/";
+        };
+    };
+
+    group ExpressKoaResponseSinks {
+        includePlatforms = "nodejs,express,koa";
+
+        sink.methodArg += {
+            pattern += "/\\bres\\.send\\b|\\bres\\.write\\b/";
+            paramIndex = 0;
+            taintTag = "xss_tag";
+        };
+
+        sink.methodArg += {
+            pattern += "/\\bctx\\.body$/";
+            paramIndex = 0;
+            taintTag = "xss_tag";
+        };
+    };
+
+    group HtmlSanitizers {
+        includePlatforms = "nodejs,express,koa";
+
+        sanitizer.methodReturn += {
+            pattern += "/\\bescapeHtml\\b/";
+        };
+    };
+
+    source.customSourceFunc = loadclass("NodeJS_web_taint.rule.customSourceFunc");
+}

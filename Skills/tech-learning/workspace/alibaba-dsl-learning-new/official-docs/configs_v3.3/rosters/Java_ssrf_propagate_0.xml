@@ -1,0 +1,331 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_ssrf_propagate</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>SSRFCustomPropagate.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.SSRFCustomPropagate</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>classcontent</string>
+          <string>SSRFPkgHandler.java</string>
+        </entry>
+        <entry>
+          <string>classpath</string>
+          <string>com.taobao.customrule.SSRFPkgHandler</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>user define pattern</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>preprocess sanitizer param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>use safe state</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>treat unknown as safe</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>false</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>tainted start</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>propagate</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\burl\b|URIBroker[^\.]*\.setServerURI|URIBroker[^\.]*\.setBaseURI|URIBroker[^\.]*\.setContextPath|URIBuilder[^\.]*\.setHost|UriComponentsBuilder[^\.]*\.(fromUriString|fromHttpUrl|fromPath|fromUri|host|uri)\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>composeUrl|setParameter</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>URIBroker[^\.]*\.|URIBuilder[^\.]*\.|UriComponentsBuilder[^\.]*\.|UriTemplate[^\.]*\.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bBuilder\b|\baddHeader\b|\.setHeader|\.setEntity</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>only tainted by invoker type method</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>append|concat</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>alloc propagate</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\bsetServerURI\b|\bsetBaseURI\b|\bsetContextPath\b|\bsetHost\b|\burl\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>from</string>
+          <string>1</string>
+        </entry>
+        <entry>
+          <string>name</string>
+          <string>custom black propagate</string>
+        </entry>
+        <entry>
+          <string>to</string>
+          <string>return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.lang.String.join</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param transmit</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>true</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe method - redirect set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.httpclient.HttpMethod.setFollowRedirects|org.apache.commons.httpclient.methods.GetMethod.setFollowRedirects|org.apache.commons.httpclient.methods.PostMethod.setFollowRedirects|java.net.HttpURLConnection.setInstanceFollowRedirects|java.net.HttpURLConnection.setFollowRedirects|org.apache.http.client.config.RequestConfig.Builder.setRedirectsEnabled|sun.net.www.protocol.http.HttpURLConnection.setInstanceFollowRedirects|sun.net.www.protocol.http.HttpURLConnection.setFollowRedirects</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe method - redirect</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>\.setRedirectStrategy\b|\.setRedirectsEnabled\b|\.setFollowRedirects\b|\.setInstanceFollowRedirects\b|\.disableRedirectHandling\b|\bfollowRedirects\b</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe state set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.startSSRFNetHookChecking</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>safe state</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyun.securitysdk.SecurityUtil.withSSRFChecking|com.aliyun.securitysdk.SecurityUtil.startSSRFNetHookChecking</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>unsafe state set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.stopSSRFNetHookChecking|com.aliyun.securitysdk.SecurityUtil.stopSSRFNetHookChecking</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>okhttp3.RequestBody.create|com.aliyun.oss.OSSClient.generatePresignedUrl|com.aliyun.oss.OSS.generatePresignedUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|java.sql.PreparedStatement.setString|java.sql.PreparedStatement.setNString</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.china.aop.core.isv.service.AlipaySubmitService.createUserAuthorizeUrl|com.alifi.cbu.payback.biz.manager.AlipayManager.getAlipayIFrameURL|com.alibaba.xteam.common.buc.BucService.genAutoLoginUrl|com.alibaba.site.winport.service.WinportDomainReadService.getUrl|com.alibaba.trading.biz.alipay.service.AlipayRequestService.request|com.alibaba.trading.biz.alipay.service.AlipayAsoService.alipayAso|com.youku.recommend.bigdata.util.RouteUtil.getVipServerDomain</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.security.SecurityUtil.checkSSRF</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer param - {redirect} set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.alibaba.fasttext.sec.url.SSRFChecker.checkUrlWithoutConnection|com.alibaba.fasttext.sec.url.SSRFChecker.instance.checkUrlWithoutConnection|com.alibaba.security.SecurityUtil.checkUrlWithoutConnection|com.alibaba.security.SecurityUtil.checkSSRFWithoutConnection|com.alibaba.security.SecurityUtil.startSSRFNetHookCheckingWithExpirationCache</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sanitizer return</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>addQueryParameter</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

@@ -1,0 +1,319 @@
+<net.sourceforge.pmd.ParamRosterItem>
+  <name>Java_Param_new_ssrfJava_sink</name>
+  <groups/>
+  <attributes/>
+  <properties>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.httpclient.methods.GetMethod.setPath|org.apache.commons.httpclient.methods.PostMethod.setPath|org.apache.commons.httpclient.HttpMethodBase.setPath|org.apache.http.client.methods.RequestBuilder.setUri|org.apache.http.client.methods.RequestBuilder.get.setUri|org.apache.http.client.methods.HttpRequestBase.setURI|org.apache.http.client.methods.HttpGet.setURI|org.apache.http.client.methods.HttpPost.setURI|org.apache.http.client.methods.HttpDelete.setURI|org.apache.http.client.methods.HttpPut.setURI|org.apache.http.client.methods.HttpHead.setURI|org.apache.http.client.methods.HttpOptions.setURI|org.apache.http.client.methods.HttpTrace.setURI|org.apache.http.client.methods.HttpPatch.setURI|com.aliyun.api.console.common.service.AliyunApiRequest.execCommandByParams|com.aliyun.api.console.common.service.AliyunApiRequest.execCommandByParamsNoUpper|com.aliyun.api.console.common.service.AliyunApiRequest.setBaseServiceHost|jws.lib.WS.url|jws.http.SimpleHttpClient.doGet|jws.http.SimpleHttpClient.doGetBatch|jws.http.SimpleHttpClient.doPost|jws.http.SimpleHttpClient.doPostAll|okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URL&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.imageio.ImageIO.read|org.apache.commons.io.IOUtils.toByteArray|org.apache.commons.io.IOUtils.toString|org.apache.commons.io.FileUtils.copyURLToFile|org.apache.commons.io.file.PathUtils.copyFile|org.apache.commons.io.file.PathUtils.copyFileToDirectory</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URI&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>javax.imageio.ImageIO.read|org.apache.commons.io.IOUtils.toByteArray|org.apache.commons.io.IOUtils.toString|org.apache.commons.io.FileUtils.copyURLToFile|org.apache.commons.io.file.PathUtils.copyFile|org.apache.commons.io.file.PathUtils.copyFileToDirectory</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>okhttp3\.OkHttpClient\.newCall|okhttp\.OkHttpClient\.newCall|ExecutableClient\.newGetClient|ExecutableClient\.newPostClient</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org\.apache\.commons\.io\.input\.XmlStreamReader</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org\.springframework\.web\.client\.RestTemplate\.(getFor.*|headForHeaders|postFor.*|patchFor.*|optionsFor.*|put|delete|exchange|execute)|org.apache.http.client.fluent.Request.Get\b|org.apache.http.client.fluent.Request.Post\b|com.taobao.pandora.boot.utils.DownloadUtils.download|org.jsoup.Jsoup.connect</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink object</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java\.net\.URL\.openConnection|java\.net\.URL\.getContent|java\.net\.URL\.openStream</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.commons.httpclient.methods.GetMethod|org.apache.commons.httpclient.methods.PostMethod|org.apache.commons.httpclient.HttpMethodBase|org.apache.http.client.methods.HttpGet|org.apache.http.client.methods.HttpPost|org.apache.http.client.methods.HttpDelete|org.apache.http.client.methods.HttpPut|org.apache.http.client.methods.HttpHead|org.apache.http.client.methods.HttpOptions|org.apache.http.client.methods.HttpTrace|org.apache.http.client.methods.HttpPatch|com.aliyun.market.core.openapi.OpenApiClient|jws.http.Request|okhttp3.OkHttpClient.newCall|okhttp.OkHttpClient.newCall</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink allocation</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string></string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink object set</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.http.client.ClientHttpRequest.execute|java.net.URL.openConnection|java.net.URL.getContent|java.net.URL.openStream|com.aliyuncs.fc.client.FunctionComputeClient.deleteService</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param set</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>com.aliyuncs.fc.http.HttpRequest.getHttpConnection|com.aliyuncs.fc.http.HttpResponse.getResponse</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>kong.unirest.UnirestInstance.get</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.apache.http.HttpHost._init_.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URL&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>ws.schild.jave.MultimediaObject._init_.</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;URI&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>java.net.http.HttpRequest.newBuilder|java.net.http.HttpRequest.newBuilder.uri</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.eclipse.jetty.client.HttpClient.newRequest</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.web.reactive.function.client.WebClient.create</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>org.springframework.web.reactive.function.client.WebClient.Builder.baseUrl</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>play.libs.ws.WSClient.url</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>play.libs.ws.StandaloneWSClient.url</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="tree-map">
+        <entry>
+          <string>name</string>
+          <string>sink param</string>
+        </entry>
+        <entry>
+          <string>param</string>
+          <string>[{&apos;position&apos;:0,&apos;tainted&apos;:true,&apos;type&apos;:&apos;String&apos;}]</string>
+        </entry>
+        <entry>
+          <string>value</string>
+          <string>retrofit2.Retrofit.Builder.baseUrl</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+    <net.sourceforge.pmd.ParamProperty>
+      <atts class="linked-hash-map">
+        <entry>
+          <string>name</string>
+          <string>Dsl_Define_Table</string>
+        </entry>
+      </atts>
+    </net.sourceforge.pmd.ParamProperty>
+  </properties>
+</net.sourceforge.pmd.ParamRosterItem>

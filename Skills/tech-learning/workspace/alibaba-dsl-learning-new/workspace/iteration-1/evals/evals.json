@@ -1,0 +1,27 @@
+{
+  "skill_name": "alibaba-dsl-new",
+  "evals": [
+    {
+      "id": "java-ssrf-rule",
+      "prompt": "Use Alibaba DSL to create a Java SSRF taint rule package. Source: HttpServletRequest.getParameter. Sink: new URL(String) and RestTemplate.getForObject first argument. Include a sanitizer for SecurityUtil.checkSSRF, relation config, and commands to lint and verify it.",
+      "expectations": [
+        "The Rule imports a roster before type/subType fields.",
+        "The roster filename uses _0 while the Rule import omits _0.",
+        "The relation config maps the numeric rule id to the _0 roster name.",
+        "The Java SSRF roster includes source.methodReturn, sink.methodArg, and checkSSRF as sanitizer.methodArg.",
+        "The answer includes local lint and official verify commands."
+      ]
+    },
+    {
+      "id": "js-xss-rule",
+      "prompt": "Create an Alibaba DSL JavaScript XSS rule package for Express/Koa style apps. Sources are req.query, req.body, and ctx.request.body. Sinks are res.send/res.write/ctx.body. Include an escapeHtml sanitizer and mention how JS extend-file loadclass should be structured.",
+      "expectations": [
+        "The JavaScript source blocks use value/value +=, not precise.",
+        "The JavaScript sink and sanitizer call blocks use pattern/pattern +=.",
+        "The Rule imports a roster before type/subType.",
+        "The output explains JS loadclass as fileName.property.path into a CommonJS module.",
+        "The output states userDefineFunc should return false unless replacing default analysis."
+      ]
+    }
+  ]
+}

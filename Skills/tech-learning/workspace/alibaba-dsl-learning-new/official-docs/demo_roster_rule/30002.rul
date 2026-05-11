@@ -1,0 +1,6 @@
+Rule MyCustomTaintRule extends AbstractTaintRule {
+    import roster My_Custom_Roster;
+
+    type = "Test";
+    subType = "CustomRule";
+}

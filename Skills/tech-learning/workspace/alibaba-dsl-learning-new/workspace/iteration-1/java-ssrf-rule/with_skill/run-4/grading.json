@@ -1,0 +1,35 @@
+{
+  "expectations": [
+    {
+      "text": "The Rule imports a roster before type/subType fields.",
+      "passed": true,
+      "evidence": "Matched expected content in outputs/transcript."
+    },
+    {
+      "text": "The roster filename uses _0 while the Rule import omits _0.",
+      "passed": true,
+      "evidence": "Matched expected content in outputs/transcript."
+    },
+    {
+      "text": "The relation config maps the numeric rule id to the _0 roster name.",
+      "passed": true,
+      "evidence": "Matched expected content in outputs/transcript."
+    },
+    {
+      "text": "The Java SSRF roster includes source.methodReturn, sink.methodArg, and checkSSRF as sanitizer.methodArg.",
+      "passed": true,
+      "evidence": "Matched expected content in outputs/transcript."
+    },
+    {
+      "text": "The answer includes local lint and official verify commands.",
+      "passed": true,
+      "evidence": "Matched expected content in outputs/transcript."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "total": 5,
+    "pass_rate": 1.0
+  }
+}
