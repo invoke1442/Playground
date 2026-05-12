@@ -1,0 +1,6 @@
+Roster NodeJS_bad_precise {
+    source.methodReturn += {
+        precise = true;
+        value += "/\\breq\\.query\\b/";
+    };
+}

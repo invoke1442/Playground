@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 import tarfile
@@ -12,7 +13,8 @@ import tempfile
 from pathlib import Path
 
 
-VERIFY_URL = "http://43.106.136.189:8081/api/v1/verify"
+DEFAULT_VERIFY_URL = "http://43.106.136.189:8081/api/v1/verify"
+VERIFY_URL = os.environ.get("ALIBABA_DSL_VERIFY_URL", DEFAULT_VERIFY_URL)
 BOUNDARY = "bound"
 
 

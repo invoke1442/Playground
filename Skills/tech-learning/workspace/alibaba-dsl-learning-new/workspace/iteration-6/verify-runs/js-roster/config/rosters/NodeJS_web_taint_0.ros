@@ -1,0 +1,20 @@
+Roster NodeJS_web_taint {
+    source.methodReturn += {
+        value += "/\\breq\\.query\\b|\\breq\\.body\\b|\\bctx\\.request\\.body\\b/";
+    };
+
+    source.expression += {
+        taintTag = "xss_tag";
+        value += "/ctx\\.query\\.[A-Za-z_$][\\w$]*$/";
+    };
+
+    sink.methodArg += {
+        pattern += "/\\bres\\.send\\b|\\bres\\.write\\b|\\bctx\\.body$/";
+        paramIndex = 0;
+        taintTag = "xss_tag";
+    };
+
+    sanitizer.methodReturn += {
+        pattern += "/\\bescapeHtml\\b|\\bsanitizeHtml\\b/";
+    };
+}

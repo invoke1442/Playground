@@ -11,7 +11,7 @@ Use this skill to author Alibaba DSL web taint rules that are runnable by the of
 
 ## Verify API Status
 
-The official verify API endpoint is currently unavailable from this environment. Do not try to access `http://43.106.136.189:8081/api/v1/verify`, do not run remote verify commands, and do not spend time probing the service. Use local lint and package checks only; record that remote verify is blocked by endpoint unavailability.
+The official verify API should be treated as part of the normal validation flow, but the deployed verify URL may change over time. Run local lint first, then use `scripts/verify_alibaba_dsl.py` when you need official verifier acceptance. If the deployment endpoint has changed, pass `--url` or set `ALIBABA_DSL_VERIFY_URL` instead of editing commands by hand.
 
 ## Workflow
 
@@ -29,7 +29,8 @@ The official verify API endpoint is currently unavailable from this environment.
    - Error messages and fixes: `references/error-guide.md`
 4. For Java loadclass work, read `references/java-loadclass.md` and `references/java-loadclass/GENERAL.md` before choosing task-specific API files from `references/java-loadclass/INDEX.md`.
 5. For JavaScript extend-file work, read `references/javascript-extend-file.md` and `references/javascript-extend-file/GENERAL.md` before choosing task-specific API files from `references/javascript-extend-file/INDEX.md`.
-6. Create a config directory with this shape:
+6. Treat the syntax references as already integrated: `java-dsl-syntax.md` and `javascript-dsl-syntax.md` carry the unified Rule/Roster conclusions, while `java-loadclass/` and `javascript-extend-file/` carry the unified extension-mechanism conclusions.
+7. Create a config directory with this shape:
    ```text
    config/
    ├── 90001.rul
@@ -42,14 +43,14 @@ The official verify API endpoint is currently unavailable from this environment.
        └── rosters/RosterName_0/CustomClass.java
    ```
    For JavaScript, use `.js` extend files and `relation/config_addition_relation.json` when matching official JS examples.
-7. Put all `import roster ...;` statements at the top of the Rule body, before `type`, `subType`, or any field assignment. Import by roster declaration name, not filename: `import roster Java_web_taint;`.
-8. Add relation entries using the rule id and roster file stem: `{ "90001": ["Java_web_taint_0"] }`.
-9. Run local lint:
+8. Put all `import roster ...;` statements at the top of the Rule body, before `type`, `subType`, or any field assignment. Import by roster declaration name, not filename: `import roster Java_web_taint;`.
+9. Add relation entries using the rule id and roster file stem: `{ "90001": ["Java_web_taint_0"] }`.
+10. Run local lint:
    ```bash
    python scripts/lint_alibaba_dsl.py path/to/config --language java
    python scripts/lint_alibaba_dsl.py path/to/config --language javascript
    ```
-10. Do not call the official verify API. If reporting validation status, say: local lint passed or failed; remote verify was not attempted because the official endpoint is currently unavailable.
+11. Report validation status precisely: say whether local lint passed or failed, and say whether remote verify was run with `scripts/verify_alibaba_dsl.py` and what it returned.
 
 ## Core Rules
 

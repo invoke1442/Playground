@@ -1,0 +1,6 @@
+Rule JavaWebTaintRule extends AbstractTaintRule {
+    import roster Java_web_taint;
+    type = "SSRF";
+    subType = "ssrfJava";
+    general.customSubject = "SSRF";
+}

@@ -1,0 +1,5 @@
+Rule NodeJSWebTaintRule extends AbstractTaintRule {
+    import roster NodeJS_web_taint;
+    type = "Xss";
+    subType = "XssTs";
+}

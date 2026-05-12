@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
@@ -85,6 +86,18 @@ class HelperScriptContract(unittest.TestCase):
             verify.create_config_tar(root, tar_path)
             self.assertGreater(tar_path.stat().st_size, 0)
             self.assertTrue(tar_path.read_bytes().startswith(b"././@PaxHeader") or tar_path.read_bytes())
+
+    def test_verify_script_supports_environment_url_override(self):
+        previous = os.environ.get("ALIBABA_DSL_VERIFY_URL")
+        try:
+            os.environ["ALIBABA_DSL_VERIFY_URL"] = "https://verify.example.test/api/v2/verify"
+            verify = load_module("verify_alibaba_dsl_env_override", SKILL / "scripts" / "verify_alibaba_dsl.py")
+            self.assertEqual(verify.VERIFY_URL, "https://verify.example.test/api/v2/verify")
+        finally:
+            if previous is None:
+                os.environ.pop("ALIBABA_DSL_VERIFY_URL", None)
+            else:
+                os.environ["ALIBABA_DSL_VERIFY_URL"] = previous
 
     def test_direct_eval_runner_uses_outer_sandbox_bypass(self):
         runner = load_module(

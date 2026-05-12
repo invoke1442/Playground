@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Second-iteration coverage checks for official Alibaba DSL extension APIs.
 
-These tests intentionally check only local files. The official remote verify
-endpoint is unavailable and must not be probed by coverage tests.
+These tests intentionally check only local files. They verify documentation and
+reference coverage, not live remote verifier behavior.
 """
 
 from __future__ import annotations
@@ -214,15 +214,15 @@ class OfficialApiCoverage(unittest.TestCase):
         self.assertNotIn("## TaintVarSet API", self.js_dsl_ref)
         self.assertNotIn("## Built-In Require Modules", self.js_dsl_ref)
 
-    def test_verify_unavailable_warning_remains_prominent(self):
+    def test_verify_workflow_guidance_remains_prominent(self):
         combined = self.skill + "\n" + read(SKILL / "references" / "verification.md")
         self.assert_terms_present(
             combined,
             [
-                "official verify API endpoint is currently unavailable",
-                "Do not try to access `http://43.106.136.189:8081/api/v1/verify`",
-                "do not run remote verify commands",
-                "Use local lint",
+                "Run local lint first",
+                "scripts/verify_alibaba_dsl.py",
+                "official verifier acceptance",
+                "Report validation status precisely",
             ],
         )
 

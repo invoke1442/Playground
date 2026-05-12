@@ -1,0 +1,21 @@
+{
+  "returncode": 56,
+  "stdout": "",
+  "stderr": "curl: (56) Recv failure: Connection reset by peer\n",
+  "command": [
+    "curl",
+    "--silent",
+    "--show-error",
+    "--noproxy",
+    "*",
+    "--http1.0",
+    "-H",
+    "Content-Type: multipart/form-data; boundary=bound",
+    "--data-binary",
+    "@/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-6/verify-runs/java-roster/artifacts/payload.bin",
+    "http://43.106.136.189:8081/api/v1/verify"
+  ],
+  "response": null,
+  "tar_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-6/verify-runs/java-roster/artifacts/config.tar",
+  "payload_path": "/home/nyn/Desktop/Projects/Agents/playground/Skills/tech-learning/workspace/alibaba-dsl-learning-new/workspace/iteration-6/verify-runs/java-roster/artifacts/payload.bin"
+}

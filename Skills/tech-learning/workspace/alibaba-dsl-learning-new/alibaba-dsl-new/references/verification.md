@@ -2,15 +2,17 @@
 
 ## Current Service Status
 
-The official verify API endpoint is currently unavailable from this environment. Do not attempt to access `http://43.106.136.189:8081/api/v1/verify`; do not run curl, health checks, or `verify_alibaba_dsl.py` against the remote service. Treat remote verify as blocked. Validate with local lint, archive layout checks, and package creation only.
+The official verify API should be treated as part of the normal validation flow again. Run local lint first, then use `scripts/verify_alibaba_dsl.py` for official verifier acceptance when needed. Prefer the helper script over ad hoc `curl`, because the request uses multipart fields with strict naming and packaging expectations.
 
 ## Official Verify API
 
-Endpoint:
+Documented endpoint in the bundled official docs and current helper default:
 
 ```text
 POST http://43.106.136.189:8081/api/v1/verify
 ```
+
+Treat the verify URL as deployment-specific rather than hard-coded truth. If the current deployment has moved, override it with `--url` or `ALIBABA_DSL_VERIFY_URL`.
 
 Required multipart fields:
 
@@ -22,11 +24,23 @@ Required multipart fields:
 | `rule_id` | for rules | Numeric id matching `{rule_id}.rul` |
 | `roster_name` | for rosters | File stem such as `Java_web_taint_0` |
 
-When the service is restored in a future environment, use `scripts/verify_alibaba_dsl.py` because the local environment needs a manually built binary multipart request. Do not run these commands while the endpoint is unavailable:
+Use `verify_type=rule` when validating a `.rul` entry point. Use `verify_type=roster` when validating a standalone `.ros` roster package.
+
+Use `scripts/verify_alibaba_dsl.py` because the local environment needs a manually built binary multipart request:
 
 ```bash
 python scripts/verify_alibaba_dsl.py config --language java --verify-type rule --rule-id 90001
 python scripts/verify_alibaba_dsl.py config --language java --verify-type roster --roster-name Java_web_taint_0
+```
+
+Override the endpoint when the deployment URL changes:
+
+```bash
+ALIBABA_DSL_VERIFY_URL="https://verify.example/api/v1/verify" \
+python scripts/verify_alibaba_dsl.py config --language java --verify-type rule --rule-id 90001
+
+python scripts/verify_alibaba_dsl.py config --language java --verify-type rule --rule-id 90001 \
+  --url "https://verify.example/api/v1/verify"
 ```
 
 Exit codes:
@@ -36,6 +50,11 @@ Exit codes:
 | `0` | API returned success and no verifier output |
 | `1` | curl/API-level failure |
 | `2` | API succeeded but verifier returned errors or warnings |
+
+Common transport failures during endpoint drift:
+
+- `curl: (7) Failed to connect ... Connection refused`: the documented host/port is stale or the service is down.
+- `curl: (56) Recv failure: Connection reset by peer`: the server closed the connection before returning a verifier response; re-check the current deployment URL and protocol assumptions.
 
 ## Archive Layout
 
@@ -70,7 +89,7 @@ JavaScript examples often use `relation/config_addition_relation.json` and `rela
 
 ## Local Lint
 
-Run local lint instead of remote verify while the service is unavailable:
+Run local lint before remote verify:
 
 ```bash
 python scripts/lint_alibaba_dsl.py config --language java --json
@@ -85,4 +104,4 @@ The linter checks:
 - relation config contains imported rosters with `_0`.
 - `loadclass` has a likely extend-file target.
 
-Local lint does not prove official verifier acceptance, but it is the required validation path while the official endpoint is unavailable.
+Local lint does not prove official verifier acceptance. Use it as the first-pass structural check, then run remote verify when you need verifier-backed confirmation.

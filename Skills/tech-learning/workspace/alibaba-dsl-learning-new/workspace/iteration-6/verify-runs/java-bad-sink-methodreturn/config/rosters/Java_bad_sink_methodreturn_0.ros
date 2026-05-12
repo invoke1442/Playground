@@ -1,0 +1,6 @@
+Roster Java_bad_sink_methodreturn {
+    sink.methodReturn += {
+        precise = true;
+        value = "java.lang.String.valueOf";
+    };
+}
